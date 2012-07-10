@@ -8,10 +8,6 @@ span.highlight {
   margin-bottom: 30px;
 }
 
-.total-needed {
-
-}
-
 .stat {
   h3 {
     font-size: 22px;
@@ -38,14 +34,66 @@ span.highlight {
   margin-bottom: 20px;
 }
 
+$radius: 16px;
 #progress-bar {
-  background-color: gray;
+  border-radius: $radius;
+  background-color: $lightgrey;
   width: 400px;
   height: 40px;
 }
 
 #succeeded-bar {
-  background-color: green;
+  border-radius: $radius;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: $green;
   width: 300px;
   height: 40px;
+}
+
+
+ul.mission-types {
+  li.mission-type {
+    color: white;
+    background-color: transparentize($orange, 0.3);
+    padding: 8px;
+    margin: 8px;
+    font-size: 18px;
+    &:hover {
+      background-color: transparentize($orange, 0.1);
+    }
+  }
+}
+
+ul.mission-log {
+  li.mission {
+    img {
+      margin-right: 16px;
+    }
+    span.log-mission {
+      vertical-align: super;
+      margin-right: 8px;
+      font-size: 24px;
+      float: right;
+      &:hover {
+        color: $whale;
+        border-bottom: 1px dashed $cream;
+      }
+    }
+    span.completed {
+      background: $slate;
+      border-radius: 3px;
+      padding: 6px;
+      float: right;
+    }
+    height: 42px;
+    color: white;
+    background-color: transparentize($orange, 0.3);
+    padding: 8px;
+    margin: 8px;
+    font-size: 18px;
+    &:hover {
+      background-color: transparentize($orange, 0.1);
+    }
+  }
 }
