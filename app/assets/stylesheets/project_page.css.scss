@@ -1,6 +1,6 @@
 @import "colors";
 
-span.hightlight {
+span.highlight {
   color: $orange;
 }
 
@@ -32,4 +32,20 @@ span.hightlight {
   h3.amount {
     color: $red;
   }
+}
+
+#progress-box {
+  margin-bottom: 20px;
+}
+
+#progress-bar {
+  background-color: gray;
+  width: 400px;
+  height: 40px;
+}
+
+#succeeded-bar {
+  background-color: green;
+  width: 300px;
+  height: 40px;
 }

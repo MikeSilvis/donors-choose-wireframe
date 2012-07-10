@@ -1,0 +1,84 @@
+div.limit.meter {
+  float: left;
+  margin: 10px 40px 20px 0;
+  text-align: center;
+  width: 240px;
+
+  span.numbers {
+    font-weight: bold;
+
+    em {
+      font-style: normal;
+    }
+  }
+
+  div.bar {
+    border: 1px solid #ccc;
+    @include border-radius(8px);
+    height: 15px;
+    @include linear-gradient(#DFDFDF, #F6F6F6);
+    margin-top: 6px;
+    overflow: hidden;
+    width: 100%;
+
+    span {
+      @include border-radius(8px);
+      display: block;
+      height: 15px;
+      overflow: hidden;
+      position: relative;
+      text-indent: -9999px;
+
+      &.green {
+        $to: hsla(94, 50.2041%, 51.9608%, 1.0);
+        $from: hsla(152, 53.4653%, 39.6078%, 1.0);
+        $highlight: #9ee471;
+        $darken: darken($from, 10%);
+        @include box-shadow(inset 0 1px 0 0 $highlight, inset 0 -1px 0 0 $darken);
+        @include linear-gradient($to, $from);
+      }
+
+      &.yellow {
+        $to: hsla(51, 82.4561%, 55.2941%, 1.0);
+        $from: hsla(43, 100.0000%, 42.3529%, 1.0);
+        $highlight: lighten($to, 22%);
+        $darken: darken($from, 10%);
+        @include box-shadow(inset 0 1px 0 0 $highlight, inset 0 -1px 0 0 $darken);
+        @include linear-gradient($to, $from);
+      }
+
+      &.orange {
+        $to: hsla(31, 100.0000%, 64.9020%, 1.0);
+        $from: hsla(22, 100.0000%, 52.9412%, 1.0);
+        $highlight: lighten($to, 15%);
+        $darken: darken($from, 10%);
+        @include box-shadow(inset 0 1px 0 0 $highlight, inset 0 -1px 0 0 $darken);
+        @include linear-gradient($to, $from);
+      }
+
+      &:after {
+        @include border-radius(8px);
+        @include background-image(linear-gradient(-45deg,
+                          rgba(#fff, 0.15) 0%,
+                          rgba(#fff, 0.15) 25%,
+                          transparent 25%,
+                          transparent 50%,
+                          rgba(#fff, 0.15) 50%,
+                          rgba(#fff, 0.15) 75%,
+                          transparent 75%,
+                          transparent 100%));
+        -webkit-background-size: 20px 20px;
+        -moz-background-size: 20px 20px;
+        background-size: 20px 20px;
+        bottom: 0;
+        content: "";
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
