@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DonorsChooseWireframe</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="custom-container" id="navbar">
+    <div class="row header">
+      <div class="twelvecol">
+        <span class="brand">
+          <%= link_to "Donors Team 6", page_path("index"), id: "brand" %>
+        </span>
+        <span class="nav">
+          <a href="#">Tasks</a> | <a href="#">Account</a> | <a href="#">Sign Out</a>
+        </span>
+      </div>
+    </div>
+  </div> <!-- navbar -->
+
+<%= yield %>
+
+</body>
+</html>

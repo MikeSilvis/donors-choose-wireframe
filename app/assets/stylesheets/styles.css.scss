@@ -1,0 +1,74 @@
+@import "colors";
+
+body {
+  font-family: 'Lato', serif;
+}
+
+.custom-container {
+  width: 100%;
+}
+
+#navbar {
+  background: $navbar;
+  margin-bottom: 40px;
+  color: white;
+  a {
+    color: white;
+    &:link {
+      text-decoration: none;
+    }
+    &:visited {
+      color: white;
+      &:hover {
+        color: white;
+        border-bottom: 1px dashed $cream;
+      }
+    }
+    &:hover {
+      border-bottom: 1px dashed $cream;
+    }
+  }
+}
+
+.center-col {
+  width: 1040px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+#get-started {
+  margin-top: -40px;
+  background: $cream;
+  height: 1040px;
+  input[type='text'] {
+    margin-top: 8px;
+    height: 24px;
+    width: 50%;
+    font-size: 18px;
+  }
+}
+
+#url-submit {
+  @include button(pill, $orange);
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.brand {
+  font-size: 200%;
+  /*color: $color;*/
+}
+
+
+.nav {
+  float: right;
+}
+
+.hero-unit {
+  margin-top: 60px;
+  padding-top: 60px;
+  width: 600px;
+  margin: auto;
+}
+

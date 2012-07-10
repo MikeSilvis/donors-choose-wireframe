@@ -1,0 +1,35 @@
+@import "colors";
+
+span.hightlight {
+  color: $orange;
+}
+
+#project-heading-row {
+  margin-bottom: 30px;
+}
+
+.total-needed {
+
+}
+
+.stat {
+  h3 {
+    font-size: 22px;
+  }
+  h3.heading {
+   margin-bottom: 8px;
+   border-bottom: 1px dashed $orange;
+  }
+}
+
+.raised {
+  h3.amount {
+   color: $green;
+  }
+}
+
+.remaining {
+  h3.amount {
+    color: $red;
+  }
+}
