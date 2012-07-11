@@ -17,7 +17,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :school_name
       t.string :city
       t.string :zip
-      t.string :state
+      t.string :state_abbr
       t.string :latitude
       t.string :longitude
       t.string :state
