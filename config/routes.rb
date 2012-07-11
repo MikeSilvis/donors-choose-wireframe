@@ -1,3 +1,3 @@
 DonorsChooseWireframe::Application.routes.draw do
-  root to: 'high_voltage/pages#show', id: 'index'
+  root to: 'projects#new'
 end

@@ -4,6 +4,7 @@ gem 'rails', '3.2.6'
 gem 'sqlite3'
 gem 'bourbon', '~> 2.1.1'
 gem 'high_voltage'
+gem 'donors_choose', :git => 'git://github.com/verdi327/donors_choose_gem.git'
 
 
 # Gems used only for assets and not required
