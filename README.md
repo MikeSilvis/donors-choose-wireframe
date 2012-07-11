@@ -5,11 +5,9 @@ Donors Team 6
 
   Potential Characters:
 
-    * Teacher's friend group: give a concentrated way for these types
-of people to contribute to smaller projects
+    * Teacher's friend group: give a concentrated way for these types of people to contribute to smaller projects
 
-    * PTA/community members: Provide actionable steps for small groups
-to attack fundraising
+    * PTA/community members: Provide actionable steps for small groups to attack fundraising
 
     * Students/faculty members? A more public platform for these people
 to interact with their potential donors
