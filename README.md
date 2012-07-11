@@ -3,7 +3,7 @@ Donors Team 6
 
 ### Who's it for
 
-  ##### Potential Characters:
+  Potential Characters:
 
     * Teacher's friend group: give a concentrated way for these types
 of people to contribute to smaller projects
