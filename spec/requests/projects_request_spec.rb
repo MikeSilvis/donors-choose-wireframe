@@ -20,4 +20,28 @@ describe "Creating a project" do
     end
   end
 
+  context "When a project is created for the first time" do
+    use_vcr_cassette
+    before(:each) { visit root_path }
+
+    it "shows a message that the project has been created successfully" do
+      fill_in "project_proposal_url", with: "http://www.donorschoose.org/project/a-library-for-all-to-enjoy/793053/"
+      click_link_or_button "Create Project"
+      page.should have_content "Thanks for adopting this project! Use this dashboard to manage your efforts!"
+    end
+  end
+
+  context "When a project is already in the system" do
+    let(:project) { FactoryGirl.create(:project) }
+    use_vcr_cassette
+    before(:each) { visit root_path }
+
+    it "shows a message that the project already exists" do
+      fill_in "project_proposal_url", with: project.proposal_url
+      click_link_or_button "Create Project"
+      current_path.should == project_path(project)
+      page.should have_content "This project already exists. You can contribute to it here!"
+    end
+  end
+
 end

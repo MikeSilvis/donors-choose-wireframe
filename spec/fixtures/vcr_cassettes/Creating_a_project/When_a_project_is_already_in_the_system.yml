@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.donorschoose.org/common/json_feed.html?id=793053&APIKEY=DONORSCHOOSE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accepts:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      content-type:
+      - text/plain;charset=UTF-8
+      content-language:
+      - en-US
+      vary:
+      - Accept-Encoding
+      cache-control:
+      - private, max-age=252
+      expires:
+      - Thu, 12 Jul 2012 14:19:37 GMT
+      date:
+      - Thu, 12 Jul 2012 14:15:25 GMT
+      content-length:
+      - '2344'
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "\r\n \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t\r\n\r\n\t
+        \ \t\r\n\r\n\r\n\r\n\r\n\r\n{\n  \"searchTerms\": \"Project 793053\",\n  \"searchURL\":
+        \"http://www.donorschoose.org/donors/search.html?id=793053&amp;APIKEY=DONORSCHOOSE&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=searchlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \ \"totalProposals\": \"1\",\n  \"index\": \"0\",\n  \"max\": \"1\",\n  \"proposals\":
+        [{\n    \"id\": \"793053\",\n    \"proposalURL\": \"http://www.donorschoose.org/project/a-library-for-all-to-enjoy/793053/?utm_source=api&amp;utm_medium=feed&amp;utm_content=bodylink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \   \"fundURL\": \"https://secure.donorschoose.org/donors/givingCart.html?proposalid=793053&amp;donationAmount=&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=fundlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \   \"imageURL\": \"http://cdn.donorschoose.net/images/user/uploads/small/u1102844_sm.jpg?timestamp=1323198577312\",\n
+        \   \"title\": \"A Library For All To Enjoy!\",\n    \"shortDescription\":
+        \"Do you remember trying to choose a book in your classroom library, but the
+        shelves were packed? I would like to make choosing a book easier on my students
+        by organizing the library with book bins....\",\n    \"fulfillmentTrailer\":
+        \"My students need Help-Yourself Book Bins for our class library.  The book
+        bins will make it easier for them to find books they are interested in.\",\n
+        \   \"percentFunded\": \"13\",\n    \"costToComplete\": \"172.20\",\n    \"matchingFund\":
+        {\n      \"matchingKey\": \"\",\n      \"name\": \"\",\n      \"logoURL\":
+        \"\",\n      \"faqURL\": \"\",\n      \"amount\": \"0.00\"\n    },\n    \"totalPrice\":
+        \"197.20\",\n    \"freeShipping\": \"true\",\n    \"teacherName\": \"Ms. Walker\",\n
+        \   \"gradeLevel\": {\n      \"id\": \"1\",\n      \"name\": \"Grades PreK-2\"\n
+        \   },\n    \"povertyLevel\": \"High Poverty\",\n    \"schoolName\": \"Anna
+        Yates Elementary School\",\n    \"city\": \"Emeryville\",\n    \"zip\": \"94608-3693\",\n
+        \   \"state\": \"CA\",\n    \"latitude\": \"37.832642000000000\",\n    \"longitude\":
+        \"-122.278770000000000\",\n    \"zone\": {\n      \"id\": \"402\",\n      \"name\":
+        \"California (North)\"\n    },\n    \"subject\": {\n      \"id\": \"10\",\n
+        \     \"name\": \"Literacy\",\n      \"groupId\": \"6\"\n    },\n    \"resource\":
+        {\n      \"id\": \"3\",\n      \"name\": \"Supplies\"\n    },\n    \"expirationDate\":
+        \"2012-10-07\",\n    \"fundingStatus\": \"needs funding\"\n  }]\n}\r\n"
+    http_version: '1.1'
+  recorded_at: Thu, 12 Jul 2012 14:15:26 GMT
+recorded_with: VCR 2.2.2
