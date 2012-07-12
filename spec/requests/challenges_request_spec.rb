@@ -18,5 +18,14 @@ describe "Creating a new challenge" do
     end
   end
 
+  context "When I am on the new challenge page" do
+    before(:each) { visit new_challenge_path }
 
+    it "should allow me to fill out the info for name, challenge, and amount" do
+      page.should have_field('Name')
+      page.should have_field('Challenge')
+      page.should have_field('Minimum Amount')
+      page.should have_field('Maximum Amount')
+    end
+  end
 end

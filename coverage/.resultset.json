@@ -207,6 +207,12 @@
       "/Users/darrelrivera/Desktop/donors-choose-wireframe/app/controllers/challenges_controller.rb": [
         1,
         1,
+        2,
+        null,
+        null
+      ],
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/app/models/challenge.rb": [
+        1,
         null,
         null
       ],
@@ -250,6 +256,14 @@
         null,
         null
       ],
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/spec/factories/challenges.rb": [
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/darrelrivera/Desktop/donors-choose-wireframe/spec/factories/projects.rb": [
         null,
         null,
@@ -262,6 +276,13 @@
       "/Users/darrelrivera/Desktop/donors-choose-wireframe/config/routes.rb": [
         1,
         1,
+        1,
+        1,
+        null
+      ],
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/spec/models/challenge_spec.rb": [
+        1,
+        null,
         1,
         1,
         null
@@ -288,7 +309,7 @@
         1,
         1,
         1,
-        1,
+        0,
         null,
         null,
         null,
@@ -297,7 +318,10 @@
         2,
         null,
         1,
-        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         null
@@ -324,6 +348,6 @@
         null
       ]
     },
-    "timestamp": 1342102975
+    "timestamp": 1342103720
   }
 }

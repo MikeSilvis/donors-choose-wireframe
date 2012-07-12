@@ -1,1 +1,9 @@
 <h1>Creating a new challenge</h1>
+
+<%= form_for @challenge do |f| %>
+  <%= f.label :name_of_challenger %>
+  <%= f.text_field :name_of_challenger %>
+
+
+  <%= f.submit %>
+<% end %>

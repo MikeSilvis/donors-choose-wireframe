@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120711211457) do
+ActiveRecord::Schema.define(:version => 20120712143513) do
+
+  create_table "challenges", :force => true do |t|
+    t.string   "name_of_challenger"
+    t.string   "title_of_challenge"
+    t.integer  "minimum_amount"
+    t.integer  "maximum_amount"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "projects", :force => true do |t|
     t.string   "proposal_url"
