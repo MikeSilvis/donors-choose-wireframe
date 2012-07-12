@@ -13,5 +13,7 @@
   <%= f.label :maximum_amount, "Maximum Amount" %>
   <%= f.text_field :maximum_amount %>
 
+  <%= f.hidden_field :project_id, :value => @project_id  %>
+
   <%= f.submit %>
 <% end %>
