@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   def new
+    @projects = Project.limit(10)
     @project = Project.new
   end
 
