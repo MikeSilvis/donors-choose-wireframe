@@ -1,5 +1,4 @@
 class Project < ActiveRecord::Base
-  attr_accessible :challenge_id
   has_many :challenges
 
   def create_from_donors_choose_url(url)

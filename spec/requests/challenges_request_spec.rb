@@ -19,7 +19,10 @@ describe "Creating a new challenge" do
   end
 
   context "When I am on the new challenge page" do
-    before(:each) { visit new_challenge_path }
+    before :each do
+      visit new_project_challenge_path(project)
+      find(:xpath, "//input[@id='challenge_project_id']").set project.id
+    end
 
     it "should allow me to fill out the info for name, challenge, and amount" do
       page.should have_field('Name')
@@ -30,13 +33,23 @@ describe "Creating a new challenge" do
     it "should allow me to create the new challenge" do
       fill_in("Name", :with => "Darrell Rivera")
       fill_in("Challenge", :with => "I will shave my head")
-      fill_in("Amount", :with => 200)
-      find(:xpath, "//input[@id='challenge_project_id']").set project.id
+      fill_in("Amount", :with => 5)
       click_button("Create Challenge")
       page.should have_content("Your challenge has been created")
     end
 
-    it "should redirect me to form if I leave items blank" do
+    it "should redirect me to form if I leave an item blank" do
+      fill_in("Challenge", :with => "I will shave my head")
+      fill_in("Amount", :with => 5)
+      click_button("Create Challenge")
+      page.should have_content("Creating a new challenge")
+    end
+
+    it "should error if amount is more than the completion amount" do
+      fill_in("Name", :with => "Darrell Rivera")
+      fill_in("Challenge", :with => "I will shave my head")
+      fill_in("Amount", :with => 10000)
+      find(:xpath, "//input[@id='challenge_project_id']").set project.id
       click_button("Create Challenge")
       page.should have_content("Creating a new challenge")
     end

@@ -1,5 +1,6 @@
 DonorsChooseWireframe::Application.routes.draw do
   root to: 'projects#new'
-  resources :projects
-  resources :challenges
+  resources :projects do
+    resources :challenges
+  end
 end

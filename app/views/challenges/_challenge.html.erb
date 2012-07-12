@@ -1,4 +1,4 @@
-<%= form_for @challenge do |f| %>
+<%= form_for [@project, @challenge] do |f| %>
   <%= f.label :name_of_challenger, "Name" %>
   <%= f.text_field :name_of_challenger %>
 
