@@ -10,6 +10,7 @@ class ChallengesController < ApplicationController
       redirect_to project_path(@challenge.project_id)
       flash[:notice] = "Your challenge has been created"
     else
+      # pass project_id if challenge isn't created correctly
       render :new
       flash[:error] = "Your challenge cannot be created"
     end

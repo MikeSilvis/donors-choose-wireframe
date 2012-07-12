@@ -23,7 +23,7 @@
       <img src="./assets/0.5.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-07-12T14:32:25-04:00">2012-07-12T14:32:25-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-07-12T15:00:02-04:00">2012-07-12T15:00:02-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -72,7 +72,7 @@
       <tr>
         <td class="strong"><a href="#8ba5eb452a291670061f03d1f5b213e368a75cac" class="src_link" title="app/controllers/challenges_controller.rb">app/controllers/challenges_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>17</td>
+        <td>18</td>
         <td>11</td>
         <td>11</td>
         <td>0</td>
@@ -200,7 +200,7 @@
       <tr>
         <td class="strong"><a href="#8ba5eb452a291670061f03d1f5b213e368a75cac" class="src_link" title="app/controllers/challenges_controller.rb">app/controllers/challenges_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>17</td>
+        <td>18</td>
         <td>11</td>
         <td>11</td>
         <td>0</td>
@@ -599,31 +599,37 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="13">
           
-          <code class="ruby">      render :new</code>
+          
+          <code class="ruby">      # pass project_id if challenge isn't created correctly</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">      flash[:error] = &quot;Your challenge cannot be created&quot;</code>
+          <code class="ruby">      render :new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      flash[:error] = &quot;Your challenge cannot be created&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">end</code>
@@ -944,13 +950,13 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_accessible :name_of_challenger, :title_of_challenge, :minimum_amount,</code>
+          <code class="ruby">  attr_accessible :name_of_challenger, :title_of_challenge, :amount,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby">                  :maximum_amount, :project_id</code>
+          <code class="ruby">                  :project_id</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -980,7 +986,7 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates_numericality_of :minimum_amount, :maximum_amount</code>
+          <code class="ruby">  validates_numericality_of :amount, :greater_than =&gt; 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">

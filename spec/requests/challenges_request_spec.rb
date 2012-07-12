@@ -24,15 +24,13 @@ describe "Creating a new challenge" do
     it "should allow me to fill out the info for name, challenge, and amount" do
       page.should have_field('Name')
       page.should have_field('Challenge')
-      page.should have_field('Minimum Amount')
-      page.should have_field('Maximum Amount')
+      page.should have_field('Amount')
     end
 
     it "should allow me to create the new challenge" do
       fill_in("Name", :with => "Darrell Rivera")
       fill_in("Challenge", :with => "I will shave my head")
-      fill_in("Minimum Amount", :with => 200)
-      fill_in("Maximum Amount", :with => 800)
+      fill_in("Amount", :with => 200)
       find(:xpath, "//input[@id='challenge_project_id']").set project.id
       click_button("Create Challenge")
       page.should have_content("Your challenge has been created")

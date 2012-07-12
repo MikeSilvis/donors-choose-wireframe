@@ -16,8 +16,7 @@ ActiveRecord::Schema.define(:version => 20120712172358) do
   create_table "challenges", :force => true do |t|
     t.string   "name_of_challenger"
     t.string   "title_of_challenge"
-    t.integer  "minimum_amount"
-    t.integer  "maximum_amount"
+    t.integer  "amount"
     t.integer  "project_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
