@@ -1,27 +1,63 @@
 <div class="container">
-  <div class="row" id="project-heading-row">
-    <div id="project-photo" class="threecol">
-      <%= image_tag @project.image_url %>
+
+  <div class="row feed-row">
+    <div class="challenges-list fourcol">
+      <h1>Open Challenges</h1>
     </div>
-    <div class="ninecol last">
+
+    <div class="eightcol last">
+      <div id="feed">
+        <h1>Project Activity</h1>
+        <div id="feed-entries">
+
+          <div class="feed-entry challenge-opening">
+            <div class="feed-entry-row row any-width">
+              <h2>Open Challenge:</h2>
+              <img class="profile-pic threecol" src="https://si0.twimg.com/profile_images/1373765588/Verdi_reasonably_small.jpg">
+              <div class="challenge-details sixcol">
+                <div>
+                  <span class="user-name"><%= link_to "Michael Verdi", "#" %></span>
+                  <div>
+                    <span class="challenge-will">WILL:</span>
+                    <span class="challenge-action">grow a gnarly 'stache</span>
+                  </div>
+                </div>
+                <div>
+                  <span class="challenge-if">IF:</span><span class="challenge-condition">the project reaches $400</span>
+                </div>
+              </div>
+              <div class="challenge-progress threecol last">
+                <span>$84 to meet this challenge</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="threecol project-details">
+      <div id="project-photo">
+        <%= image_tag @project.image_url %>
+      </div>
+      <div id="progress-box">
+        <h1>25 Days Left</h1>
+        <div id="progress-bar">
+          <div id="succeeded-bar">
+          </div>
+        </div>
+      </div>
       <h1><span class="highlight"><%= link_to @project.title, @project.proposal_url %></span></h1>
       <br>
       <h3><%= @project.school_name %></h3>
       <h3><%= @project.city + ", " + @project.state_abbr %></h3>
       <h3>Donors: 22</h3>
     </div>
-  </div>
+    <div class="ninecol last">
+      <h1>Project Activity Feed</h1>
 
-  <div class="row" id="progress-box">
-    <div class="fourcol">
-      <h1>25 Days Left</h1>
-    </div>
-    <div class="eightcol last">
-      <div id="progress-bar">
-        <div id="succeeded-bar">
-        </div>
-      </div>
     </div>
   </div>
-
 </div>
