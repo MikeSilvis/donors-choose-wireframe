@@ -1,24 +1,24 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/danielkaufman/code/donors-choose-wireframe/app/controllers/application_controller.rb": [
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/Users/danielkaufman/code/donors-choose-wireframe/app/helpers/application_helper.rb": [
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/danielkaufman/code/donors-choose-wireframe/app/helpers/challenges_helper.rb": [
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/app/helpers/challenges_helper.rb": [
         1,
         null
       ],
-      "/Users/danielkaufman/code/donors-choose-wireframe/app/helpers/projects_helper.rb": [
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/app/helpers/projects_helper.rb": [
         1,
         null
       ],
-      "/Users/danielkaufman/code/donors-choose-wireframe/app/controllers/challenges_controller.rb": [
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/app/controllers/challenges_controller.rb": [
         1,
         1,
         null,
@@ -42,7 +42,7 @@
         null,
         null
       ],
-      "/Users/danielkaufman/code/donors-choose-wireframe/app/models/challenge.rb": [
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/app/models/challenge.rb": [
         1,
         1,
         null,
@@ -60,7 +60,7 @@
         null,
         null
       ],
-      "/Users/danielkaufman/code/donors-choose-wireframe/app/controllers/messages_controller.rb": [
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/app/controllers/messages_controller.rb": [
         1,
         1,
         1,
@@ -73,7 +73,7 @@
         null,
         null
       ],
-      "/Users/danielkaufman/code/donors-choose-wireframe/app/models/message.rb": [
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/app/models/message.rb": [
         1,
         1,
         null,
@@ -84,13 +84,13 @@
         1,
         null
       ],
-      "/Users/danielkaufman/code/donors-choose-wireframe/app/controllers/pages_controller.rb": [
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/app/controllers/pages_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/danielkaufman/code/donors-choose-wireframe/app/controllers/projects_controller.rb": [
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/app/controllers/projects_controller.rb": [
         1,
         1,
         4,
@@ -117,7 +117,7 @@
         null,
         null
       ],
-      "/Users/danielkaufman/code/donors-choose-wireframe/app/models/project.rb": [
+      "/Users/darrelrivera/Desktop/donors-choose-wireframe/app/models/project.rb": [
         1,
         1,
         1,
@@ -133,6 +133,6 @@
         null
       ]
     },
-    "timestamp": 1342129908
+    "timestamp": 1342130128
   }
 }

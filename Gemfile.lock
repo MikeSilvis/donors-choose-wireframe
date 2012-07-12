@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/verdi327/donors_choose_gem.git
-  revision: ea9c32988d3e3c386e84c8c75af8a7b9be7382a2
+  revision: 5feebf6d5b3f218d278e5abb40d3e306dc3fdb81
   specs:
     donors_choose (0.0.1)
       faraday
