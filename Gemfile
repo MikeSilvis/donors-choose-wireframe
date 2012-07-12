@@ -25,6 +25,8 @@ group :development, :test do
   gem 'faker'
   gem 'simplecov'
   gem 'launchy'
+  gem 'vcr'
+  gem 'fakeweb'
 end
 
 gem 'jquery-rails'
