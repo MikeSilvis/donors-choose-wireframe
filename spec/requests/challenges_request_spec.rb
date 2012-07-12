@@ -27,5 +27,14 @@ describe "Creating a new challenge" do
       page.should have_field('Minimum Amount')
       page.should have_field('Maximum Amount')
     end
+
+    it "should allow me to create the new challenge" do
+      fill_in("Name", :with => "Darrell Rivera")
+      fill_in("Challenge", :with => "I will shave my head")
+      fill_in("Minimum Amount", :with => 200)
+      fill_in("Maximum Amount", :with => 800)
+      click_button("Create Challenge")
+      page.should have_content("Your challenge has been created")
+    end
   end
 end

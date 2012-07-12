@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/verdi327/donors_choose_gem.git
-  revision: 1e210e7a30302b0be0c74038c38c1358246506f2
+  revision: ea9c32988d3e3c386e84c8c75af8a7b9be7382a2
   specs:
     donors_choose (0.0.1)
       faraday
@@ -174,7 +174,7 @@ GEM
     uglifier (1.2.6)
       execjs (>= 0.3.0)
       multi_json (~> 1.3)
-    vcr (2.2.2)
+    vcr (2.2.3)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 

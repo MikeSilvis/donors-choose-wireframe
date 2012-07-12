@@ -5,6 +5,7 @@ class CreateChallenges < ActiveRecord::Migration
       t.string :title_of_challenge
       t.integer :minimum_amount
       t.integer :maximum_amount
+      t.integer :project_id
 
       t.timestamps
     end

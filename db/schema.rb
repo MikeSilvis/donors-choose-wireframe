@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120712143513) do
+ActiveRecord::Schema.define(:version => 20120712172358) do
 
   create_table "challenges", :force => true do |t|
     t.string   "name_of_challenger"
     t.string   "title_of_challenge"
     t.integer  "minimum_amount"
     t.integer  "maximum_amount"
+    t.integer  "project_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
@@ -50,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20120712143513) do
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
     t.string   "donors_choose_id"
+    t.integer  "challenge_id"
   end
 
 end

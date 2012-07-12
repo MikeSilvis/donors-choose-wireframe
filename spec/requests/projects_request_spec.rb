@@ -41,7 +41,6 @@ describe "Creating a project" do
       click_link_or_button "Create Project"
       current_path.should == project_path(project)
       page.should have_content "This project already exists. You can contribute to it here!"
->>>>>>> 39f86bd793e8e6f314a6880c7889bdd126b4f3ac
     end
   end
 
