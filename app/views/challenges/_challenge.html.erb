@@ -8,7 +8,7 @@
   <%= f.label :amount, "Amount" %>
   <%= f.text_field :amount %>
 
-  <%= f.hidden_field :project_id, :value => @project_id  %>
+  <%= f.hidden_field :project_id, :value => @project.id  %>
 
   <%= f.submit %>
 <% end %>
