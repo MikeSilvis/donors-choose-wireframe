@@ -1,28 +1,8 @@
-<div class="container">
-  <div class="row" id="project-heading-row">
-    <div id="project-photo" class="threecol">
-      <%= image_tag @project.image_url %>
-    </div>
-    <div class="ninecol last">
-      <h1><span class="highlight"><%= link_to @project.title, @project.proposal_url %></span></h1>
-      <br>
-      <h3><%= @project.school_name %></h3>
-      <h3><%= @project.city + ", " + @project.state_abbr %></h3>
-      <h3>Donors: 22</h3>
-    </div>
-  </div>
+<%= @project.title %>
 
-  <div class="row" id="progress-box">
-    <div class="fourcol">
-      <h1>25 Days Left</h1>
-    </div>
-    <div class="eightcol last">
-      <div id="progress-bar">
-        <div id="succeeded-bar">
-        </div>
-      </div>
-    </div>
-  </div>
+<% @messages.each do |message| %>
+  <div class="message"><%= message.name %>: <%= message.body %></div>
+<% end %>
 
   <div class="row">
     <div class="fourcol" id="missions">
@@ -51,5 +31,11 @@
     </div>
   </div>
 </div>
+
+<%= form_for [@project, @new_message] do |f| %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :body, placeholder: "Message" %>
+  <%= f.submit %>
+<% end %>
 
 <%= link_to "Create New Challenge", new_project_challenge_path(:project_id => @project.id) %>
