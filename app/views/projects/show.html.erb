@@ -11,36 +11,45 @@
 <% end %>
 <div class="container">
 
-  <div class="row feed-row">
-    <div class="challenges-list fourcol">
-      <h1>Open Challenges</h1>
-    </div>
+  <div class="row">
+    <div class="featured-challenge sixcol">
+      <h1>Featured Challenge</h1>
+      <div class="challenge">
+        <div class="row any-width">
+          <div class="profile-pic twocol">
+            <img src="https://si0.twimg.com/profile_images/1373765588/Verdi_reasonably_small.jpg">
+          </div>
+          <div class="challenge-details tencol last">
+            <img class="challenge-media" src="http://goosenationlax.files.wordpress.com/2012/03/0000008565-photo-1.jpg">
 
-    <div class="eightcol last">
-      <div id="feed">
-        <h1>Project Activity</h1>
-        <div id="feed-entries">
-
-          <div class="feed-entry challenge-opening">
-            <div class="feed-entry-row row any-width">
-              <h2>Open Challenge:</h2>
-              <img class="profile-pic threecol" src="https://si0.twimg.com/profile_images/1373765588/Verdi_reasonably_small.jpg">
-              <div class="challenge-details sixcol">
+            <div class="row any-width">
+              <div class="challenge-description eightcol">
+                <span class="user-name"><%= link_to "Michael Verdi", "#" %></span>
                 <div>
-                  <span class="user-name"><%= link_to "Michael Verdi", "#" %></span>
-                  <div>
-                    <span class="challenge-will">WILL:</span>
-                    <span class="challenge-action">grow a gnarly 'stache</span>
-                  </div>
+                  <span class="challenge-will">WILL:</span>
+                  <span class="challenge-action">grow a gnarly 'stache</span>
                 </div>
                 <div>
                   <span class="challenge-if">IF:</span><span class="challenge-condition">the project reaches $400</span>
                 </div>
               </div>
-              <div class="challenge-progress threecol last">
-                <span>$84 to meet this challenge</span>
+              <div class="challenge-progress fourcol last">
+                <p class="dollars-left">$84</p>
+                <p>To Go</p>
               </div>
             </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="sixcol last">
+      <div id="feed">
+        <h1>Project Activity</h1>
+        <div id="feed-entries">
+          <div class="feed-entry">
+            <p>A message here</p>
           </div>
         </div>
       </div>

@@ -1,19 +1,11 @@
 @import "colors";
 .feed-entry {
-  background: $feed-entry-box;
-  font-size: 1.1em;
-  padding: 16px;
-  margin: 16px;
-  border-radius: 16px;
-  @include box-shadow(0 0 16px 1px $shadow);
+  background: $orange;
 }
 
 img.profile-pic {
   display: inline;
   max-width: 64px;
-}
-.challenge-details {
-  display: inline;
 }
 
 .challenge-will, .challenge-if  {
@@ -31,4 +23,14 @@ img.profile-pic {
 .project-heading-row {
   margin-top: 32px;
   margin-bottom: 32px;
+}
+
+.challenge {
+  background: $lightgrey;
+  padding: 16px;
+  .dollars-left {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
 }
