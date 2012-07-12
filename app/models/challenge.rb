@@ -9,7 +9,7 @@ class Challenge < ActiveRecord::Base
   validate :amount_versus_donors_choose_fund, :on => :create
 
   def amount_versus_donors_choose_fund
-    if self.project.cost_to_complete.to_i < self.amount
+    if self.amount && self.project.cost_to_complete.to_i < self.amount
       errors.add(:amount, "Amount must be less than the cost to complete")
     end
   end
