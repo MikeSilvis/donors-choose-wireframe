@@ -7,7 +7,6 @@ class ChallengesController < ApplicationController
   def create
     @challenge = Challenge.new(params[:challenge])
     if @challenge.save
-      # TODO: is this n+1?
       redirect_to project_path(@challenge.project_id)
       flash[:notice] = "Your challenge has been created"
     else
