@@ -44,4 +44,18 @@ describe "Creating a project" do
     end
   end
 
+  context "Viewing a project" do
+    let(:project) { FactoryGirl.create(:project) }
+
+    before(:each) { visit project_path(project) }
+
+    it "shows the basic details for the project" do
+      page.should have_image(project.image_url)
+      page.should have_content(project.city)
+      page.should have_content(project.state_abbr)
+      page.should have_content(project.school_name)
+    end
+
+  end
+
 end
