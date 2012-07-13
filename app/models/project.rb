@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+  has_many :messages
   # attr_accessible :title, :body
 
   def create_from_donors_choose_url(url)

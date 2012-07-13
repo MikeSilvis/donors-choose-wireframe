@@ -1,3 +1,14 @@
+<%= @project.title %>
+
+<% @messages.each do |message| %>
+  <div class="message"><%= message.name %>: <%= message.body %></div>
+<% end %>
+
+<%= form_for [@project, @new_message] do |f| %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :body, placeholder: "Message" %>
+  <%= f.submit %>
+<% end %>
 <div class="container">
 
   <div class="row">
