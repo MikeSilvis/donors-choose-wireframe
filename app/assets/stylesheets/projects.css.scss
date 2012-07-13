@@ -32,6 +32,42 @@ img.profile-pic {
     font-size: 32px;
     font-weight: bold;
   }
-
 }
+
+/*Feed*/
+#divider{
+  margin-top:50px;
+}
+
+#feed{
+  .title{
+    border:1px solid black;
+    font-size:25px;
+  }
+}
+
+.message{
+  border:1px solid black;
+  padding-top:15px;
+  padding-bottom:15px;
+  margin-left:0px;
+}
+
+.creator{
+  font-weight:bold;
+  border:1px solid red;
+  margin-right:5px;
+}
+
+.message_create{
+  border:1px solid blue;
+}
+
+/*#chat_input{
+  width:100%;
+  border:1px solid blue;
+  height:50px;
+}*/
+
+
 
