@@ -32,7 +32,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -93,7 +92,7 @@
       <div id="feed">
         <div class="feed title">Project Activity Feed</div>
           <% @messages.each do |message| %>
-            <div class="message"><span class="creator"><%= message.name %>:</span><%= message.body) %></div>
+            <div class="message"><span class="creator"><%= message.name %>:</span><%= message.body %></div>
           <% end %>
           <div class="message_form">
             <%= form_for [@project, @new_message] do |f| %>
@@ -107,11 +106,5 @@
     </div>
   </div>
 </div>
-
-<%= form_for [@project, @new_message] do |f| %>
-  <%= f.text_field :name, placeholder: "Name" %>
-  <%= f.text_field :body, placeholder: "Message" %>
-  <%= f.submit %>
-<% end %>
 
 <%= link_to "Create New Challenge", new_project_challenge_path(:project_id => @project.id) %>
