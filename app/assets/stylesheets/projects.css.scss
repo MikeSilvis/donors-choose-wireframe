@@ -32,5 +32,51 @@ img.profile-pic {
     font-size: 32px;
     font-weight: bold;
   }
-
 }
+
+/*Project Title*/
+
+#project_title{
+  font-size: 40px;
+  border-bottom:1px solid $lightgrey;
+  margin-bottom:20px;
+}
+
+/*Feed*/
+#divider{
+  margin-top:50px;
+}
+
+#feed{
+  .title{
+    border:1px solid black;
+    font-size:25px;
+  }
+}
+
+.message{
+  border-bottom:1px solid $lightgrey;
+  padding-top:15px;
+  padding-bottom:15px;
+  margin-left:0px;
+}
+
+.creator{
+  font-weight:bold;
+  border:1px solid red;
+  margin-right:5px;
+}
+
+.message_form{
+  border:1px solid $whale;
+  height:60px;
+  padding-top:35px;
+  background-color: $slate;
+}
+
+/*#chat_input{
+  width:100%;
+  border:1px solid blue;
+  height:50px;
+}*/
+

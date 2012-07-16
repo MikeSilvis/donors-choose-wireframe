@@ -1,11 +1,9 @@
-<%= @project.title %>
-
-<% @messages.each do |message| %>
-  <div class="message"><%= message.name %>: <%= message.body %></div>
-<% end %>
-
 <div class="container">
-
+  <div class="row">
+    <div class="twelvecol">
+      <div id="project_title"><%= @project.title %></div>
+    </div>
+  </div>
   <div class="row">
     <div class="sixcol">
       <h1>Featured Challenge</h1>
@@ -34,7 +32,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -70,10 +67,10 @@
         </div>
       </div>
     </div>
-
   </div>
 
   <div class="row">
+    <div id="divider"></div>
     <div class="threecol project-details">
       <div id="project-photo">
         <%= image_tag @project.image_url %>
@@ -92,16 +89,22 @@
       <h3>Donors: 22</h3>
     </div>
     <div class="ninecol last">
-      <h1>Project Activity Feed</h1>
-
+      <div id="feed">
+        <div class="feed title">Project Activity Feed</div>
+          <% @messages.each do |message| %>
+            <div class="message"><span class="creator"><%= message.name %>:</span><%= message.body %></div>
+          <% end %>
+          <div class="message_form">
+            <%= form_for [@project, @new_message] do |f| %>
+              <%= f.text_field :name, placeholder: "Name" %>
+              <%= f.text_field :body, placeholder: "Message" %>
+              <%= f.submit %>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-<%= form_for [@project, @new_message] do |f| %>
-  <%= f.text_field :name, placeholder: "Name" %>
-  <%= f.text_field :body, placeholder: "Message" %>
-  <%= f.submit %>
-<% end %>
 
 <%= link_to "Create New Challenge", new_project_challenge_path(:project_id => @project.id) %>
