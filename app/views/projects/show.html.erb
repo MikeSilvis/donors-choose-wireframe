@@ -1,16 +1,9 @@
-<%= @project.title %>
-
-<% @messages.each do |message| %>
-  <div class="message"><%= message.name %>: <%= message.body %></div>
-<% end %>
-
-<%= form_for [@project, @new_message] do |f| %>
-  <%= f.text_field :name, placeholder: "Name" %>
-  <%= f.text_field :body, placeholder: "Message" %>
-  <%= f.submit %>
-<% end %>
 <div class="container">
-
+  <div class="row">
+    <div class="twelvecol">
+      <div id="project_title"><%= @project.title %></div>
+    </div>
+  </div>
   <div class="row">
     <div class="sixcol">
       <h1>Featured Challenge</h1>
@@ -75,7 +68,6 @@
         </div>
       </div>
     </div>
-
   </div>
 
   <div class="row">
@@ -100,14 +92,16 @@
     <div class="ninecol last">
       <div id="feed">
         <div class="feed title">Project Activity Feed</div>
-          <div class="message"><span class="creator">Michael Verdi:</span>Some Cool Content</div>
-          <div class="message"><span class="creator">Michael Verdi:</span>Some Cool Content</div>
-          <div class="message"><span class="creator">Michael Verdi:</span>Some Cool Content</div>
-          <div class="message"><span class="creator">Michael Verdi:</span>Some Cool Content</div>
-          <%= form_tag "#", method: :post, class: "message_create" do %>
-            <%= text_field_tag "Message", nil, placeholder: "post a new message" %>
-            <%= submit_tag "Post" %>
+          <% @messages.each do |message| %>
+            <div class="message"><span class="creator"><%= message.name %>:</span><%= message.body) %></div>
           <% end %>
+          <div class="message_form">
+            <%= form_for [@project, @new_message] do |f| %>
+              <%= f.text_field :name, placeholder: "Name" %>
+              <%= f.text_field :body, placeholder: "Message" %>
+              <%= f.submit %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

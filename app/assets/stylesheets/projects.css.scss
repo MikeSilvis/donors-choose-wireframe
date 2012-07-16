@@ -34,6 +34,14 @@ img.profile-pic {
   }
 }
 
+/*Project Title*/
+
+#project_title{
+  font-size: 40px;
+  border-bottom:1px solid $lightgrey;
+  margin-bottom:20px;
+}
+
 /*Feed*/
 #divider{
   margin-top:50px;
@@ -47,7 +55,7 @@ img.profile-pic {
 }
 
 .message{
-  border:1px solid black;
+  border-bottom:1px solid $lightgrey;
   padding-top:15px;
   padding-bottom:15px;
   margin-left:0px;
@@ -59,8 +67,11 @@ img.profile-pic {
   margin-right:5px;
 }
 
-.message_create{
-  border:1px solid blue;
+.message_form{
+  border:1px solid $whale;
+  height:60px;
+  padding-top:35px;
+  background-color: $slate;
 }
 
 /*#chat_input{
