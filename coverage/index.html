@@ -23,7 +23,7 @@
       <img src="./assets/0.5.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-07-16T18:53:40-04:00">2012-07-16T18:53:40-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-07-16T19:01:45-04:00">2012-07-16T19:01:45-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -41,8 +41,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>15</b> files in total.
-    <b>111</b> relevant lines. 
-    <span class="green"><b>111</b> lines covered</span> and
+    <b>113</b> relevant lines. 
+    <span class="green"><b>113</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -142,11 +142,11 @@
       <tr>
         <td class="strong"><a href="#e36d6176c353b0a120bf4948da468d41520529f0" class="src_link" title="app/jobs/project_importer.rb">app/jobs/project_importer.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>23</td>
-        <td>15</td>
-        <td>15</td>
+        <td>26</td>
+        <td>17</td>
+        <td>17</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -584,15 +584,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.7
+         1.8
        </span>
     </span> hits/line)
   </h2>
   <a name="Ungrouped"></a>
   <div>
     <b>1</b> files in total.
-    <b>15</b> relevant lines. 
-    <span class="green"><b>15</b> lines covered</span> and
+    <b>17</b> relevant lines. 
+    <span class="green"><b>17</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -612,11 +612,11 @@
       <tr>
         <td class="strong"><a href="#e36d6176c353b0a120bf4948da468d41520529f0" class="src_link" title="app/jobs/project_importer.rb">app/jobs/project_importer.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>23</td>
-        <td>15</td>
-        <td>15</td>
+        <td>26</td>
+        <td>17</td>
+        <td>17</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>1.8</td>
       </tr>
       
     </tbody>
@@ -1293,8 +1293,8 @@
     <h3>app/jobs/project_importer.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>17</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1413,28 +1413,46 @@
         <li class="covered" data-hits="2" data-linenumber="19">
           <span class="hits">2</span>
           
-          <code class="ruby">  			challenge.update_attributes(:amount =&gt; new_goal)</code>
+          <code class="ruby">        if new_goal &lt; 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">  		end  		</code>
+          <code class="ruby">          new_goal = 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="22">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  			challenge.update_attributes(:amount =&gt; new_goal)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  		end  		</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
           <code class="ruby">  	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">end</code>

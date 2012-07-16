@@ -21,7 +21,7 @@ describe "Importing a project's attributes" do
     context 'when updating challenges for a project' do
       it "should update the amount of the challenge" do
         updated_challenge_info = ProjectImporter.perform
-        updated_challenge_info.first.challenges.first.amount.should == -12
+        updated_challenge_info.first.challenges.first.amount.should == 0
       end
     end
   end
