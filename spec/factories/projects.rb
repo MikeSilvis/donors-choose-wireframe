@@ -28,4 +28,12 @@ FactoryGirl.define do
     funding_status "needs funding"
     donors_choose_id "816943"
   end
+
+  factory :project_with_challenges, parent: :project do
+    after_create do |project, evaluator|
+      FactoryGirl.create(:challenge, project: project)
+      FactoryGirl.create(:challenge, project: project)
+      FactoryGirl.create(:challenge, project: project)
+    end
+  end
 end
