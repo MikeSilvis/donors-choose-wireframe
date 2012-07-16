@@ -12,12 +12,12 @@ class ProjectImporter
   end
 
   def self.update_challenge_goal(previous_cost, new_cost, project)
-  	if previous_cost != new_cost
+  	if previous_cost != new_cost 
   		adjustment_to_goal = previous_cost - new_cost
   		project.challenges.each do |challenge|
   			new_goal = challenge.amount - adjustment_to_goal
   			challenge.update_attributes(:amount => new_goal)
-  		end
+  		end  		
   	end
   end
 end
