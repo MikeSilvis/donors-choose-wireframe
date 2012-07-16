@@ -36,4 +36,14 @@ FactoryGirl.define do
       FactoryGirl.create(:challenge, project: project)
     end
   end
+
+  factory :project_with_the_works, parent: :project do
+    after_create do |project, evaluator|
+      FactoryGirl.create(:challenge, project: project, created_at: DateTime.now - 4)
+      FactoryGirl.create(:challenge, project: project, created_at: DateTime.now - 3)
+      project.challenges.first.mark_as_met
+      FactoryGirl.create(:message, project: project, created_at: DateTime.now - 2)
+      FactoryGirl.create(:message, project: project, created_at: DateTime.now - 1)
+    end
+  end
 end
