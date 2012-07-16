@@ -1,0 +1,18 @@
+<%= flash[:notice] %>
+<%= @challenge.title_of_challenge %>
+</br>
+<%= @challenge.name_of_challenger %>
+</br>
+<%= image_tag(@challenge.display_media) %>
+
+<h1>Finished Challenged?</h1>
+<h3>Submit Evidence Here</h3>
+<%= form_for [@project, @challenge, @challenge_evidence] do |f| %>
+  <%= f.label :image, "Prove It" %>
+  <br>
+  <%= f.text_field :image %>
+
+  <%= f.hidden_field :challenge_id, :value => @challenge.id  %>
+ <br>
+  <%= f.submit "Submit" %>
+<% end %>
