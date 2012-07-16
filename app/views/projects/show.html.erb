@@ -107,3 +107,11 @@
     </div>
   </div>
 </div>
+
+<%= form_for [@project, @new_message] do |f| %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :body, placeholder: "Message" %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Create New Challenge", new_project_challenge_path(:project_id => @project.id) %>

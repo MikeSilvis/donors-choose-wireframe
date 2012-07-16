@@ -1,0 +1,14 @@
+<%= form_for [@project, @challenge] do |f| %>
+  <%= f.label :name_of_challenger, "Name" %>
+  <%= f.text_field :name_of_challenger %>
+
+  <%= f.label :title_of_challenge, "Challenge" %>
+  <%= f.text_field :title_of_challenge %>
+
+  <%= f.label :amount, "Amount" %>
+  <%= f.text_field :amount %>
+
+  <%= f.hidden_field :project_id, :value => @project.id  %>
+
+  <%= f.submit %>
+<% end %>

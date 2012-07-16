@@ -26,7 +26,6 @@ class CreateProjects < ActiveRecord::Migration
       t.string :expiration_date
       t.string :funding_status
 
-
       t.timestamps
     end
   end
