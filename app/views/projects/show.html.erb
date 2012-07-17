@@ -17,10 +17,10 @@
               <%= image_tag(@challenges.first.display_media) %>
               <div class="row any-width">
                 <div class="challenge-description eightcol">
-                  <span class="user-name"><%= link_to @challenges.first.name_of_challenger, "#" %></span>
+                  <span class="user-name"><%= link_to @challenges.first.name, "#" %></span>
                   <div>
                     <span class="challenge-will">WILL:</span>
-                    <span class="challenge-action"><%= @challenges.first.title_of_challenge %></span>
+                    <span class="challenge-action"><%= @challenges.first.title %></span>
                   </div>
                   <div>
                     <span class="challenge-if">IF:</span><span class="challenge-condition">the project reaches $<%= @challenges.first.amount %></span>
