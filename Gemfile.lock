@@ -119,6 +119,7 @@ GEM
       net-ssh (>= 1.99.1)
     net-ssh (2.5.2)
     nokogiri (1.5.5)
+    pg (0.14.0)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -240,6 +241,7 @@ DEPENDENCIES
   high_voltage
   jquery-rails
   launchy
+  pg
   rails (= 3.2.6)
   redis-store
   resque (~> 1.20.0)
