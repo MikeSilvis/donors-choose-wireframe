@@ -5,7 +5,9 @@ gem 'bourbon', '~> 2.1.1'
 gem 'high_voltage'
 gem 'donors_choose', github: 'verdi327/donors_choose_gem'
 gem 'hashie'
-
+gem 'redis-store'
+gem 'resque', "~> 1.20.0", :require => 'resque/server'
+gem 'resque-scheduler', :require => 'resque_scheduler'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -11,7 +11,7 @@
     <div class="row header">
       <div class="twelvecol">
         <span class="brand">
-          <%= link_to "Donors Team 6", page_path("index"), id: "brand" %>
+          <%= link_to "Donors Challenge", root_path %>
         </span>
         <span class="nav">
           <a href="#">Michael Verdi</a> | <a href="#">Account</a> | <a href="#">Sign Out</a>
@@ -19,6 +19,17 @@
       </div>
     </div>
   </div> <!-- navbar -->
+
+  <div class="flash-container container">
+    <div class="row flash-row">
+     <% if flash[:notice] %>
+        <p class="notice"><%= flash[:notice] %></p>
+      <% end %>
+      <% if flash[:error] %>
+        <p class="error"><%= flash[:error] %></p>
+      <% end %>
+    </div>
+  </div>
 
 <%= yield %>
 

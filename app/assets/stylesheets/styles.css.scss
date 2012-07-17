@@ -4,9 +4,21 @@ body {
   font-family: 'Lato', serif;
 }
 
+/*CUSTOM GRID STUFF*/
 .custom-container {
   width: 100%;
 }
+
+.center-col {
+  width: 1040px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.row.any-width {
+  min-width: 0px;
+}
+
 
 #navbar {
   background: $navbar;
@@ -28,12 +40,6 @@ body {
       border-bottom: 1px dashed $cream;
     }
   }
-}
-
-.center-col {
-  width: 1040px;
-  margin: 0 auto;
-  position: relative;
 }
 
 

@@ -1,3 +1,82 @@
-// Place all the styles related to the projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "colors";
+.feed-entry {
+  background: $orange;
+}
+
+img.profile-pic {
+  display: inline;
+  max-width: 64px;
+}
+
+.challenge-will, .challenge-if  {
+  color: $orange;
+  border-bottom: 1px dashed $orange;
+  font-weight: bold;
+  font-size: 1em;
+  margin-right: 4px;
+}
+
+.challenge-progress {
+  font-size: 1.3em;
+}
+
+.project-heading-row {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.featured-challenge {
+  background: $lightgrey;
+  padding: 16px;
+  .dollars-left {
+    font-size: 32px;
+    font-weight: bold;
+  }
+}
+
+/*Project Title*/
+
+#project_title{
+  font-size: 40px;
+  border-bottom:1px solid $lightgrey;
+  margin-bottom:20px;
+}
+
+/*Feed*/
+#divider{
+  margin-top:50px;
+}
+
+#feed{
+  .title{
+    border:1px solid black;
+    font-size:25px;
+  }
+}
+
+.message{
+  border-bottom:1px solid $lightgrey;
+  padding-top:15px;
+  padding-bottom:15px;
+  margin-left:0px;
+}
+
+.creator{
+  font-weight:bold;
+  border:1px solid red;
+  margin-right:5px;
+}
+
+.message_form{
+  border:1px solid $whale;
+  height:60px;
+  padding-top:35px;
+  background-color: $slate;
+}
+
+/*#chat_input{
+  width:100%;
+  border:1px solid blue;
+  height:50px;
+}*/
+

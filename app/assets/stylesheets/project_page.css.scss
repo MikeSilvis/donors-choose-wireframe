@@ -38,8 +38,8 @@ $radius: 16px;
 #progress-bar {
   border-radius: $radius;
   background-color: $lightgrey;
-  width: 400px;
-  height: 40px;
+  width: 80%;
+  height: 20px;
 }
 
 #succeeded-bar {
@@ -47,8 +47,8 @@ $radius: 16px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   background-color: $green;
-  width: 300px;
-  height: 40px;
+  width: 60%;
+  height: 20px;
 }
 
 
