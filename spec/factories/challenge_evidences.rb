@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :challenge_evidence do
-    project_id 1
+    challenge_id 1
     image "MyString"
   end
 end

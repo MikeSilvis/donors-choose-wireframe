@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Challenge do
-  describe "#create" do
+  context "#create" do
     before(:each) { Challenge.any_instance.stub(:amount_versus_donors_choose_fund) }
 
     it "creates a corresponding challenge created event after save" do

@@ -3,9 +3,9 @@ class Event < ActiveRecord::Base
 
  belongs_to :project
 
- def self.create_for(object, event_type)
+ def self.create_for(project_id, object, event_type)
    event = Event.new
-   event.project = object.project
+   event.project_id = project_id
    event.event_type = event_type_for(object, event_type)
    event.save
  end

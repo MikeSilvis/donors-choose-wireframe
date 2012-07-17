@@ -1,11 +1,11 @@
 class ChallengeObserver < ActiveRecord::Observer
-  def after_create(model)
-    Event.create_for(model, :created)
+  def after_create(challenge)
+    Event.create_for(challenge.project_id, challenge, :created)
   end
 
-  def around_save(model)
-    if model.changed_attributes.keys.include?("met") && model.met
-      Event.create_for(model, :met)
+  def around_save(challenge)
+    if challenge.changed_attributes.keys.include?("met") && challenge.met
+      Event.create_for(challenge.project_id, challenge, :met)
     end
     yield
   end
