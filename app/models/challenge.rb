@@ -3,8 +3,6 @@ class Challenge < ActiveRecord::Base
                   :project_id, :display_media
 
   belongs_to :project
-  has_one :challenge_creation_event
-  has_one :challenge_met_event
   has_many :challenge_evidence
 
   validates_presence_of     :name, :title, :display_media
@@ -14,15 +12,9 @@ class Challenge < ActiveRecord::Base
   after_create :create_challenge_creation_event
 
   def create_challenge_creation_event
-    event = ChallengeCreationEvent.new
-    event.challenge_id = self.id
-    event.save
   end
 
   def mark_as_met
-    event = ChallengeMetEvent.new
-    event.challenge_id = self.id
-    event.save
   end
 
   private
