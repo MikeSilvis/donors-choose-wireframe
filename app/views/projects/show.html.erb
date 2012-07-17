@@ -12,20 +12,22 @@
           <div class="profile-pic twocol">
             <img src="https://si0.twimg.com/profile_images/1373765588/Verdi_reasonably_small.jpg">
           </div>
-          <div class="challenge-details tencol last">
-            <%= image_tag(@challenges.first.display_media) %>
-            <div class="row any-width">
-              <div class="challenge-description eightcol">
-                <span class="user-name"><%= link_to @challenges.first.name_of_challenger, "#" %></span>
-                <div>
-                  <span class="challenge-will">WILL:</span>
-                  <span class="challenge-action"><%= @challenges.first.title_of_challenge %></span>
+          <% if @challenges.first %>
+            <div class="challenge-details tencol last">
+              <%= image_tag(@challenges.first.display_media) %>
+              <div class="row any-width">
+                <div class="challenge-description eightcol">
+                  <span class="user-name"><%= link_to @challenges.first.name_of_challenger, "#" %></span>
+                  <div>
+                    <span class="challenge-will">WILL:</span>
+                    <span class="challenge-action"><%= @challenges.first.title_of_challenge %></span>
+                  </div>
+                  <div>
+                    <span class="challenge-if">IF:</span><span class="challenge-condition">the project reaches $<%= @challenges.first.amount %></span>
+                    <p><%= link_to "View Details", project_challenge_path(@challenges.first) %><p>
+                  </div>
                 </div>
-                <div>
-                  <span class="challenge-if">IF:</span><span class="challenge-condition">the project reaches $<%= @challenges.first.amount %></span>
-                  <p><%= link_to "View Details", project_challenge_path(@challenges.first) %><p>
-                </div>
-              </div>
+              <% end %>
               <div class="challenge-progress fourcol last">
                 <p class="dollars-left">$84</p>
                 <p>To Go</p>
