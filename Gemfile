@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
-gem 'sqlite3'
 gem 'bourbon', '~> 2.1.1'
 gem 'high_voltage'
 gem 'donors_choose', github: 'verdi327/donors_choose_gem'
@@ -16,6 +15,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :production do
+  gem 'pg'
+end
+
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'capybara'
@@ -25,6 +28,9 @@ group :development, :test do
   gem 'faker'
   gem 'simplecov'
   gem 'launchy'
+  gem 'vcr'
+  gem 'fakeweb'
+  gem 'sqlite3'
 end
 
 gem 'jquery-rails'
