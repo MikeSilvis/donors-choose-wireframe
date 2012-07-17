@@ -1,4 +1,4 @@
-class Project < ActiveRecord::Base
+class Project < ActiveRecord::Base  
   has_many :challenges
   has_many :messages
 

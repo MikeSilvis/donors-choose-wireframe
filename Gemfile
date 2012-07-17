@@ -9,7 +9,9 @@ gem 'hashie'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog'
-
+gem 'redis-store'
+gem 'resque', "~> 1.20.0", :require => 'resque/server'
+gem 'resque-scheduler', :require => 'resque_scheduler'
 
 # Gems used only for assets and not required
 # in production environments by default.
