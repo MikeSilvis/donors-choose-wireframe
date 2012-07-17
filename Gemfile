@@ -6,6 +6,9 @@ gem 'bourbon', '~> 2.1.1'
 gem 'high_voltage'
 gem 'donors_choose', github: 'verdi327/donors_choose_gem'
 gem 'hashie'
+gem 'carrierwave'
+gem 'rmagick'
+gem 'fog'
 
 
 # Gems used only for assets and not required

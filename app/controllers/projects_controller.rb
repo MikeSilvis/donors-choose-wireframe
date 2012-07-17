@@ -21,5 +21,6 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @messages = @project.messages
     @new_message = Message.new
+    @challenges = Challenge.where("project_id = ?", params[:id])
   end
 end

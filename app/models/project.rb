@@ -10,4 +10,8 @@ class Project < ActiveRecord::Base
     end
     save
   end
+
+  # def to_param
+  #   "#{self.id}-#{self.title.parameterize}"
+  # end
 end

@@ -1,0 +1,2 @@
+module ChallengeEvidencesHelper
+end

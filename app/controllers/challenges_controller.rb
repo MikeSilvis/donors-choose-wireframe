@@ -16,6 +16,12 @@ class ChallengesController < ApplicationController
     end
   end
 
+  def show
+    @challenge = Challenge.find(params[:id])
+    @challenge_evidence = @challenge.challenge_evidence.new
+    @challenge_evidences = ChallengeEvidence.where("challenge_id = ?", @challenge.id)
+  end
+
   def find_project
     @project = Project.find(params[:project_id])
   end
