@@ -5,14 +5,12 @@
 </br>
 <%= image_tag(@challenge.display_media) %>
 
-<h1>Finished Challenged?</h1>
-<h3>Submit Evidence Here</h3>
-<%= form_for [@project, @challenge, @challenge_evidence] do |f| %>
-  <%= f.label :image, "Prove It" %>
-  <br>
-  <%= f.text_field :image %>
+<%= render partial: 'challenge_evidences/form' %>
 
-  <%= f.hidden_field :challenge_id, :value => @challenge.id  %>
- <br>
-  <%= f.submit "Submit" %>
+</br>
+<h1>Evidence So Far</h1>
+<% unless @challenge_evidences.blank? %>
+  <% @challenge_evidences.each do |evidence| %>
+    <%= image_tag(evidence.image_url(:thumb).to_s) %>
+  <% end %>
 <% end %>

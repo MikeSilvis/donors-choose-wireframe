@@ -23,3 +23,6 @@
 
 # Ignore Coverage
 coverage/*
+
+#Ignore Secret Keys
+/initializers/amazon_s3.rb

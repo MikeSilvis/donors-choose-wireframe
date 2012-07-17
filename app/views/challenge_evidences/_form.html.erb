@@ -1,0 +1,12 @@
+<h1>Finished Challenged?</h1>
+<h3>Submit Evidence Here</h3>
+<%= form_for [@project, @challenge, @challenge_evidence] do |f| %>
+  <%= f.hidden_field :challenge_id, :value => @challenge.id  %>
+  <%= f.label :image, "Prove It" %>
+  <br>
+  <%= f.file_field :image %>
+ <br>
+  <%= f.label :remote_image_url, "or image URL" %><br />
+  <%= f.text_field :remote_image_url %></br>
+  <%= f.submit "Submit" %>
+<% end %>
