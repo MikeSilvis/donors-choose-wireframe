@@ -1,5 +1,5 @@
 class Challenge < ActiveRecord::Base
-  attr_accessible :name_of_challenger, :title_of_challenge, :amount,
+  attr_accessible :name, :title, :amount,
                   :project_id, :display_media
 
   belongs_to :project
@@ -7,7 +7,7 @@ class Challenge < ActiveRecord::Base
   has_one :challenge_met_event
   has_many :challenge_evidence
 
-  validates_presence_of     :name_of_challenger, :title_of_challenge, :display_media
+  validates_presence_of     :name, :title, :display_media
   validates_numericality_of :amount, :greater_than => 0
   validate                  :amount_versus_donors_choose_fund, :on => :create
 
