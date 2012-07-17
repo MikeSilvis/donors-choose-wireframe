@@ -15,6 +15,8 @@ class Challenge < ActiveRecord::Base
   end
 
   def mark_as_met
+    self.met = true
+    save
   end
 
   private
