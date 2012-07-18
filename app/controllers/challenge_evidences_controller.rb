@@ -9,7 +9,7 @@ class ChallengeEvidencesController < ApplicationController
     @challenge_evidence = ChallengeEvidence.new(params[:challenge_evidence])
     if @challenge_evidence.save
       flash[:notice] = "Your evidence has been logged"
-      redirect_to project_challenge_path(@challenge.project, @challenge)
+      redirect_to project_challenge_path(project, challenge)
     else
       render :new
       flash[:error] = "Your evidence could not be saved"
@@ -17,11 +17,11 @@ class ChallengeEvidencesController < ApplicationController
   end
 
   private
-    def find_challenge
-      @challenge = Challenge.find(params[:challenge_id])
+    def challenge
+      @challenge ||= Challenge.find(params[:challenge_id])
     end
 
-    def find_project
-      @project = Project.find(@challenge.project_id)
+    def project
+      @project ||= challenge.project
     end
 end

@@ -31,11 +31,10 @@ describe "Creating a new challenge" do
     end
 
     it "should allow me to create the new challenge" do
-      pending
       fill_in("Name", :with => "Darrell Rivera")
       fill_in("Challenge", :with => "I will shave my head")
       fill_in("Amount", :with => 5)
-      fill_in("Image", :with => "http://www.flushdoggy.com/wordpress/wp-content/uploads/2012/05/male-dog.jpg")
+      fill_in("Photo or Video", :with => "http://www.flushdoggy.com/wordpress/wp-content/uploads/2012/05/male-dog.jpg")
       click_button("Create Challenge")
       page.should have_content("Your challenge has been created")
     end
