@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120718005413) do
+ActiveRecord::Schema.define(:version => 20120718135943) do
 
   create_table "challenge_creation_events", :force => true do |t|
     t.integer  "challenge_id"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20120718005413) do
     t.datetime "updated_at", :null => false
     t.string   "media_type"
     t.string   "url"
+    t.string   "video_html"
   end
 
   create_table "projects", :force => true do |t|
