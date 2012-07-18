@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120718135943) do
+ActiveRecord::Schema.define(:version => 20120718203349) do
 
   create_table "challenge_creation_events", :force => true do |t|
     t.integer  "challenge_id"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(:version => 20120718135943) do
     t.string   "image"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.string   "external_url"
+    t.string   "display_html"
   end
 
   create_table "challenge_met_events", :force => true do |t|
