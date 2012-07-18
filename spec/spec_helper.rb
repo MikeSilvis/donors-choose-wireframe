@@ -32,3 +32,14 @@ module Capybara
   end
 end
 
+class UploadStubber
+  def self.build_upload_evidence(challenge)
+    evidence = FactoryGirl.build(:challenge_evidence, challenge: challenge)
+    image = ImageUploader.new
+    image.stub(:file).and_return(true)
+    image.stub(:url).and_return("http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Salmo_trutta.jpg/220px-Salmo_trutta.jpg")
+    evidence.stub(:image).and_return(image)
+    evidence.save
+    evidence
+  end
+end

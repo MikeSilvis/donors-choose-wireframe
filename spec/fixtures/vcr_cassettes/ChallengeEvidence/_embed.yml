@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.embed.ly/1/oembed?urls=http%3A%2F%2Fwww.makems.com%2Fgraphic%2Fpuppies-2.jpg&key=9e226384957f11e1bf614040aae4d8c9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Mozilla/5.0 (compatible; embedly-ruby/1.5.6;)
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Jul 2012 20:38:06 GMT
+      content-type:
+      - application/json
+      content-length:
+      - '188'
+      connection:
+      - keep-alive
+      x-embedly-from-cache:
+      - !binary ""
+      access-control-max-age:
+      - '86400'
+      server:
+      - TornadoServer/2.1
+      etag:
+      - ! '"9bf02d7ab1a21bbf50189f9693cb2eea7aa7050c"'
+      x-embedly-process-time:
+      - '936'
+      access-control-allow-origin:
+      - ! '*'
+      access-control-allow-methods:
+      - GET, OPTIONS
+      x-embedly-host:
+      - api18
+    body:
+      encoding: US-ASCII
+      string: ! '[{"provider_url": "http://www.makems.com", "url": "http://www.makems.com/graphic/puppies-2.jpg",
+        "height": 375, "width": 500, "version": "1.0", "provider_name": "Makems",
+        "type": "photo"}]'
+    http_version: '1.1'
+  recorded_at: Wed, 18 Jul 2012 20:38:06 GMT
+- request:
+    method: get
+    uri: http://api.embed.ly/1/oembed?urls=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DH0Gdf285hfA%26feature%3Dg-logo-xit&key=9e226384957f11e1bf614040aae4d8c9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Mozilla/5.0 (compatible; embedly-ruby/1.5.6;)
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        V2VkLCAxOCBKdWwgMjAxMiAyMToyMTo0MCBHTVQ=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbg==
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "eC1lbWJlZGx5LWZyb20tY2FjaGU=":
+      - !binary |-
+        MA==
+      !binary "YWNjZXNzLWNvbnRyb2wtbWF4LWFnZQ==":
+      - !binary |-
+        ODY0MDA=
+      !binary "c2VydmVy":
+      - !binary |-
+        VG9ybmFkb1NlcnZlci8yLjE=
+      !binary "ZXRhZw==":
+      - !binary |-
+        IjQzZjNkMThkMDFkMTM2NmExNGRkMGE4ZGM0ODFjNDM5MmRkODk5ZTki
+      !binary "eC1lbWJlZGx5LXByb2Nlc3MtdGltZQ==":
+      - !binary |-
+        NDE=
+      !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctb3JpZ2lu":
+      - !binary |-
+        Kg==
+      !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctbWV0aG9kcw==":
+      - !binary |-
+        R0VULCBPUFRJT05T
+      !binary "eC1lbWJlZGx5LWhvc3Q=":
+      - !binary |-
+        YXBpMDk=
+      !binary "Y29udGVudC1lbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA31TXW/TMBT9KyYP8EKTdh9lq9ZNCDF4GDCpFRNiaHKSm9rU
+        sY19nagg/jvXTlttldhbrp1z7jk+937/k1lnOlmDewhOZTOWCUQ7K4q+7/ON
+        CRhKyCvTFtlrltXgKyctSqPjn4tQxroEhoatASwLlvUSBWs3LHIaz7iuWSWg
+        WjPiYiiAKanXnpWgTB9xHvmGST1cGWNfsGuj4h1xLHsA9DO2lYTEjeCSnHfc
+        Ipd6YblbK/jNFsjVOmKueQWlMes9KhpptocD1OIetiTKSiy/kqoOSIsD3j5B
+        xp6VyLErqqGj33UcseVoIaTDwWQLrhLkVnpgo53iA0zuLTWofUQlKfTnl4DO
+        sIXRKyoWCB1odkdeZDpYGstMkx7nzjhVP9H2OJ6ek8yrbn69mZ59NqOb6e1q
+        J0Ji0OBzbq0aogy+4KoMbdEa7elBK46j8fh41JoWNNK5rE/enJ+eTsbT8xg7
+        SlQQA/8kNVSONzhji+A62XHFbgBfeXarKMX3NmfH42jD8l6DY0f5OOKfH6yd
+        8o/jD3VzdHYqmrcRJLBN43ghG8dboLmqUczvs+nJ+D5jAuRKIJXH01h6V9H3
+        fyYX2hLq4hH9VePnk5cNcAwO5ibdE0nqUxpHu0BkkZbHQWyCUjTmAPryohjE
+        XEaBPKAw7kETKOo8GMhkIYmkSxJJZXJAFTmIjypCW2ou1cHeyUm+Qdmu0nx0
+        8rHuQvyqoeFBYf7TrlIye5Id+clZJO/A+e2SToYM9lu+0/vNhCXtdmLZ2GQh
+        rexT2gMLW8/PBxo8uMP9zP7++Af0Qo71awQAAA==
+    http_version: !binary |-
+      MS4x
+  recorded_at: Wed, 18 Jul 2012 21:21:41 GMT
+recorded_with: VCR 2.2.3

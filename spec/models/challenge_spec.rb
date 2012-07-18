@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Challenge do
   context "#create" do
-    before(:each) { Challenge.any_instance.stub(:amount_versus_donors_choose_fund) }
+    before { Challenge.any_instance.stub(:amount_versus_donors_choose_fund) }
 
     it "creates a corresponding challenge created event after save" do
       expect{ FactoryGirl.create(:challenge) }.to change{Event.count}.by(1)

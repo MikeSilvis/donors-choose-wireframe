@@ -1,5 +1,4 @@
 class ChallengeEvidencesController < ApplicationController
-  before_filter :find_challenge, :find_project
 
   def new
     @challenge_evidence = ChallengeEvidence.new
