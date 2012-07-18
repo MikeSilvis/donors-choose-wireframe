@@ -15,19 +15,20 @@ describe "Creating a project" do
       fill_in "project_proposal_url", with: "http://www.donorschoose.org/project/a-library-for-all-to-enjoy/793053/"
       click_link_or_button "Create Project"
       project = Project.find_by_donors_choose_id("793053")
-      current_path.should == project_path(project)
-      page.should have_content("A Library For All To Enjoy")
+      current_path.should == new_project_challenge_path(project)
+      page.should have_content("Thanks for adopting this project! To kick this party off right, create a new challenge!")
     end
   end
 
   context "When a project is created for the first time" do
     use_vcr_cassette
-    before(:each) { visit root_path }
+    before { visit root_path }
 
     it "shows a message that the project has been created successfully" do
       fill_in "project_proposal_url", with: "http://www.donorschoose.org/project/a-library-for-all-to-enjoy/793053/"
       click_link_or_button "Create Project"
-      page.should have_content "Thanks for adopting this project! Use this dashboard to manage your efforts!"
+      current_path.should == new_project_challenge_path(Project.last)
+      page.should have_content "Thanks for adopting this project! To kick this party off right, create a new challenge!"
     end
   end
 
