@@ -11,23 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120717201249) do
-
-  create_table "challenge_creation_events", :force => true do |t|
-    t.integer  "challenge_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
+ActiveRecord::Schema.define(:version => 20120718135943) do
 
   create_table "challenge_evidences", :force => true do |t|
     t.integer  "challenge_id"
     t.string   "image"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
-  create_table "challenge_met_events", :force => true do |t|
-    t.integer  "challenge_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
@@ -57,6 +45,9 @@ ActiveRecord::Schema.define(:version => 20120717201249) do
     t.integer  "project_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "media_type"
+    t.string   "url"
+    t.string   "video_html"
   end
 
   create_table "projects", :force => true do |t|

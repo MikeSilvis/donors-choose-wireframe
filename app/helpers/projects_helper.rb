@@ -1,19 +1,24 @@
 module ProjectsHelper
-  # Need to work on this more
-  # LINK_REGEX = /http[s]?:\/\/(?:[a-z\-\d]+\.)+\S+\.(?:com|net|org)(?:\?.*)?/i
-  # IMAGE_REGEX = /http[s]?:\/\/(?:[a-z\-\d]+\.)+\S+\.(?:jpg|gif|png|jpeg)(?:\?.*)?/i
+  def format_message(message)
+    unless message.nil?
+      case message.media_type
+      when "video"
+        get_video(message)
+      when "link"
+        link_to(message.url, message.url, target: "_blank")
+      when "image"
+        image_tag(message.url)
+      else
+        message.body
+      end
+    end
+  end
 
-  # def display_media(message_body)
-  #   if message_body.scan(LINK_REGEX)
-  #     raise message_body.inspect
-  #     link = message_body.scan(LINK_REGEX)
-  #     link_to(link, link, target: "_blank")
-  #   elsif message_body.scan(IMAGE_REGEX) == ![]
-  #     raise 'boom'
-  #     image = message_body.scan(IMAGE_REGEX)
-  #     image_tag(message_body)
-  #   else
-  #     message_body
-  #   end
-  # end
+  def get_video(message)
+    if message.video_html
+      message.video_html.html_safe
+    else
+      message.embed.html_safe
+    end
+  end
 end
