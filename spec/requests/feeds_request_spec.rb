@@ -34,6 +34,7 @@ describe "Viewing a project feed" do
       before(:each) do
         challenge1.mark_as_met
         other_challenge.mark_as_met
+        visit project_path(project)
       end
 
       it "shows each event for the project" do
