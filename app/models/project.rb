@@ -1,6 +1,7 @@
 class Project < ActiveRecord::Base
   has_many :challenges
   has_many :messages
+  has_many :events
 
   def create_from_donors_choose_url(url)
     response = DonorsChooseApi::Project.find_by_id(self.donors_choose_id)

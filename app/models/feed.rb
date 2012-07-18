@@ -13,9 +13,8 @@ class Feed
 
   def items_for_project
     messages = project.messages
-    challenge_creation_events = project.challenges.map { |c| c.challenge_creation_event }
-    challenge_met_events = project.challenges.map { |c| c.challenge_met_event}
+    events = project.events
 
-    (messages + challenge_creation_events + challenge_met_events).compact.sort_by(&:created_at).reverse
+    (messages + events).sort_by(&:created_at).reverse
   end
 end
