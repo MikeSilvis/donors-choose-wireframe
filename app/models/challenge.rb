@@ -9,10 +9,8 @@ class Challenge < ActiveRecord::Base
   validates_numericality_of :amount, :greater_than => 0
   validate                  :amount_versus_donors_choose_fund, :on => :create
 
-  after_create :create_challenge_creation_event
-
-  def create_challenge_creation_event
-  end
+  # Sets the Challenge's `met` status to true to indicate it has been completed
+  # @return [Challenge] returns self after saving
 
   def mark_as_met
     self.met = true

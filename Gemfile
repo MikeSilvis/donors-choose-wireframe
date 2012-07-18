@@ -26,6 +26,8 @@ group :production do
 end
 
 group :development, :test do
+  gem 'redcarpet'
+  gem 'yard'
   gem 'rspec-rails', '~> 2.0'
   gem 'capybara'
   gem 'launchy'
