@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.embed.ly/1/oembed?urls=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DLiyQ8bvLzIE%26feature%3Dg-all-u&key=9e226384957f11e1bf614040aae4d8c9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Mozilla/5.0 (compatible; embedly-ruby/1.5.6;)
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Jul 2012 15:33:09 GMT
+      content-type:
+      - application/json
+      content-length:
+      - '766'
+      connection:
+      - keep-alive
+      x-embedly-from-cache:
+      - '0'
+      access-control-max-age:
+      - '86400'
+      server:
+      - TornadoServer/2.1
+      etag:
+      - ! '"97595ac412a79900d003ff3a36a6a9791f9aec0a"'
+      x-embedly-process-time:
+      - '995'
+      access-control-allow-origin:
+      - ! '*'
+      access-control-allow-methods:
+      - GET, OPTIONS
+      x-embedly-host:
+      - api18
+    body:
+      encoding: US-ASCII
+      string: ! '[{"provider_url": "http://www.youtube.com/", "description": "Let''s
+        admit it: the PHP community has lagged a bit, when it comes to advocating
+        test-driven development. This new series will fix that!", "title": "Test-Driven
+        Development in PHP: First Steps", "url": "http://www.youtube.com/watch?v=LiyQ8bvLzIE",
+        "html": "<iframe width=\"640\" height=\"360\" src=\"http://www.youtube.com/embed/LiyQ8bvLzIE?fs=1&feature=oembed\"
+        frameborder=\"0\" allowfullscreen></iframe>", "author_name": "nettutsplus",
+        "height": 360, "width": 640, "thumbnail_url": "http://i1.ytimg.com/vi/LiyQ8bvLzIE/hqdefault.jpg",
+        "thumbnail_width": 480, "version": "1.0", "provider_name": "YouTube", "type":
+        "video", "thumbnail_height": 360, "author_url": "http://www.youtube.com/user/nettutsplus"}]'
+    http_version: '1.1'
+  recorded_at: Wed, 18 Jul 2012 15:33:09 GMT
+recorded_with: VCR 2.2.3
