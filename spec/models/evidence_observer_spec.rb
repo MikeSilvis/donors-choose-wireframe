@@ -7,7 +7,8 @@ describe EvidenceObserver do
     let(:challenge) { FactoryGirl.create(:challenge, project: project) }
 
     it "creates an event for the evidence" do
-      evidence = FactoryGirl.create(:challenge_evidence, challenge: challenge)
+      evidence = FactoryGirl.create(:external_evidence, challenge: challenge)
+      #raise Event.last.event_type.inspect
       Event.last.event_type.should == "challenge_evidence_posted"
     end
   end
