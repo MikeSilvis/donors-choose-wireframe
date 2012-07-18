@@ -38,8 +38,7 @@ class Message < ActiveRecord::Base
   end
 
   def embed
-    unless embedly_response.html.nil?
-      embedly_response.html.html_safe
-    end
+    REDIS.set "message_id_#{self.id}", "#{embedly_response.html.html_safe}"
+    embedly_response.html.html_safe
   end
 end
