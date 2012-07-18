@@ -26,6 +26,7 @@ coverage/*
 
 #Ignore Secret Keys
 /initializers/amazon_s3.rb
+/initializers/embedly.rb
 
 #Ignore Public Uploads
 public/uploads/*
