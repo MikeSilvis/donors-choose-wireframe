@@ -31,7 +31,6 @@ describe "Creating a new challenge" do
     end
 
     it "should allow me to create the new challenge" do
-      #pending
       fill_in("Name", :with => "Darrell Rivera")
       fill_in("Challenge", :with => "I will shave my head")
       fill_in("Amount", :with => 5)
