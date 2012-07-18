@@ -96,8 +96,8 @@
     <div class="ninecol last">
       <div id="feed">
         <div class="feed title">Project Activity Feed</div>
-          <% @messages.each do |message| %>
-            <div class="message"><span class="creator"><%= message.name %>:</span><%= format_message(message) %></div>
+          <% @feed.items.each do |item| %>
+            <%= render item %>
           <% end %>
           <div class="message_form">
             <%= form_for [@project, @new_message] do |f| %>
