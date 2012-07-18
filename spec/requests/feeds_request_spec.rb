@@ -24,6 +24,29 @@ describe "Viewing a project feed" do
         page.should_not have_selector ".message"
       end
     end
+
+    context "a project has associated events" do
+      let!(:challenge1) { FactoryGirl.create(:challenge, project_id: project.id) }
+      let!(:challenge2) { FactoryGirl.create(:challenge, project_id: project.id) }
+      let(:other_project) { FactoryGirl.create(:project) }
+      let!(:other_challenge) { FactoryGirl.create(:challenge, project_id: other_project.id) }
+
+      before(:each) do
+        challenge1.mark_as_met
+        other_challenge.mark_as_met
+      end
+
+      it "shows each event for the project" do
+        page.should have_css(".challenge_created_event", text: challenge1.title)
+        page.should have_css(".challenge_created_event", text: challenge2.title)
+        page.should have_css(".challenge_met_event", text: challenge1.title)
+      end
+
+      it "does now show events for other projects" do
+        page.should_not have_css(".challenge_created_event", text: other_challenge.title)
+        page.should_not have_css(".challenge_met_event", text: other_challenge.title)
+      end
+    end
   end
 end
 

@@ -7,6 +7,7 @@ class Event < ActiveRecord::Base
    event = Event.new
    event.project_id = project_id
    event.event_type = event_type_for(object, event_type)
+   event.set
    event.save
  end
 
