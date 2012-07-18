@@ -13,7 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20120718135943) do
 
-
   create_table "challenge_creation_events", :force => true do |t|
     t.integer  "challenge_id"
     t.datetime "created_at",   :null => false
