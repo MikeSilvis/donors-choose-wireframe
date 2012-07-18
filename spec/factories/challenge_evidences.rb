@@ -5,11 +5,15 @@ FactoryGirl.define do
     challenge_id 1
   end
 
-  factory :image_evidence, parent: :challenge_evidence do
+  factory :upload_evidence, parent: :challenge_evidence do
     image "http://www.amazon-s3.some-image.jpg"
   end
 
-  factory :external_evidence, parent: :challenge_evidence do
+  factory :image_evidence, parent: :challenge_evidence do
     external_url "http://www.makems.com/graphic/puppies-2.jpg"
+  end
+
+  factory :video_evidence, parent: :challenge_evidence do
+    external_url "http://www.youtube.com/watch?v=H0Gdf285hfA&feature=g-logo-xit"
   end
 end
