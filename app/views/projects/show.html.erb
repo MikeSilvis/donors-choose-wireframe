@@ -1,7 +1,27 @@
 <div class="container">
   <div class="row">
-    <div class="twelvecol">
-      <div id="project_title"><%= @project.title %></div>
+    <div class="project">
+      <div class="project-info fourcol">
+        <h1 class="project-title"><span class="highlight"><%= link_to @project.title, @project.proposal_url %></span></h1>
+        <h3 class="school-name"><%= @project.school_name %></h3>
+      </div>
+      <div class="project-stats threecol">
+        <div class="donor-count">
+          <p class="stat-heading">Donors:</p>
+          <p>22</p>
+        </div>
+        <div class="days-left">
+          <p class="stat-heading">Days left:</p>
+          <p>16</p>
+        </div>
+      </div>
+      <div id="progress-box" class="fivecol last">
+        <div id="progress-bar">
+          <div id="succeeded-bar">
+          </div>
+        </div>
+      </div>
+      <br>
     </div>
   </div>
   <div class="row">
@@ -75,25 +95,6 @@
   </div>
 
   <div class="row">
-    <div id="divider"></div>
-    <div class="threecol project-details">
-      <div id="project-photo">
-        <%= image_tag @project.image_url %>
-      </div>
-      <div id="progress-box">
-        <h1>25 Days Left</h1>
-        <div id="progress-bar">
-          <div id="succeeded-bar">
-          </div>
-        </div>
-      </div>
-      <h1><span class="highlight"><%= link_to @project.title, @project.proposal_url %></span></h1>
-      <br>
-      <h3><%= @project.school_name %></h3>
-      <h3><%= @project.city + ", " + @project.state_abbr %></h3>
-      <h3>Donors: 22</h3>
-    </div>
-    <div class="ninecol last">
       <div id="feed">
         <div class="feed title">Project Activity Feed</div>
           <% @feed.items.each do |item| %>

@@ -1,3 +1,6 @@
+/*CSS FOR STATIC PROTOTYPE*/
+/*DONT CONFUSE WITH 'projects.css.scss'*/
+/*!!!!!!!!!!!!!!!!!!!*/
 @import "colors";
 
 span.highlight {
@@ -28,27 +31,6 @@ span.highlight {
   h3.amount {
     color: $red;
   }
-}
-
-#progress-box {
-  margin-bottom: 20px;
-}
-
-$radius: 16px;
-#progress-bar {
-  border-radius: $radius;
-  background-color: $lightgrey;
-  width: 80%;
-  height: 20px;
-}
-
-#succeeded-bar {
-  border-radius: $radius;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  background-color: $green;
-  width: 60%;
-  height: 20px;
 }
 
 
