@@ -22,40 +22,54 @@
     </div>
   </div>
   <div class="row">
-    <div class="sixcol">
+    <div class="sixcol challenges">
       <h1>Featured Challenge</h1>
       <div class="featured-challenge">
         <div class="row any-width">
-          <div class="profile-pic twocol">
-            <img src="https://si0.twimg.com/profile_images/1373765588/Verdi_reasonably_small.jpg">
-          </div>
-          <% if @challenges.first %>
-            <div class="challenge-details tencol last">
-              <%= image_tag(@challenges.first.display_media) %>
+          <% if @challenges.any? %>
+            <div class="challenge-details twelvecol">
               <div class="row any-width">
-                <div class="challenge-description eightcol">
+                <div class="twelvecol featured-challenge-image">
+                  <%= image_tag(@challenges.first.display_media) %>
+                </div>
+              </div>
+              <div class="row any-width">
+                <div class="challenger twocol">
+                  <div class="challenger-image">
+                    <img src="https://si0.twimg.com/profile_images/1373765588/Verdi_reasonably_small.jpg">
+                  </div>
                   <span class="user-name"><%= link_to @challenges.first.name, "#" %></span>
+                </div>
+
+                <div class="challenge-description sixcol">
                   <div>
                     <span class="challenge-will">WILL:</span>
                     <span class="challenge-action"><%= @challenges.first.title %></span>
                   </div>
                   <div>
                     <span class="challenge-if">IF:</span><span class="challenge-condition">the project reaches $<%= @challenges.first.amount %></span>
-                    <p><%= link_to "View Details", project_challenge_path(@challenges.first) %><p>
+                  </div>
+                  <%= link_to "Details", project_challenge_path(@challenges.first), class: "challenge-link" %>
+                </div>
+
+              <% end %>
+              <div class="fourcol last">
+                <div class="challenge-money">
+                  <div class="challenge-progress">
+                    <span class="dollars-left">$84</span>
+                    <p class="to-go">To Go</p>
+                  </div>
+                  <div class="challenge-donate">
+                    <%= link_to "Give", @challenges.first.project.fund_url, class: "give-link" %>
                   </div>
                 </div>
-              <% end %>
-              <div class="challenge-progress fourcol last">
-                <p class="dollars-left">$84</p>
-                <p>To Go</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="sixcol last">
+    <div class="last">
       <h1>Project Activity</h1>
       <div id="challenge-list">
         <div class="row any-width">
@@ -89,24 +103,25 @@
         </div>
       </div>
     </div>
+    </div>
+
+    <div id="feed" class="sixcol last">
+      <h1 class="feed-title">Project Activity Feed</h1>
+        <div class="message_form">
+          <%= form_for [@project, @new_message] do |f| %>
+            <%= f.text_field :name, placeholder: "Name" %>
+            <%= f.text_field :body, placeholder: "Message" %>
+            <%= f.submit %>
+          <% end %>
+        </div>
+        <% @feed.items.each do |item| %>
+          <%= render item %>
+        <% end %>
+      </div>
+    </div>
+
   </div>
 
   <div class="row">
-      <div id="feed">
-        <div class="feed title">Project Activity Feed</div>
-          <% @feed.items.each do |item| %>
-            <%= render item %>
-          <% end %>
-          <div class="message_form">
-            <%= form_for [@project, @new_message] do |f| %>
-              <%= f.text_field :name, placeholder: "Name" %>
-              <%= f.text_field :body, placeholder: "Message" %>
-              <%= f.submit %>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 

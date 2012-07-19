@@ -10,15 +10,12 @@ img.profile-pic {
 
 .challenge-will, .challenge-if  {
   color: $orange;
+  font-size: 20px;
   border-bottom: 1px dashed $orange;
   font-weight: bold;
-  font-size: 1em;
   margin-right: 4px;
 }
 
-.challenge-progress {
-  font-size: 1.3em;
-}
 
 .project-heading-row {
   margin-top: 32px;
@@ -26,11 +23,49 @@ img.profile-pic {
 }
 
 .featured-challenge {
+  img {
+    width: 100%;
+  }
   background: $lightgrey;
   padding: 16px;
-  .dollars-left {
-    font-size: 32px;
-    font-weight: bold;
+  .challenge-link {
+    font-size: 16px;
+  }
+  .challenge-money {
+    width: 92.5%;
+    color: white;
+    padding: 8px;
+    $c-m-radius: 8px;
+    background-color: $accent-background;
+    -webkit-border-bottom-right-radius: $c-m-radius;
+    -webkit-border-bottom-left-radius:  $c-m-radius;
+    -moz-border-radius-bottomright:     $c-m-radius;
+    -moz-border-radius-bottomleft:      $c-m-radius;
+    border-bottom-right-radius:         $c-m-radius;
+    border-bottom-left-radius:          $c-m-radius;
+    div {
+      display: inline-block;
+    }
+    .give-link {
+      @include button(simple, $give-button);
+      font-size: 18px;
+      padding: 8px 18px;
+    }
+    .challenge-donate {
+      margin-top: 10px;
+      vertical-align: top;
+    }
+    .challenge-progress {
+      padding: 4px;
+      font-size: 16px;
+      .dollars-left {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .to-go {
+        font-size: 14px;
+      }
+    }
   }
 }
 
@@ -100,12 +135,6 @@ img.profile-pic {
   margin-top:50px;
 }
 
-#feed{
-  .title{
-    border:1px solid black;
-    font-size:25px;
-  }
-}
 
 .message{
   border-bottom:1px solid $lightgrey;
@@ -116,13 +145,10 @@ img.profile-pic {
 
 .creator{
   font-weight:bold;
-  border:1px solid red;
   margin-right:5px;
 }
 
 .message_form{
-  border:1px solid $whale;
   height:60px;
   padding-top:35px;
-  background-color: $slate;
 }
