@@ -21,6 +21,7 @@
       </div>
     </div>
   </div>
+  <div class="row spacer"></div>
   <div class="row">
     <div class="sixcol challenges">
       <h1>Featured Challenge</h1>
@@ -30,7 +31,7 @@
             <div class="challenge-details twelvecol">
               <div class="row any-width">
                 <div class="twelvecol featured-challenge-image">
-                  <%= image_tag(@challenges.first.display_media) %>
+                  <%= link_to(image_tag(@challenges.first.display_media), project_challenge_path(@challenges.first))  %>
                 </div>
               </div>
               <div class="row any-width">
@@ -49,7 +50,6 @@
                   <div>
                     <span class="challenge-if">IF:</span><span class="challenge-condition">the project reaches $<%= @challenges.first.amount %></span>
                   </div>
-                  <%= link_to "Details", project_challenge_path(@challenges.first), class: "challenge-link" %>
                 </div>
 
               <% end %>
@@ -69,40 +69,46 @@
         </div>
       </div>
 
-    <div class="last">
-      <h1>Project Activity</h1>
-      <div id="challenge-list">
+      <div id="other-challenges">
         <div class="row any-width">
-          <div class="fourcol challenge-preview">
-            <p>A message here</p>
-            <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
-          </div>
-          <div class="fourcol challenge-preview">
-            <p>A message here</p>
-            <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
-          </div>
-          <div class="fourcol last challenge-preview">
-            <p>A message here</p>
-            <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
-          </div>
-          <div class="fourcol challenge-preview">
-            <p>A message here</p>
-            <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
-          </div>
-          <div class="fourcol challenge-preview">
-            <p>A message here</p>
-            <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
-          </div>
-          <div class="fourcol last challenge-preview">
-            <p>A message here</p>
-            <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
+          <div class="eightcol">
+            <h1>Other Challenges</h1>
           </div>
           <div class="fourcol last">
-            <%= link_to "Create New Challenge", new_project_challenge_path(:project_id => @project.id) %>
+            <div class="new-challenge-link">
+              <%= link_to "Create New Challenge", new_project_challenge_path(:project_id => @project.id) %>
+            </div>
+          </div>
+        </div>
+        <div id="challenge-list">
+          <div class="row any-width">
+            <div class="fourcol challenge-preview">
+              <p>A message here</p>
+              <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
+            </div>
+            <div class="fourcol challenge-preview">
+              <p>A message here</p>
+              <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
+            </div>
+            <div class="fourcol last challenge-preview">
+              <p>A message here</p>
+              <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
+            </div>
+            <div class="fourcol challenge-preview">
+              <p>A message here</p>
+              <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
+            </div>
+            <div class="fourcol challenge-preview">
+              <p>A message here</p>
+              <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
+            </div>
+            <div class="fourcol last challenge-preview">
+              <p>A message here</p>
+              <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
 
     <div id="feed" class="sixcol last">
