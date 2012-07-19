@@ -1,5 +1,6 @@
 require 'donors_choose'
 class Project < ActiveRecord::Base
+  attr_accessible :cost_to_complete
   has_many :challenges
   has_many :messages
   has_many :events
