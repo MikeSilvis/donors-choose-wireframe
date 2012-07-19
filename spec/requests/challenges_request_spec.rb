@@ -64,6 +64,7 @@ describe "Creating a new challenge" do
     before(:each) { visit project_challenge_path(project, challenge) }
 
     it "should display the evidence for the challenge" do
+      save_and_open_page
       page.should have_image(upload_evidence.image.url)
       page.should have_image(image_evidence.external_url)
     end
