@@ -3,7 +3,7 @@ class Challenge < ActiveRecord::Base
                   :project_id, :display_media
 
   belongs_to :project
-  has_many :challenge_evidence
+  has_many :challenge_evidences
 
   validates_presence_of     :name, :title, :display_media
   validates_numericality_of :amount, :greater_than => 0

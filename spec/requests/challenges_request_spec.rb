@@ -55,4 +55,17 @@ describe "Creating a new challenge" do
       page.should have_content("Creating a new challenge")
     end
   end
+
+  context "Viewing an existing challenge" do
+    use_vcr_cassette
+    let!(:challenge) { FactoryGirl.create(:challenge, project: project) }
+    let!(:upload_evidence) { UploadStubber.build_upload_evidence(challenge) }
+    let!(:image_evidence) { FactoryGirl.create(:image_evidence, challenge: challenge) }
+    before(:each) { visit project_challenge_path(project, challenge) }
+
+    it "should display the evidence for the challenge" do
+      page.should have_image(upload_evidence.image.url)
+      page.should have_image(image_evidence.external_url)
+    end
+  end
 end
