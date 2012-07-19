@@ -34,11 +34,12 @@ end
 
 class UploadStubber
   def self.build_upload_evidence(challenge)
-    evidence = FactoryGirl.build(:challenge_evidence, challenge: challenge)
+    evidence = FactoryGirl.build(:challenge_evidence, challenge_id: challenge.id)
     image = ImageUploader.new
     image.stub(:file).and_return(true)
     image.stub(:url).and_return("http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Salmo_trutta.jpg/220px-Salmo_trutta.jpg")
     evidence.stub(:image).and_return(image)
+    evidence.stub(:image_url).and_return("http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Salmo_trutta.jpg/220px-Salmo_trutta.jpg")
     evidence.save
     evidence
   end

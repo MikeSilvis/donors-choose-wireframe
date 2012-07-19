@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Wed, 18 Jul 2012 22:50:13 GMT
+      - Thu, 19 Jul 2012 13:45:32 GMT
       content-type:
       - application/json
       content-length:
@@ -35,18 +35,18 @@ http_interactions:
       etag:
       - ! '"9bf02d7ab1a21bbf50189f9693cb2eea7aa7050c"'
       x-embedly-process-time:
-      - '351'
+      - '836'
       access-control-allow-origin:
       - ! '*'
       access-control-allow-methods:
       - GET, OPTIONS
       x-embedly-host:
-      - api11
+      - api09
     body:
       encoding: US-ASCII
       string: ! '[{"provider_url": "http://www.makems.com", "url": "http://www.makems.com/graphic/puppies-2.jpg",
         "height": 375, "width": 500, "version": "1.0", "provider_name": "Makems",
         "type": "photo"}]'
     http_version: '1.1'
-  recorded_at: Wed, 18 Jul 2012 22:50:14 GMT
+  recorded_at: Thu, 19 Jul 2012 13:45:33 GMT
 recorded_with: VCR 2.2.3

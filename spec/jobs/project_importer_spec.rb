@@ -14,10 +14,10 @@ describe "Importing a project's attributes" do
     use_vcr_cassette
 
     it 'should update any changes to its attributes' do
-      updated_project_info = ProjectImporter.perform      
+      updated_project_info = ProjectImporter.perform
       updated_project_info.first.cost_to_complete.to_i.should == 0
     end
-    
+
     context 'when updating challenges for a project' do
       it "should update the amount of the challenge" do
         updated_challenge_info = ProjectImporter.perform
