@@ -7,7 +7,7 @@ class ChallengeEvidence < ActiveRecord::Base
     return self.display_html if self.display_html
 
     if self.image.file
-      self.display_html = "<img src='#{self.image}'>"
+      self.display_html = "<img src='#{self.image_url}'>"
     else
       self.display_html = display_html_from_embedly
     end

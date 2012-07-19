@@ -1,5 +1,7 @@
 <div class="challenge_evidence_posted_event">
-  <h4>
-    <%= challenge_evidence_posted.content[:owner_class].find(challenge_evidence_posted.content[:owner_id]).title %> was met.
-  </h4>
+  <h4>New evidence from the challenger!</h4>
+
+  <div class="evidence-media">
+    <%= challenge_evidence_posted.display_html.html_safe %>
+  </div>
 </div>
