@@ -36,55 +36,62 @@ img.profile-pic {
 
 /*PROJECT INFO BAR*/
 
-/*Project Title*/
+.project {
+  border-bottom: 1px solid $lightgrey;
+  /*Project Title*/
 
-h1.project-title{
-  font-size: 32px;
-}
-
-h3.school-name {
-  color: $text-medium;
-  font-weight: 400;
-}
-
-/*Project Stats*/
-
-.project-stats {
-  div {
-    padding-top: 12px;
-    display: inline-block;
+  h1.project-title{
+    font-size: 32px;
   }
-  .stat-heading {
-    margin-bottom: 12px;
+
+  h3.school-name {
+    margin-top: -4px;
+    color: $text-medium;
+    font-weight: 400;
   }
-  .donor-count {
-    margin-right: 8px;
+
+  /*Project Stats*/
+
+  .project-stats {
+    div {
+      padding-top: 12px;
+      display: inline-block;
+    }
+    .stat-heading {
+      margin-bottom: 2px;
+    }
+    .stat {
+      font-size: 20px;
+    }
+    .donor-count {
+      margin-right: 8px;
+    }
   }
-}
 
-/*Progress Bar*/
+  /*Progress Bar*/
 
-$bar-height: 30px;
-#progress-box {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+  $bar-height: 30px;
+  #progress-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-$radius: 16px;
-#progress-bar {
-  border-radius: $radius;
-  background-color: $lightgrey;
-  width: 80%;
-  height: $bar-height;
-}
+  $radius: 16px;
+  #progress-bar {
+    border-radius: $radius;
+    background-color: $lightgrey;
+    width: 80%;
+    height: $bar-height;
+  }
 
-#succeeded-bar {
-  border-radius: $radius;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  background-color: $green;
-  width: 60%;
-  height: $bar-height;
+  #succeeded-bar {
+    border-radius: $radius;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: $green;
+    width: 60%;
+    height: $bar-height;
+  }
 }
 
 
