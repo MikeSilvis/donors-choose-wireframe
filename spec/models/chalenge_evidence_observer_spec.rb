@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe EvidenceObserver do
+describe ChallengeEvidenceObserver do
   context "#after_create" do
     use_vcr_cassette
     before { Challenge.any_instance.stub(:amount_versus_donors_choose_fund) }
