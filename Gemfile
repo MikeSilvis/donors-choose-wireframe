@@ -40,3 +40,17 @@ group :development, :test do
 end
 
 gem 'jquery-rails'
+
+
+
+  gem 'rspec-rails', '~> 2.0'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'guard-rspec'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'simplecov'
+  gem 'launchy'
+  gem 'vcr'
+  gem 'fakeweb'
+  gem 'sqlite3'
