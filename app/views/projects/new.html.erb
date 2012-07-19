@@ -1,5 +1,5 @@
-
 <div class="container">
+  <div class="row spacer"></div>
   <div class="row">
     <%= form_for @project do |f| %>
       <%= f.label :project_url %>:
@@ -16,4 +16,18 @@
       <%= link_to p.title, project_path(p) %>
     <% end %>
   </div>
+
+  <div class="row">
+    <h1> Projects Currently Running </h1>
+    <div class="fourcol">
+      <%= image_tag("http://www.donorschoose.org/images/user/uploads/small/u1071662_sm.jpg?timestamp=1327800840581") %>
+    </div>
+    <div class="fourcol">
+      <%= image_tag("http://www.donorschoose.org/images/user/uploads/small/u1071662_sm.jpg?timestamp=1327800840581") %>
+    </div>
+    <div class="fourcol last">
+      <%= image_tag("http://www.donorschoose.org/images/user/uploads/small/u1071662_sm.jpg?timestamp=1327800840581") %>
+    </div>
+  </div>
+  <div class="row spacer600"></div>
 </div>
