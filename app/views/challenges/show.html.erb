@@ -11,6 +11,6 @@
 <h1>Evidence So Far</h1>
 <% unless @challenge_evidences.blank? %>
   <% @challenge_evidences.each do |evidence| %>
-    <%= evidence.display_html.html_safe %>
+    <%= image_tag(evidence.image_url) %>
   <% end %>
 <% end %>
