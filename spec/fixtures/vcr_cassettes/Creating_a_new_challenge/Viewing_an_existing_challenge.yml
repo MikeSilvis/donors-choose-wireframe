@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.embed.ly/1/oembed?urls=http%3A%2F%2Fwww.makems.com%2Fgraphic%2Fpuppies-2.jpg&key=9e226384957f11e1bf614040aae4d8c9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      user-agent:
+      - Mozilla/5.0 (compatible; embedly-ruby/1.5.6;)
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Jul 2012 22:50:13 GMT
+      content-type:
+      - application/json
+      content-length:
+      - '188'
+      connection:
+      - keep-alive
+      x-embedly-from-cache:
+      - '0'
+      access-control-max-age:
+      - '86400'
+      server:
+      - TornadoServer/2.1
+      etag:
+      - ! '"9bf02d7ab1a21bbf50189f9693cb2eea7aa7050c"'
+      x-embedly-process-time:
+      - '351'
+      access-control-allow-origin:
+      - ! '*'
+      access-control-allow-methods:
+      - GET, OPTIONS
+      x-embedly-host:
+      - api11
+    body:
+      encoding: US-ASCII
+      string: ! '[{"provider_url": "http://www.makems.com", "url": "http://www.makems.com/graphic/puppies-2.jpg",
+        "height": 375, "width": 500, "version": "1.0", "provider_name": "Makems",
+        "type": "photo"}]'
+    http_version: '1.1'
+  recorded_at: Wed, 18 Jul 2012 22:50:14 GMT
+recorded_with: VCR 2.2.3
