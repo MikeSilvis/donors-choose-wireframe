@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
 
-ruby "1.9.3"
+# ruby "1.9.3"
 gem 'rails', '3.2.6'
 gem 'bourbon', '~> 2.1.1'
-gem 'high_voltage'
 gem 'donors_choose2'
 gem 'hashie'
 gem 'carrierwave'
@@ -13,6 +12,7 @@ gem 'redis-store'
 gem 'resque', "~> 1.20.0", :require => 'resque/server'
 gem 'resque-scheduler', :require => 'resque_scheduler'
 gem 'embedly'
+gem 'jquery-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -40,4 +40,14 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-gem 'jquery-rails'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'guard-rspec'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'simplecov'
+  gem 'launchy'
+  gem 'vcr'
+  gem 'fakeweb'
+  gem 'sqlite3'

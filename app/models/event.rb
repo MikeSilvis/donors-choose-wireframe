@@ -9,7 +9,7 @@ class Event < ActiveRecord::Base
     event.event_type = event_type_for(object, event_type)
     event.content = {}
     event.associate_with(object)
-    event.save!
+    event.save
     event
   end
 
