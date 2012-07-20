@@ -32,8 +32,7 @@ class Message < ActiveRecord::Base
   def embedly_response
     if self.media_type == "video"
       api = Embedly::API.new(key: EMBEDLY_KEY)
-      obj = api.oembed(url: self.url)
-      obj.first
+      obj = api.oembed(url: self.url).first
     end
   end
 
