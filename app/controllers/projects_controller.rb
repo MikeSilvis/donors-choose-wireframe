@@ -6,8 +6,7 @@ class ProjectsController < ApplicationController
 
   def create
     url = params[:project][:proposal_url]
-    id = url.scan(/\d{4,}/).first
-    project = Project.find_or_initialize_by_donors_choose_id(id)
+    project = Project.find_or_initialize_from_donors_choose_url(url)
     if project.new_record?
       project.create_from_donors_choose_url(url)
       redirect_to new_project_challenge_path(:project_id => project.id)
