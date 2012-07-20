@@ -5,12 +5,17 @@ class Project < ActiveRecord::Base
   has_many :messages
   has_many :events
 
-  def self.find_or_initialize_from_donors_choose_url(url)
+  def self.from_donors_choose_url(url)
     dc_id = donors_choose_id_from_url(url)
     self.find_or_initialize_by_donors_choose_id(dc_id)
   end
 
-  def create_from_donors_choose_url(url)
+  def set_attrs_from_donors_choose(url)
+    self.attributes = donors_choose_attributes
+    save
+  end
+
+  def refresh_donors_choose_data
     self.attributes = donors_choose_attributes
     save
   end

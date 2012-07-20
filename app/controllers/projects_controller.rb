@@ -6,9 +6,9 @@ class ProjectsController < ApplicationController
 
   def create
     url = params[:project][:proposal_url]
-    project = Project.find_or_initialize_from_donors_choose_url(url)
+    project = Project.from_donors_choose_url(url)
     if project.new_record?
-      project.create_from_donors_choose_url(url)
+      project.set_attrs_from_donors_choose(url)
       redirect_to new_project_challenge_path(:project_id => project.id)
       flash[:notice] = "Thanks for adopting this project! To kick this party off right, create a new challenge!"
     else
