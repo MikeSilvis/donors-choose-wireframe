@@ -1,25 +1,6 @@
 <div class="container">
   <div class="row project">
-    <div class="project-info fourcol">
-      <h1 class="project-title"><span class="highlight"><%= link_to @project.title.truncate(30), @project.proposal_url %></span></h1>
-      <h3 class="school-name"><%= @project.school_name %></h3>
-    </div>
-    <div class="project-stats threecol">
-      <div class="donor-count">
-        <p class="stat-heading">Donors:</p>
-        <p class="stat">22</p>
-      </div>
-      <div class="days-left">
-        <p class="stat-heading">Days left:</p>
-        <p class="stat">16</p>
-      </div>
-    </div>
-    <div id="progress-box" class="fivecol last">
-      <div id="progress-bar">
-        <div id="succeeded-bar">
-        </div>
-      </div>
-    </div>
+    <%= render partial: "project_info_bar" %>
   </div>
   <div class="row spacer"></div>
   <div class="row">
@@ -41,7 +22,6 @@
                   </div>
                   <span class="user-name"><%= link_to @challenges.first.name, "#" %></span>
                 </div>
-
                 <div class="challenge-description sixcol">
                   <div>
                     <span class="challenge-will">WILL:</span>
@@ -51,7 +31,6 @@
                     <span class="challenge-if">IF:</span><span class="challenge-condition">the project reaches $<%= @challenges.first.amount %></span>
                   </div>
                 </div>
-
               <% end %>
               <div class="fourcol last">
                 <div class="challenge-money">
@@ -68,49 +47,8 @@
           </div>
         </div>
       </div>
-
-      <div id="other-challenges">
-        <div class="row any-width">
-          <div class="eightcol">
-            <h1>Other Challenges</h1>
-          </div>
-          <div class="fourcol last">
-            <div class="new-challenge-link">
-              <%= link_to "Create New Challenge", new_project_challenge_path(:project_id => @project.id) %>
-            </div>
-          </div>
-        </div>
-        <div id="challenge-list">
-          <div class="row any-width">
-            <div class="fourcol challenge-preview">
-              <p>A message here</p>
-              <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
-            </div>
-            <div class="fourcol challenge-preview">
-              <p>A message here</p>
-              <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
-            </div>
-            <div class="fourcol last challenge-preview">
-              <p>A message here</p>
-              <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
-            </div>
-            <div class="fourcol challenge-preview">
-              <p>A message here</p>
-              <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
-            </div>
-            <div class="fourcol challenge-preview">
-              <p>A message here</p>
-              <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
-            </div>
-            <div class="fourcol last challenge-preview">
-              <p>A message here</p>
-              <img class="challenge-thumbnail" src="http://projectkong.files.wordpress.com/2009/07/slackline1.jpg">
-            </div>
-          </div>
-        </div>
-      </div>
+      <%= render partial: "other_challenges_bar" %>
     </div>
-
     <div id="feed" class="sixcol last">
       <h1 class="feed-title">Project Activity Feed</h1>
         <div class="message_form">
@@ -125,9 +63,7 @@
         <% end %>
       </div>
     </div>
-
   </div>
-
   <div class="row">
 </div>
 
