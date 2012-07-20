@@ -1,0 +1,16 @@
+<h1>Create a new challenge</h1>
+<div class="well">
+  <%= form_for [@project, @challenge] do |f| %>
+  <h3><%= f.label :name, "Name" %></h3>
+  <%= f.text_field :name %>
+  <h3><%= f.label :title, "Challenge" %></h3>
+  <%= f.text_field :title %>
+  <h3><%= f.label :amount, "Amount" %></h3>
+  <%= f.text_field :amount %>
+  <h3><%= f.label :display_media, "Photo or Video" %></h3>
+  <%= f.text_field :display_media %>
+  <%= f.hidden_field :project_id, :value => @project.id  %>
+  </br>
+  <%= f.submit class: "form-submit small" %>
+<% end %>
+</div>
