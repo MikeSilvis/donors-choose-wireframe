@@ -2,40 +2,12 @@
   <div class="row spacer"></div>
 
   <div class='row'>
-    <div class="well">
-      <div class="fourcol">
-        <%= image_tag("http://3.bp.blogspot.com/-tY30zdA0YNs/TgpRjEUFkXI/AAAAAAAAAU0/U5UqPrzWKWk/s1600/HappyKids2.jpg") %>
-      </div>
-      <div class='eightcol last'>
-        <div class="title-text"><h1>Be A Hero Today</h1></div>
-        <%= form_for @project, class: "project-form" do |f| %>
-          <%= f.text_field :proposal_url, placeholder: "Enter a Donors Choose Url" %>
-          <%= f.submit class: 'form-submit' %>
-        <% end %>
-      </div>
-    </div>
+    <%= render partial: "new_project_form" %>
   </div>
 
   <div id="how-to-use">
     <div class="row">
-      <div class="fourcol">
-        <div class="info-title">Adopt</div>
-        <div class="info-details">
-          Find a Donors Choose project you're passionate about and add the link above
-        </div>
-      </div>
-      <div class="fourcol">
-        <div class="info-title">Create a Challenge</div>
-        <div class="info-details">
-          Make it funny, make it serious, make it memorable. For example, rock a mohawk
-        </div>
-      </div>
-      <div class="fourcol last">
-        <div class="info-title">Share</div>
-        <div class="info-details">
-          Invite friends to your project page and keep track of the lastest events
-        </div>
-      </div>
+      <%= render partial: "how_to_use" %>
     </div>
   </div>
   <div class="row spacer400"></div>
