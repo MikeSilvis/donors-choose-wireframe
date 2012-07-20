@@ -76,7 +76,7 @@ img.profile-pic {
   /*Project Title*/
 
   h1.project-title{
-    font-size: 32px;
+    font-size: 28px;
   }
 
   h3.school-name {
@@ -215,4 +215,39 @@ input.form-submit{
 
 #how-to-use{
   margin-top:7%;
+}
+
+/*Creating a new challenge*/
+
+.well.project-wrapper{
+  background:$lightgrey;
+}
+.list-item{
+  font-size:16px;
+  margin-top:2px;
+}
+
+h1.no-margin{
+  margin-bottom:-9px;
+}
+
+.display-wrapper{
+  position:relative;
+  margin-top:15px;
+  max-height:200px !important;
+  margin-bottom:30px;
+}
+
+.overlay{
+  position:absolute;
+  bottom:0px;
+  width:100%;
+  background-color:black;
+  font-size:15px;
+  color:white;
+  opacity:0.6;
+}
+
+p.overlay-text{
+  padding:10px;
 }

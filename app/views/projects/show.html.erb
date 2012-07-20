@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row project">
     <div class="project-info fourcol">
-      <h1 class="project-title"><span class="highlight"><%= link_to @project.title, @project.proposal_url %></span></h1>
+      <h1 class="project-title"><span class="highlight"><%= link_to @project.title.truncate(30), @project.proposal_url %></span></h1>
       <h3 class="school-name"><%= @project.school_name %></h3>
     </div>
     <div class="project-stats threecol">

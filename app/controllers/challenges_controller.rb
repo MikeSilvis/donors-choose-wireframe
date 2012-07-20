@@ -3,6 +3,7 @@ class ChallengesController < ApplicationController
 
   def new
     @challenge = Challenge.new(params[:challenge])
+    @project = Project.find(params[:project_id])
   end
 
   def create

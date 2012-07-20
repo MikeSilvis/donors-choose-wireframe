@@ -1,3 +1,58 @@
-<h1>Creating a new challenge</h1>
+<div class="container">
+  <div class="row">
+    <div class="sixcol">
+      <h1>Project Overview</h1>
+      <div class="well project-wrapper">
+        <h3>Title</h3>
+        <div class="list-item"><%= @project.title %></div>
+        <h3>School</h3>
+        <div class="list-item"><%= @project.school_name %></div>
+        <h3>Location</h3>
+        <div class="list-item"><%= "#{@project.city},  #{@project.state}" %></div>
+        <h3>Subject</h3>
+        <div class="list-item"><%= "#{@project.grade_level} - #{@project.subject}" %></div>
+      </div>
+    </div>
+    <div class="sixcol last">
+      <h1>Create a new challenge</h1>
+      <div class="well">
+        <%= render :partial => "challenge" %>
+      </div>
+    </div>
+  </div>
 
-<%= render :partial => "challenge" %>
+  <div class="spacer"></div>
+  <div class="row">
+    <div class='twelvecol'>
+      <h1 class="no-margin">Need Inspiration?</h1>
+      <p>These ideas have done well before</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="fourcol">
+      <div class="display-wrapper">
+        <%= image_tag("http://4.bp.blogspot.com/_Acuay0A54HE/S8p29iYRG5I/AAAAAAAAA4o/GfI0PmWrwlY/s1600/handlebar1.jpg") %>
+        <div class="overlay">
+          <p class="overlay-text">Grow a handlebar mustache</p>
+        </div>
+      </div>
+    </div>
+    <div class="fourcol">
+      <div class="display-wrapper">
+        <%= image_tag("http://4.bp.blogspot.com/_Acuay0A54HE/S8p29iYRG5I/AAAAAAAAA4o/GfI0PmWrwlY/s1600/handlebar1.jpg") %>
+        <div class="overlay">
+          <p class="overlay-text">Grow a handlebar mustache</p>
+        </div>
+      </div>
+    </div>
+    <div class="fourcol last">
+      <div class="display-wrapper">
+        <%= image_tag("http://4.bp.blogspot.com/_Acuay0A54HE/S8p29iYRG5I/AAAAAAAAA4o/GfI0PmWrwlY/s1600/handlebar1.jpg") %>
+        <div class="overlay">
+          <p class="overlay-text">Grow a handlebar mustache</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
