@@ -70,4 +70,82 @@ http_interactions:
         \"2012-10-07\",\n    \"fundingStatus\": \"needs funding\"\n  }]\n}\r\n"
     http_version: '1.1'
   recorded_at: Thu, 12 Jul 2012 14:15:26 GMT
-recorded_with: VCR 2.2.2
+- request:
+    method: get
+    uri: http://api.donorschoose.org/common/json_feed.html?id=816943&APIKEY=DONORSCHOOSE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accepts:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      content-type:
+      - text/plain;charset=UTF-8
+      content-language:
+      - en-US
+      vary:
+      - Accept-Encoding
+      cache-control:
+      - private, max-age=558
+      expires:
+      - Fri, 20 Jul 2012 19:11:51 GMT
+      date:
+      - Fri, 20 Jul 2012 19:02:33 GMT
+      content-length:
+      - '3013'
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "\r\n \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t\r\n\r\n\t
+        \ \t\r\n\r\n\r\n\r\n\r\n\r\n{\n  \"searchTerms\": \"Project 816943\",\n  \"searchURL\":
+        \"http://www.donorschoose.org/donors/search.html?id=816943&amp;APIKEY=DONORSCHOOSE&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=searchlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \ \"totalProposals\": \"1\",\n  \"index\": \"0\",\n  \"max\": \"1\",\n  \"proposals\":
+        [{\n    \"id\": \"816943\",\n    \"proposalURL\": \"http://www.donorschoose.org/project/help-inspire-young-authors-and-illustra/816943/?utm_source=api&amp;utm_medium=feed&amp;utm_content=bodylink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \   \"fundURL\": \"https://secure.donorschoose.org/donors/givingCart.html?proposalid=816943&amp;donationAmount=&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=fundlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \   \"imageURL\": \"http://cdn.donorschoose.net/images/user/uploads/small/u1489191_sm.jpg?timestamp=1340574758976\",\n
+        \   \"title\": \"Help Inspire Young Authors  and Illustrators...With Books!\",\n
+        \   \"shortDescription\": \"Do you love books? Reading them? Writing them?
+        Illustrating them, too? My students sure do! When my kindergarten students
+        come in each year in August, they have no idea what is in store for...\",\n
+        \   \"fulfillmentTrailer\": \"My students need fun and quirky picture books
+        to inspire them to be authors and illustrators!\",\n    \"percentFunded\":
+        \"100\",\n    \"costToComplete\": \"0.00\",\n    \"matchingFund\": {\n      \"matchingKey\":
+        \"\",\n      \"name\": \"\",\n      \"logoURL\": \"\",\n      \"faqURL\":
+        \"\",\n      \"amount\": \"0.00\"\n    },\n    \"totalPrice\": \"255.44\",\n
+        \   \"freeShipping\": \"true\",\n    \"teacherName\": \"Mrs. Mendoza\",\n
+        \   \"gradeLevel\": {\n      \"id\": \"1\",\n      \"name\": \"Grades PreK-2\"\n
+        \   },\n    \"povertyLevel\": \"High Poverty\",\n    \"schoolName\": \"King-chavez
+        Primary Academy\",\n    \"city\": \"San Diego\",\n    \"zip\": \"92102-4236\",\n
+        \   \"state\": \"CA\",\n    \"latitude\": \"32.709813000000000\",\n    \"longitude\":
+        \"-117.127250000000000\",\n    \"zone\": {\n      \"id\": \"411\",\n      \"name\":
+        \"California (South)\"\n    },\n    \"subject\": {\n      \"id\": \"3\",\n
+        \     \"name\": \"Literature &amp; Writing\",\n      \"groupId\": \"6\"\n
+        \   },\n    \"resource\": {\n      \"id\": \"1\",\n      \"name\": \"Books\"\n
+        \   },\n    \"expirationDate\": \"2012-12-02\",\n    \"fundingStatus\": \"funded\",\n
+        \   \"thankYouAssets\": {\n      \"interimThankYou\": \"I am so excited to
+        get these books and start teaching a new batch of kids how to write! I&#039;m
+        sure the books I&#039;ve chosen will be inspire my students to take their
+        writing to the next level. Thank you so very much for helping out with my
+        project! I am overwhelmed and extremely grateful at how fast this project
+        got funded. I know all of you have other things you could be spending your
+        money on, and I just want to let you know how touched I am that you chose
+        to support these young eager learners! This will be a great year. Thanks again!With
+        gratitude,Mrs. Mendoza\",\n      \"photos\": [],\n      \"resultsLetter\":
+        \"\"\n    }\n  }]\n}\r\n"
+    http_version: '1.1'
+  recorded_at: Fri, 20 Jul 2012 19:02:33 GMT
+recorded_with: VCR 2.2.3
