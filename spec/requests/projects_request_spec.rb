@@ -66,4 +66,27 @@ describe "Creating a project" do
     end
   end
 
+  context "Viewing the challenges attached to a project" do
+    let(:project) { FactoryGirl.create(:project) }
+    let!(:challenge1) { FactoryGirl.create(:challenge, project: project) }
+    let!(:challenge2) { FactoryGirl.create(:challenge, project: project) }
+
+    before(:each) { visit project_path(project) }
+
+    it "Shows a list of all the projects that are currently active" do
+      within(".active-challenges") do
+        page.should have_content("These people are taking on challenges for this project:")
+      end
+    end
+
+    it "contains the details for each project" do
+      project.challenges.each do |c|
+        within("#feed-challenge-#{c.id}") do
+          page.should have_content(c.name)
+          page.should have_content(c.title)
+          page.should have_content(c.amount)
+        end
+      end
+    end
+  end
 end
