@@ -140,8 +140,9 @@ img.profile-pic {
     }
   }
 
-  /*Progress Bar*/
 
+}
+  /*Progress Bar*/
   $bar-height: 30px;
   #progress-box {
     margin-top: 20px;
@@ -151,7 +152,7 @@ img.profile-pic {
   .meter {
     height: 20px;  /* Can be anything */
     position: relative;
-    background: #555;
+    background: $progress-bar-bg;
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
     border-radius: 25px;
@@ -298,7 +299,6 @@ img.profile-pic {
         background-image: -ms-linear-gradient(top, #f1a165, #f36d0a);
         background-image: -o-linear-gradient(top, #f1a165, #f36d0a);
   }
-}
 
 /*Feed*/
 #divider{
