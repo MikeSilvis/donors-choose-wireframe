@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/verdi327/text_to_media.git
-  revision: 07773fe740dc6079e983ece1d1accd60236bdbe0
+  revision: 8387961b9f274cab3b424be71ec2cd4cdae29791
   specs:
     text_to_media (0.0.1)
       embedly
@@ -124,7 +124,7 @@ GEM
     money (5.0.0)
       i18n (~> 0.4)
       json
-    money-rails (0.4.0)
+    money-rails (0.5.0)
       activesupport (~> 3.0)
       money (~> 5.0.0)
       railties (~> 3.0)
