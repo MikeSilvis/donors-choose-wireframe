@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
     user.provider = auth.provider
     user.uid = auth.uid
     user.screen_name = auth.extra.raw_info.screen_name
-    user.avatar_url = auth.extra.raw_info.profile_image_url
+    user.profile_image_url = auth.extra.raw_info.profile_image_url
     user.save
     return user
   end
