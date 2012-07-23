@@ -44,13 +44,12 @@ describe Challenge do
     end
   end
 
-  context "#cents_to_complete" do
-    let(:project)   { FactoryGirl.create(:project, cost_to_complete: "50.00") }
-    let(:challenge) { FactoryGirl.create(:challenge, project: project, amount: 25) }
+  context "#target_funding" do
+    let!(:project)   { FactoryGirl.create(:project, cost_to_complete: "40.00", total_price: "150.00") }
+    let!(:challenge) { FactoryGirl.create(:challenge, project: project, amount: 25) }
 
-    it "returns the remaining amount needed to satisfy the challenge" do
-      challenge.cents_to_complete.should == (challenge.project.cents_to_complete - challenge.target_funding.cents)
-      challenge.cents_to_complete.should == 2500
+    it "returns the project's current funding level plus the challenge amount" do
+      challenge.target_funding.cents.should == 13500
     end
   end
 end

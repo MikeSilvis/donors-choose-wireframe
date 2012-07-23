@@ -18,8 +18,8 @@ class Challenge < ActiveRecord::Base
     save
   end
 
-  def cents_to_complete
-    project.cents_to_complete - target_funding.cents
+  def amount_currency
+    Money.new(amount * 100)
   end
 
   private
@@ -30,12 +30,9 @@ class Challenge < ActiveRecord::Base
     end
   end
 
-  def cents_amount
-    amount * 100
-  end
 
   def calculate_target_funding
-    self.target_funding_cents = (project.cents_to_complete - cents_amount)
+    self.target_funding_cents = (project.raised_to_date.cents + amount_currency.cents)
     save
   end
 end

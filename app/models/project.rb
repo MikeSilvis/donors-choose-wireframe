@@ -26,10 +26,7 @@ class Project < ActiveRecord::Base
   end
 
   def raised_to_date
-    unless amount_raised
-      self.amount_raised_cents = calculate_amount_raised_cents
-      save
-    end
+    calculate_amount_raised_cents unless amount_raised
     amount_raised
   end
 
@@ -44,6 +41,7 @@ class Project < ActiveRecord::Base
   end
 
   def calculate_amount_raised_cents
-    ((total_price.to_f - cost_to_complete.to_f) * 100).to_i
+    self.amount_raised_cents = ((total_price.to_f - cost_to_complete.to_f) * 100).to_i
+    save
   end
 end
