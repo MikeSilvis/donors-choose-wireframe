@@ -17,6 +17,10 @@ img.profile-pic {
 /*CHALLENGE FEED*/
 
 .feed-challenge {
+  background: $page-container;
+  &:hover {
+    background: darken($page-container, 10%);
+  }
   margin-bottom: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid $rule-grey;
@@ -33,13 +37,16 @@ img.profile-pic {
 }
 
 .new-challenge-link{
-  font-size: 18px;
   a {
     color: $orange;
+    @include button(simple, $challenge-button);
+    &:hover {
+      color: white;
+    }
+    font-size: 14px;
   }
+  font-size: 18px;
 }
-
-
 
 /*FEATURED CHALLENGE*/
 

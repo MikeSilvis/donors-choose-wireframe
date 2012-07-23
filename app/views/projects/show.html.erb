@@ -16,9 +16,6 @@
             <% if @challenges.any? %>
               <div class="challenge-details twelvecol">
                 <div class="row any-width">
-                  <h3 class="twelvecol">This challenge has almost met its goal — Push it over the edge by making a donation!</h3>
-                </div>
-                <div class="row any-width">
                   <div class="twelvecol featured-challenge-image">
                     <%= link_to(image_tag(@challenges.first.display_media), project_challenge_path(@project, @challenges.first))  %>
                   </div>
@@ -34,11 +31,11 @@
 
                   <div class="challenge-description sixcol">
                     <div>
-                      <span class="challenge-will">WILL:</span>
-                      <span class="challenge-action"><%= @challenges.first.title %></span>
+                      <%= @challenges.first.name %> will <span class="challenge-action"><%= @challenges.first.title %></span>
+                      <span class="challenge-condition">when this project raises: <%= humanized_money_with_symbol @challenges.first.target_funding %></span>
                     </div>
                     <div>
-                      <span class="challenge-if">IF:</span><span class="challenge-condition">the project reaches $<%= @challenges.first.amount %></span>
+                      (Only <%= humanized_money_with_symbol @challenges.first.amount_currency %> to go!)
                     </div>
                   </div>
 
@@ -51,6 +48,9 @@
                       <div class="challenge-donate">
                         <%= link_to "Give", @challenges.first.project.proposal_url, target: "_blank", class: "give-link" %>
                       </div>
+                    </div>
+                    <div>
+                    <%= link_to("View Challenge", project_challenge_path(@project, @challenges.first), class: "challenge-link")  %>
                     </div>
                   </div>
                 </div>
@@ -70,9 +70,7 @@
                   <%= link_to(image_tag(challenge.display_media), project_challenge_path(@project, challenge))  %>
                 </div>
                 <div class="tencol last">
-                  <span class="challenge-feed-name">
-                    <span class="challeng-username"><%= challenge.name %></span> will: <%= challenge.title %> <span class="amount-remaining">(Only <%= humanized_money_with_symbol challenge.amount_currency %> to go!)</span>
-                  </span>
+                  <span class="challenge-username"><%= challenge.name %></span> will: <%= challenge.title %> <span class="amount-remaining">(Only <%= humanized_money_with_symbol challenge.amount_currency %> to go!)</span>
                   <div>
                   <%= link_to("View Challenge", project_challenge_path(@project, challenge), class: "challenge-link")  %>
                   </div>
@@ -83,7 +81,7 @@
         </div>
 
         <div class="new-challenge-link">
-          Add your contribution to the effort: <%= link_to "Post a challenge!", new_project_challenge_path(:project_id => @project.id) %>
+          Contribute to the effort: <%= link_to "Post a challenge!", new_project_challenge_path(:project_id => @project.id) %>
         </div>
       </div>
     </div>
