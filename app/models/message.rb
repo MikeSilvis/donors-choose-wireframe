@@ -7,7 +7,7 @@ class Message < ActiveRecord::Base
   before_create :parse_for_url
 
   def parse_for_url
-    self.display_html = MediaUrlParser.new(self.body).check_for_media.html
+    self.display_html = MediaUrlParser.new(self.body).check_for_media.display_html
   end
 
 end
