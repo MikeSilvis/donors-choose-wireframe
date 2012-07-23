@@ -13,3 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$("#new_message").live("ajax:complete", function(event,xhr,status){
+  $('#message_name').val('');
+  $('#message_body').val('');
+});
