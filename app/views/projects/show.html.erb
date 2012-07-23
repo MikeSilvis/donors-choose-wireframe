@@ -16,13 +16,14 @@
             <% if @challenges.any? %>
               <div class="challenge-details twelvecol">
                 <div class="row any-width">
-                  <h3>This challenge has almost met its goal — Push it over the edge by making a donation!</h3>
+                  <h3 class="twelvecol">This challenge has almost met its goal — Push it over the edge by making a donation!</h3>
                 </div>
                 <div class="row any-width">
                   <div class="twelvecol featured-challenge-image">
                     <%= link_to(image_tag(@challenges.first.display_media), project_challenge_path(@project, @challenges.first))  %>
                   </div>
                 </div>
+
                 <div class="row any-width">
                   <div class="challenger twocol">
                     <div class="challenger-image">
@@ -30,17 +31,17 @@
                     </div>
                     <span class="user-name"><%= link_to @challenges.first.name, "#" %></span>
                   </div>
+
                   <div class="challenge-description sixcol">
                     <div>
                       <span class="challenge-will">WILL:</span>
                       <span class="challenge-action"><%= @challenges.first.title %></span>
                     </div>
-                    <div class="challenge-donate">
-                      <%= link_to "Give", @challenges.first.project.proposal_url, target: "_blank", class: "give-link" %>
                     <div>
                       <span class="challenge-if">IF:</span><span class="challenge-condition">the project reaches $<%= @challenges.first.amount %></span>
                     </div>
                   </div>
+
                   <div class="fourcol last">
                     <div class="challenge-money">
                       <div class="challenge-progress">
@@ -48,13 +49,14 @@
                         <p class="to-go">To Go</p>
                       </div>
                       <div class="challenge-donate">
-                        <%= link_to "Give", @challenges.first.project.fund_url, class: "give-link" %>
+                        <%= link_to "Give", @challenges.first.project.proposal_url, target: "_blank", class: "give-link" %>
                       </div>
                     </div>
                   </div>
-                <% end %>
+                </div>
+
               </div>
-            </div>
+            <% end %>
           </div>
         </div>
       </div>
@@ -89,10 +91,9 @@
         <div class="new-challenge-link">
           Add your contribution to the effort: <%= link_to "Post a challenge!", new_project_challenge_path(:project_id => @project.id) %>
         </div>
-
       </div>
     </div>
-  </div>
+  </div> <!-- end challenges -->
 
   <div class="row spacer"></div>
 
@@ -114,5 +115,6 @@
     </div>
 
   </div>
-</div>
+</div> <!--end container -->
+
 
