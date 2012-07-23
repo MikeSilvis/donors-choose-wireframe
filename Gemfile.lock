@@ -100,7 +100,6 @@ GEM
     guard-rspec (1.2.0)
       guard (>= 1.1)
     hashie (1.2.0)
-    high_voltage (1.1.1)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.4)
@@ -135,6 +134,15 @@ GEM
     net-ssh (2.5.2)
     nokogiri (1.5.5)
     oauth (0.4.6)
+    omniauth (1.1.0)
+      hashie (~> 1.2)
+      rack
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-twitter (0.0.11)
+      multi_json (~> 1.3)
+      omniauth-oauth (~> 1.0)
     pg (0.14.0)
     polyglot (0.3.3)
     querystring (0.1.0)
@@ -258,10 +266,11 @@ DEPENDENCIES
   fog
   guard-rspec
   hashie
-  high_voltage
   jquery-rails
   launchy
   money-rails
+  omniauth
+  omniauth-twitter
   pg
   rails (= 3.2.6)
   redis-store
