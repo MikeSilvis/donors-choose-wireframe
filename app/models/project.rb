@@ -20,6 +20,10 @@ class Project < ActiveRecord::Base
     save
   end
 
+  def cents_to_complete
+    (cost_to_complete.to_f * 100).to_i
+  end
+
   private
 
   def donors_choose_attributes

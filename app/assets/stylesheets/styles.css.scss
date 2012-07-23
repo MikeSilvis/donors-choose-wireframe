@@ -1,7 +1,36 @@
 @import "colors";
 
 body {
-  font-family: 'Lato', serif;
+  background-color: $background;
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Rokkitt", serif;
+}
+
+a {
+  color: $text;
+  &:link {
+    text-decoration: none;
+  }
+  &:visited {
+    color: $text;
+    &:hover {
+      color: $hover;
+      border-bottom: 1px dashed $cream;
+    }
+  }
+  &:hover {
+    color: $hover;
+    border-bottom: 1px dashed $cream;
+  }
+}
+
+#page-container {
+  max-width: 1140px;
+  margin: auto;
+  background-color: $row;
 }
 
 /*CUSTOM GRID STUFF*/
@@ -19,10 +48,16 @@ body {
   min-width: 0px;
 }
 
+.spacer{
+  height: 24px;
+}
+
+.spacer400{
+  height: 300px;
+}
 
 #navbar {
   background: $navbar;
-  margin-bottom: 40px;
   color: white;
   a {
     color: white;
@@ -63,6 +98,7 @@ body {
 
 .brand {
   font-size: 200%;
+  margin-left:18px;
   /*color: $color;*/
 }
 

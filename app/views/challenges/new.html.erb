@@ -1,3 +1,22 @@
-<h1>Creating a new challenge</h1>
+<div class="container">
+  <div class="row">
+    <div class="sixcol">
+      <%= render partial: 'project_overview' %>
+    </div>
+    <div class="sixcol last">
+      <%= render partial: 'new_challenge' %>
+    </div>
+  </div>
 
-<%= render :partial => "challenge" %>
+  <div class="spacer"></div>
+  <div class="row">
+    <div class='twelvecol'>
+      <h1 class="no-margin">Need Inspiration?</h1>
+      <p>These ideas have done well before</p>
+    </div>
+  </div>
+  <div class="row">
+    <%= render partial: "example_challenges" %>
+  </div>
+
+</div>

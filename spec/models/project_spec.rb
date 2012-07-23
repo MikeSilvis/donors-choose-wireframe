@@ -43,4 +43,12 @@ describe Project do
       end
     end
   end
+
+  context "#cents_to_complete" do
+    it "returns the cents value of cost_to_complete" do
+      p = Project.new
+      p.cost_to_complete = "45.26"
+      p.cents_to_complete.should == 4526
+    end
+  end
 end

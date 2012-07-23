@@ -13,7 +13,7 @@ describe "Creating a new challenge" do
     context "and when I click on the new challenge link" do
       it "should take me to a form to create a new challenge" do
         click_link("Create New Challenge")
-        page.should have_content("Creating a new challenge")
+        page.should have_content("Create a new challenge")
       end
     end
   end
@@ -43,7 +43,8 @@ describe "Creating a new challenge" do
       fill_in("Challenge", :with => "I will shave my head")
       fill_in("Amount", :with => 5)
       click_button("Create Challenge")
-      page.should have_content("Creating a new challenge")
+      page.should have_content("Create a new challenge")
+      current_path.should == new_project_challenge_path(project)
     end
 
     it "should error if amount is more than the completion amount" do
@@ -52,7 +53,8 @@ describe "Creating a new challenge" do
       fill_in("Amount", :with => 10000)
       find(:xpath, "//input[@id='challenge_project_id']").set project.id
       click_button("Create Challenge")
-      page.should have_content("Creating a new challenge")
+      current_path.should == new_project_challenge_path(project)
+      page.should have_content("Create a new challenge")
     end
   end
 

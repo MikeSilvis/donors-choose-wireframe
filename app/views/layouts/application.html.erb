@@ -10,28 +10,32 @@
   <div class="custom-container" id="navbar">
     <div class="row header">
       <div class="twelvecol">
-        <span class="brand">
+        <h1 class="brand">
           <%= link_to "Donors Challenge", root_path %>
-        </span>
-        <span class="nav">
-          <a href="#">Michael Verdi</a> | <a href="#">Account</a> | <a href="#">Sign Out</a>
-        </span>
+        </h1>
       </div>
     </div>
   </div> <!-- navbar -->
 
-  <div class="flash-container container">
-    <div class="row flash-row">
-     <% if flash[:notice] %>
-        <p class="notice"><%= flash[:notice] %></p>
-      <% end %>
-      <% if flash[:error] %>
-        <p class="error"><%= flash[:error] %></p>
-      <% end %>
+  <div id="page-container">
+    <div class="flash-container container">
+      <div class="row flash-row">
+       <% if flash[:notice] %>
+          <p class="notice"><%= flash[:notice] %></p>
+        <% end %>
+        <% if flash[:error] %>
+          <p class="error"><%= flash[:error] %></p>
+        <% end %>
+      </div>
     </div>
-  </div>
 
-<%= yield %>
+    <%= yield %>
+<!--     <div class="row">
+      <div class="twelvecol">
+        <div class="footer"></div>
+      </div>
+    </div> -->
+  </div>
 
 </body>
 </html>
