@@ -1,15 +1,10 @@
+require 'resque'
 if Rails.env.production?
-  require 'resque'
-  redis_url = "redis://redistogo:977b137d16dedfbf0a1920b53f6788fe@chubb.redistogo.com:9365/"
+  redis_url = ENV["REDISTOGO_URL"]
   uri = URI.parse(redis_url)
   REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-  Resque.redis = REDIS
-  Resque.after_fork = Proc.new { ActiveRecord::Base.establish_connection }
-elsif Rails.env.development?
-  require 'resque'
-  redis_url = 'localhost:6379'
-  uri = URI.parse(redis_url)
-  REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-  Resque.redis = REDIS
-  Resque.after_fork = Proc.new { ActiveRecord::Base.establish_connection }
+else
+  REDIS = Redis.new
 end
+Resque.redis = REDIS
+Resque.after_fork = Proc.new { ActiveRecord::Base.establish_connection }
