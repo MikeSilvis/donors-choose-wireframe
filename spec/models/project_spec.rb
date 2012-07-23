@@ -51,4 +51,12 @@ describe Project do
       p.cents_to_complete.should == 4526
     end
   end
+
+  context "#raised_to_date" do
+    let(:project) { FactoryGirl.create(:project, cost_to_complete: "50.00", total_price: "150.00") }
+    it "returns the amount raised so far" do
+      project.raised_to_date.should be_a(Money)
+      project.raised_to_date.cents.should == 10000
+    end
+  end
 end
