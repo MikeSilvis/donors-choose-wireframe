@@ -1,18 +1,8 @@
-<div class="project-info fourcol">
+<div class="project-info eightcol">
   <h1 class="project-title"><span class="highlight"><%= link_to @project.title.truncate(30), @project.proposal_url %></span></h1>
   <h3 class="school-name"><%= @project.school_name %></h3>
 </div>
-<div class="project-stats threecol">
-  <div class="donor-count">
-    <p class="stat-heading">Donors:</p>
-    <p class="stat">22</p>
-  </div>
-  <div class="days-left">
-    <p class="stat-heading">Days left:</p>
-    <p class="stat">16</p>
-  </div>
-</div>
-<div id="progress-box" class="fivecol last">
+<div id="progress-box" class="fourcol last">
   <div class="meter orange">
     <span style="width: 30%"></span>
   </div>
