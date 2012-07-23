@@ -7,7 +7,7 @@
   <div class="challenges">
     <div class="row challenges-headers">
       <h1 class="sixcol">Featured Challenge</h1>
-      <h1 class="sixcol last">Other challenges for this project:</h1>
+      <h1 class="sixcol last">Challenges posted for this project:</h1>
     </div>
     <div class="row">
       <div class="sixcol">
@@ -72,7 +72,7 @@
                   <%= challenge.title %>
                 </span>
                 <div class="challenge-feed-amount">
-                  When the project raises <%= challenge.amount %> dollars! <%= link_to("View Challenge", project_challenge_path(@project, challenge), class: "challenge-link")  %>
+                  When the project raises <%= challenge.amount %> dollars!
                 </div>
               </div>
             </div>
@@ -82,9 +82,15 @@
         <div class="new-challenge-link">
           Add your contribution to the effort: <%= link_to "Post a challenge!", new_project_challenge_path(:project_id => @project.id) %>
         </div>
-
       </div>
 
+
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="twelvecol">
     </div>
   </div>
 
