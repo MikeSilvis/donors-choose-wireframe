@@ -60,19 +60,24 @@
       <div class="active-challenges sixcol last">
         <div class="feed-challenges">
           <% @challenges.each do |challenge| %>
-            <div class="row any-width">
-              <div class="feed-challenge" id="feed-challenge-<%=challenge.id%>">
+            <div class="feed-challenge" id="feed-challenge-<%=challenge.id%>">
+              <div class="row any-width">
                 <div class="twocol">
                   <%= link_to(image_tag(challenge.display_media), project_challenge_path(@project, challenge))  %>
                 </div>
-                <span class="challenge-feed-name">
-                  <%= challenge.name %> will:
-                </span>
-                <span class="challenge-feed-title">
-                  <%= challenge.title %>
-                </span>
-                <div class="challenge-feed-amount">
-                  When the project raises <%= challenge.amount %> dollars! <%= link_to("View Challenge", project_challenge_path(@project, challenge), class: "challenge-link")  %>
+                <div class="tencol last">
+                  <span class="challenge-feed-name">
+                    <%= challenge.name %> will:
+                  </span>
+                  <span class="challenge-feed-title">
+                    <%= challenge.title %>
+                  </span>
+                  <div class="challenge-feed-target">
+                    When the project raises <%= humanized_money_with_symbol challenge.target_funding %>! (Only <%= humanized_money_with_symbol challenge.amount_currency %> to go!)
+                  </div>
+                  <div>
+                  <%= link_to("View Challenge", project_challenge_path(@project, challenge), class: "challenge-link")  %>
+                  </div>
                 </div>
               </div>
             </div>
