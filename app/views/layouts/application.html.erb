@@ -12,6 +12,12 @@
       <div class="twelvecol">
         <h1 class="brand">
           <%= link_to "Donors Challenge", root_path %>
+          <% if current_user %>
+            <%= current_user.screen_name %>
+            <%= link_to "Sign out", sessions_destroy_path, method: :delete %>
+          <% else %>
+            <%= link_to "Sign in with Twitter", '/auth/twitter' %>
+          <% end %>
         </h1>
       </div>
     </div>
