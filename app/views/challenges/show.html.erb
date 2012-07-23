@@ -1,23 +1,48 @@
-<%= flash[:notice] %>
-<%= @challenge.title %>
-</br>
-<%= @challenge.name %>
-</br>
-<%= image_tag(@challenge.display_media) %>
+<div class="container">
+<div class="single-challenge-overview">
+  <div class="row">
+    <div class="twelvecol">
+      <h1><span>Challenge: </span><span><%= @challenge.title.titleize %></span></h1>
+    </div>
+  </div>
 
-<%= render partial: 'challenge_evidences/form' %>
+  <div class="row">
+    <div class="twelvecol">
+      <h3><span>Challenger: </span><span><%= @challenge.name %></span></h3>
+    </div>
+  </div>
 
-</br>
-<h1>Evidence So Far</h1>
-<% unless @challenge_evidences.blank? %>
-  <% @challenge_evidences.each do |evidence| %>
-    <% if evidence.image_url %>
-      <%= raise "boom" %>
-      <%= image_tag(evidence.image_url) %>
-    <% elsif evidence.external_url %>
-      <%= image_tag(evidence.external_url) %>
-    <% else %>
-      <p>Photo not found</p>
+  <div class="row">
+    <div class="twelvecol">
+      <h3><span>Challenge For: </span><span><%= link_to(@challenge.project.title, project_path(@challenge.project)) %></span></h3>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="sixcol">
+  <%= image_tag(@challenge.display_media) %>
+
+  <%= render partial: 'challenge_evidences/form' %>
+  </div>
+  <div class="sixcol last">
+    <h1>Evidence So Far</h1>
+    <% unless @challenge_evidences.blank? %>
+      <% @challenge_evidences.each do |evidence| %>
+        <% if evidence.image_url %>
+          <%= raise "boom" %>
+          <%= image_tag(evidence.image_url) %>
+        <% elsif evidence.external_url %>
+          <%= image_tag(evidence.external_url) %>
+        <% else %>
+          <p>Photo not found</p>
+        <% end %>
+      <% end %>
     <% end %>
-  <% end %>
-<% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
