@@ -8,6 +8,31 @@ img.profile-pic {
   max-width: 64px;
 }
 
+
+.project-heading-row {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+/*CHALLENGE FEED*/
+
+.feed-challenge {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid $rule-grey;
+}
+
+.new-challenge-link{
+  font-size: 18px;
+  a {
+    color: $orange;
+  }
+}
+
+
+
+/*FEATURED CHALLENGE*/
+
 .challenge-will, .challenge-if  {
   color: $orange;
   font-size: 20px;
@@ -16,11 +41,6 @@ img.profile-pic {
   margin-right: 4px;
 }
 
-
-.project-heading-row {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
 
 .featured-challenge {
   img {
@@ -286,15 +306,7 @@ img.profile-pic {
   padding-top:35px;
 }
 
-/*Other Challenges*/
 
-#other-challenges{
-  margin-top: 24px;
-}
-
-.new-challenge-link{
-  margin-top: 12px;
-}
 
 /*splash page*/
 
