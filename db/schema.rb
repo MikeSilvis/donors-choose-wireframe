@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120720195932) do
+ActiveRecord::Schema.define(:version => 20120722202417) do
 
   create_table "challenge_evidences", :force => true do |t|
     t.integer  "challenge_id"
@@ -27,10 +27,11 @@ ActiveRecord::Schema.define(:version => 20120720195932) do
     t.string   "title"
     t.integer  "amount"
     t.integer  "project_id"
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
     t.string   "display_media"
-    t.boolean  "met",           :default => false
+    t.boolean  "met",                  :default => false
+    t.integer  "target_funding_cents"
   end
 
   create_table "events", :force => true do |t|

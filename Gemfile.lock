@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/verdi327/text_to_media.git
-  revision: 7ee84533976ae469238a9395bde9efbfbe5784ba
+  revision: 07773fe740dc6079e983ece1d1accd60236bdbe0
   specs:
     text_to_media (0.0.1)
       embedly
@@ -121,6 +121,13 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.19)
+    money (5.0.0)
+      i18n (~> 0.4)
+      json
+    money-rails (0.4.0)
+      activesupport (~> 3.0)
+      money (~> 5.0.0)
+      railties (~> 3.0)
     multi_json (1.3.6)
     multipart-post (1.1.5)
     net-scp (1.0.4)
@@ -254,6 +261,7 @@ DEPENDENCIES
   high_voltage
   jquery-rails
   launchy
+  money-rails
   pg
   rails (= 3.2.6)
   redis-store

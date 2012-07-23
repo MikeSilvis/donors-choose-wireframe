@@ -51,12 +51,42 @@ describe "Creating a project" do
     before(:each) { visit project_path(project) }
 
     it "shows the basic details for the project" do
-      page.should have_image(project.image_url)
-      page.should have_content(project.city)
-      page.should have_content(project.state_abbr)
       page.should have_content(project.school_name)
     end
 
+    it "displays a truncated project title as a link to the original proposal" do
+      page.should have_link(project.title.truncate(30))
+    end
+
+    it "otherwise shows the whole title" do
+      project.title = "Short Title"
+      project.save
+      visit project_path(project)
+      page.should have_link(project.title)
+    end
   end
 
+  context "Viewing the challenges attached to a project" do
+    let(:project) { FactoryGirl.create(:project) }
+    let!(:challenge1) { FactoryGirl.create(:challenge, project: project) }
+    let!(:challenge2) { FactoryGirl.create(:challenge, project: project) }
+
+    before(:each) { visit project_path(project) }
+
+    it "Shows a list of all the projects that are currently active" do
+      within(".active-challenges") do
+        page.should have_content("These people are taking on challenges for this project:")
+      end
+    end
+
+    it "contains the details for each project" do
+      project.challenges.each do |c|
+        within("#feed-challenge-#{c.id}") do
+          page.should have_content(c.name)
+          page.should have_content(c.title)
+          page.should have_content(c.amount)
+        end
+      end
+    end
+  end
 end

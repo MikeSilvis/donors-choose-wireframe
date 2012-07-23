@@ -3,6 +3,7 @@
     <%= render partial: "project_info_bar" %>
   </div>
   <div class="row spacer"></div>
+
   <div class="row">
     <div class="twelvecol challenges">
       <h1>Featured Challenge</h1>
@@ -31,28 +32,38 @@
                     <span class="challenge-if">IF:</span><span class="challenge-condition">the project reaches $<%= @challenges.first.amount %></span>
                   </div>
                 </div>
-              <% end %>
-              <div class="fourcol last">
-                <div class="challenge-money">
-                  <div class="challenge-progress">
-                    <span class="dollars-left">$84</span>
-                    <p class="to-go">To Go</p>
-                  </div>
-                  <div class="challenge-donate">
-                    <%= link_to "Give", @challenges.first.project.fund_url, class: "give-link" %>
+                <div class="fourcol last">
+                  <div class="challenge-money">
+                    <div class="challenge-progress">
+                      <span class="dollars-left">$84</span>
+                      <p class="to-go">To Go</p>
+                    </div>
+                    <div class="challenge-donate">
+                      <%= link_to "Give", @challenges.first.project.fund_url, class: "give-link" %>
+                    </div>
                   </div>
                 </div>
-              </div>
+              <% end %>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="twelvecol">
-      </div>
+  </div>
+
+  <div class="row">
+    <div class="twelvecol">
+      <%= link_to "Create New Challenge", new_project_challenge_path(:project_id => @project.id) %>
     </div>
-    <div id="feed" class="sixcol last">
+  </div>
+
+  <div class="row">
+    <div class="twelvecol">
+    </div>
+  </div>
+
+  <div class="row">
+    <div id="feed" class="sixcol">
       <h1 class="feed-title">Project Activity Feed</h1>
         <div class="message_form">
           <%= form_for [@project, @new_message] do |f| %>
@@ -61,12 +72,34 @@
             <%= f.submit %>
           <% end %>
         </div>
+        <div>
         <% @feed.items.each do |item| %>
           <%= render item %>
+        <% end %>
+        </div>
+    </div>
+
+    <div class="active-challenges sixcol last">
+      <h1 class="challenges-heading">
+        These people are taking on challenges for this project:
+      </h1>
+
+      <div class="feed-challenges">
+        <% @challenges.each do |challenge| %>
+          <div class="feed-challenge" id="feed-challenge-<%=challenge.id%>">
+            <div class="challenge-feed-name">
+              <%= challenge.name %>
+            </div>
+            <div class="challenge-feed-title">
+              <%= challenge.title %>
+            </div>
+            <div class="challenge-feed-amount">
+              <%= challenge.amount %>
+            </div>
+          </div>
         <% end %>
       </div>
     </div>
   </div>
-  <div class="row">
 </div>
 
