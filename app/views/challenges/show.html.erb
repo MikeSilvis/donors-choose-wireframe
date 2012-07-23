@@ -30,7 +30,6 @@
     <% unless @challenge_evidences.blank? %>
       <% @challenge_evidences.each do |evidence| %>
         <% if evidence.image_url %>
-          <%= raise "boom" %>
           <%= image_tag(evidence.image_url) %>
         <% elsif evidence.external_url %>
           <%= image_tag(evidence.external_url) %>
