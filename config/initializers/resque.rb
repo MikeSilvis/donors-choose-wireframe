@@ -1,6 +1,6 @@
 require 'resque'
 if Rails.env.production?
-  redis_url = "redis://redistogo:1a997ec7ce05b6dcafcd7929bbd46c9e@chubb.redistogo.com:9405"
+  redis_url = ENV["REDISTOGO_URL"]
   uri = URI.parse(redis_url)
   REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
 else
