@@ -55,7 +55,11 @@ describe "Creating a project" do
     end
 
     it "displays a truncated project title as a link to the original proposal" do
-      page.should have_link(project.title.truncate(30))
+      title = "a"*100
+      project.title = title
+      project.save
+      visit project_path(project)
+      page.should have_link(project.title.truncate(54))
     end
 
     it "otherwise shows the whole title" do
