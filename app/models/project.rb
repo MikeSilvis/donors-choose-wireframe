@@ -4,6 +4,7 @@ class Project < ActiveRecord::Base
   has_many :challenges
   has_many :messages
   has_many :events
+  monetize :amount_raised_cents, allow_nil: true
 
   def self.from_donors_choose_url(url)
     dc_id = donors_choose_id_from_url(url)
@@ -24,6 +25,11 @@ class Project < ActiveRecord::Base
     (cost_to_complete.to_f * 100).to_i
   end
 
+  def raised_to_date
+    calculate_amount_raised_cents unless amount_raised
+    amount_raised
+  end
+
   private
 
   def donors_choose_attributes
@@ -32,5 +38,10 @@ class Project < ActiveRecord::Base
 
   def self.donors_choose_id_from_url(url)
     url.scan(/\d{4,}/).first
+  end
+
+  def calculate_amount_raised_cents
+    self.amount_raised_cents = ((total_price.to_f - cost_to_complete.to_f) * 100).to_i
+    save
   end
 end

@@ -7,12 +7,12 @@ describe "Creating a new challenge" do
     before(:each) { visit project_path(project) }
 
     it "shows a link for creating a new project" do
-      page.should have_content("Create New Challenge")
+      page.should have_content("Post a challenge!")
     end
 
     context "and when I click on the new challenge link" do
       it "should take me to a form to create a new challenge" do
-        click_link("Create New Challenge")
+        click_link("Post a challenge!")
         page.should have_content("Create a new challenge")
       end
     end
