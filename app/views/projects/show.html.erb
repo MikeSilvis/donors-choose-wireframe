@@ -75,7 +75,7 @@
                     <%= challenge.title %>
                   </span>
                   <div class="challenge-feed-target">
-                    When the project raises <%= humanized_money_with_symbol challenge.target_funding %>! (Only <%= humanized_money_with_symbol challenge.amount_currency %> to go!)
+                    When the project raises <%= humanized_money_with_symbol challenge.target_funding %>! <span class="amount-remaining">(Only <%= humanized_money_with_symbol challenge.amount_currency %> to go!)</span>
                   </div>
                   <div>
                   <%= link_to("View Challenge", project_challenge_path(@project, challenge), class: "challenge-link")  %>
