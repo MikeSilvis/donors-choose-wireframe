@@ -106,14 +106,12 @@
   <div class="row">
     <div id="feed" class="sixcol">
       <h1 class="feed-title">Project Activity Feed</h1>
-        <div class="message_form">
-          <%= form_for [@project, @new_message] do |f| %>
-            <%= f.text_field :name, placeholder: "Name" %>
-            <%= f.text_field :body, placeholder: "Message" %>
-            <%= f.submit %>
-          <% end %>
-        </div>
-        <div>
+        <%= form_for [@project, @new_message], remote: true do |f| %>
+          <%= f.text_field :name, placeholder: "Name" %>
+          <%= f.text_field :body, placeholder: "Message" %>
+          <%= f.submit %>
+        <% end %>
+        <div id="feed_messages">
         <% @feed.items.each do |item| %>
           <%= render item %>
         <% end %>
