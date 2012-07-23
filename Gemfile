@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-ruby "1.9.3"
 gem 'rails', '3.2.6'
 gem 'awesome_print'
 gem 'bourbon', '~> 2.1.1'
