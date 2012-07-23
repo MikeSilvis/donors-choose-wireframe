@@ -8,5 +8,8 @@ DonorsChooseWireframe::Application.routes.draw do
     end
   end
 
+  match '/auth/:provider/callback', to: 'sessions#create'
+  delete 'sessions/destroy'
+
   root to: 'projects#new'
 end
