@@ -19,8 +19,6 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @new_message = Message.new
     @challenges = Challenge.where("project_id = ?", params[:id]).order("amount ASC").limit(6)
-    @feed = Feed.for(@project)
   end
 end
