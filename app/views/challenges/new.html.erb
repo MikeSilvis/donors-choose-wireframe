@@ -1,16 +1,20 @@
 <div class="container">
- <%= render partial: 'error_message', locals: { challenge: @challenge } %>
-  <div class="row">
-    <div class="twocol"></div>
-    <div class="sevencol last">
-      <% if current_user %>
-        <%= render partial: 'new_challenge' %>
-      <% else %>
-        <%= render partial: 'sign_in_before_challenge' %>
-      <% end %>
+  <div class="well">
+   <%= render partial: 'error_message', locals: { challenge: @challenge } %>
+    <div class="row">
+      <div class="onecol"></div>
+      <div class="tencol last">
+        <% if current_user %>
+          <%= render partial: 'new_challenge' %>
+        <% else %>
+          <%= render partial: 'sign_in_before_challenge' %>
+        <% end %>
+      </div>
     </div>
   </div>
+</div>
 
+<div class="container">
   <div class="spacer"></div>
   <div class="row">
     <div class='twelvecol'>

@@ -150,16 +150,20 @@ a {
   }
 }
 
+#new-challenge-submit {
+  float: right;
+  margin-right: 20px;
+  margin-top: -10px;
+  font-size: 280%;
+}
+
 #pledge-form {
-  margin-top: 15px;
   font-family: "American Typewriter";
-  font-size: 25px;
-  background-image: url(image_path('oldpaper.jpeg'));
-  background-repeat: no-repeat;
+  font-size: 35px;
   padding: 21px;
   input {
     font-family: "American Typewriter";
-    font-size: 25px;
+    font-size: 35px;
     padding-left: 8px;
     padding-right: 8px;
     background-color: transparent;
@@ -172,5 +176,20 @@ a {
 
   input:focus {
     outline: none;
+  }
+
+  input::-webkit-input-placeholder {
+    color: gray;
+    opacity: 0.8;
+    font-style: italic;
+  }
+
+  input:-moz-placeholder {
+    color: black;
+    font-style: italic;
+  }
+
+  .url-input {
+    font-size: 28px;
   }
 }
