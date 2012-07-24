@@ -69,6 +69,10 @@ input.form-submit{
 }
 
 .info-details{
+  .number {
+    font-size: 24px;
+    color: $orange;
+  }
   border: 2px solid #eee;
   border: 6px solid rgba(0, 0, 0, 0.1);
   /*height:200px;*/
