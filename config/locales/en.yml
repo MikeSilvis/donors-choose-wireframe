@@ -9,3 +9,4 @@ en:
     attributes:
       challenge:
         display_media: "Photo or Video"
+        title: "Challenge Title"
