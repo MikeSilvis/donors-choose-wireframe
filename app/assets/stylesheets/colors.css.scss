@@ -21,15 +21,18 @@ $faintgrey: rgba(240,240,240,1);
 
 
 
+$progress-bar-bg: darken($middlegrey, 10%);
 $hover: $teal;
+$hover2: black;
 $navbar: $teal;
 $text: $squid;
 $text-medium: lighten($squid, 15%);
 $feed-entry-box: $faintgrey;
 $shadow: $squid;
 $background: lighten($orange, 13%);
-$row: $faintgrey;
+$page-container: $faintgrey;
 $give-button: $blue;
+$challenge-button: $orange;
 $accent-background: $salmon;
 $rule-grey: $middlegrey;
 /*228,93,37*/

@@ -1,0 +1,11 @@
+<ul class="feed-challenges nav nav-tabs">
+  <li class="feed-challenge active" id="feed-challenge-<%=challenges.first.id%>">
+    <%= render partial: "challenge_nav_tab", locals: {challenge: challenges.first} %>
+  </li>
+
+  <% challenges[1..-1].each do |challenge| %>
+    <li class="feed-challenge" id="feed-challenge-<%=challenge.id%>">
+      <%= render partial: "challenge_nav_tab", locals: {challenge: challenge} %>
+    </li>
+  <% end %>
+</ul>

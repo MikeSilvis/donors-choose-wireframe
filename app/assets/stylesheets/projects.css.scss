@@ -1,4 +1,5 @@
 @import "colors";
+
 .feed-entry {
   background: $orange;
 }
@@ -16,7 +17,11 @@ img.profile-pic {
 
 /*CHALLENGE FEED*/
 
-.feed-challenge {
+li.feed-challenge {
+  background: $page-container;
+  /*&:hover {*/
+    /*background: darken($page-container, 10%);*/
+  /*}*/
   margin-bottom: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid $rule-grey;
@@ -28,18 +33,22 @@ img.profile-pic {
     }
   }
   .amount-remaining {
+    border-bottom: 1px dashed $orange;
     font-weight: bold;
   }
 }
 
 .new-challenge-link{
-  font-size: 18px;
   a {
     color: $orange;
+    @include button(simple, $challenge-button);
+    &:hover {
+      color: white;
+    }
+    font-size: 14px;
   }
+  font-size: 18px;
 }
-
-
 
 /*FEATURED CHALLENGE*/
 
@@ -133,8 +142,9 @@ img.profile-pic {
     }
   }
 
-  /*Progress Bar*/
 
+}
+  /*Progress Bar*/
   $bar-height: 30px;
   #progress-box {
     margin-top: 20px;
@@ -144,7 +154,7 @@ img.profile-pic {
   .meter {
     height: 20px;  /* Can be anything */
     position: relative;
-    background: #555;
+    background: $progress-bar-bg;
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
     border-radius: 25px;
@@ -291,7 +301,6 @@ img.profile-pic {
         background-image: -ms-linear-gradient(top, #f1a165, #f36d0a);
         background-image: -o-linear-gradient(top, #f1a165, #f36d0a);
   }
-}
 
 /*Feed*/
 #divider{
@@ -322,11 +331,21 @@ img.profile-pic {
 
 .title-text{
   font-size:45px;
+  color: #838b83;
+}
+
+.subtitle-text{
+  color: #838b83;
+}
+
+.text_field{
+  border-radius: 25px;
+  padding-left: 15px;
 }
 
 input#project_proposal_url{
   height:35px;
-  width:62%;
+  width:82%;
 }
 
 input.form-submit{
@@ -334,6 +353,8 @@ input.form-submit{
   margin-top: 5px;
   font-size: 22px;
   margin-left:5px;
+  font-family: "Rokkitt", serif;
+  border-radius: 25px;
 }
 
 .well {
@@ -357,19 +378,23 @@ input.form-submit{
 
 .info-title{
   font-size:25px;
+  margin-left: 10px;
+  color: #838b83;
+
 }
 
 .info-details{
   height:200px;
-  background:$salmon;
+  background:$teal;
   font-size: 20px;
-  padding:8px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
+  padding:10px;
+  border-radius: 25px;
+  color: white;
 }
 
+
 #how-to-use{
-  margin-top:7%;
+  margin-top:23%;
 }
 
 /*Creating a new challenge*/
@@ -419,4 +444,16 @@ h1.no-margin{
 
 p.overlay-text{
   padding:10px;
+}
+
+
+.arrow{
+  margin-top: -153px;
+  margin-left: 125px;
+  width: 17%;
+  height: 17%;
+}
+
+.new_project{
+  margin-top: -59px;
 }

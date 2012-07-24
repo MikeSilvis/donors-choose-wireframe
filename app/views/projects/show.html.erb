@@ -4,95 +4,45 @@
   </div>
   <div class="row spacer"></div>
 
-  <div class="challenges">
     <div class="row challenges-headers">
-      <h1 class="sixcol">Featured Challenge</h1>
-      <h1 class="sixcol last">Other challenges for this project:</h1>
+      <h1 class="sixcol"><%= @project.title %> </h1>
+      <div id="progress-box" class="sixcol last">
+        <div class="meter orange">
+          <span style="width: 30%"></span>
+        </div>
+      </div>
     </div>
+
+  <div class="challenges">
     <div class="row">
+
+    <div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
+
+
       <div class="sixcol">
         <div class="featured-challenge">
           <div class="row any-width">
-            <% if @challenges.any? %>
-              <div class="challenge-details twelvecol">
-                <div class="row any-width">
-                  <h3 class="twelvecol">This challenge has almost met its goal — Push it over the edge by making a donation!</h3>
-                </div>
-                <div class="row any-width">
-                  <div class="twelvecol featured-challenge-image">
-                    <%= link_to(image_tag(@challenges.first.display_media), project_challenge_path(@project, @challenges.first))  %>
-                  </div>
-                </div>
-
-                <div class="row any-width">
-                  <div class="challenger twocol">
-                    <div class="challenger-image">
-                      <img src="https://si0.twimg.com/profile_images/1373765588/Verdi_reasonably_small.jpg">
-                    </div>
-                    <span class="user-name"><%= link_to @challenges.first.name, "#" %></span>
-                  </div>
-
-                  <div class="challenge-description sixcol">
-                    <div>
-                      <span class="challenge-will">WILL:</span>
-                      <span class="challenge-action"><%= @challenges.first.title %></span>
-                    </div>
-                    <div>
-                      <span class="challenge-if">IF:</span><span class="challenge-condition">the project reaches $<%= @challenges.first.amount %></span>
-                    </div>
-                  </div>
-
-                  <div class="fourcol last">
-                    <div class="challenge-money">
-                      <div class="challenge-progress">
-                        <span class="dollars-left">$84</span>
-                        <p class="to-go">To Go</p>
-                      </div>
-                      <div class="challenge-donate">
-                        <%= link_to "Give", @challenges.first.project.proposal_url, target: "_blank", class: "give-link" %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            <% end %>
+            <div class="tab-content">
+              <% if @challenges.any? %>
+                <%= render partial: "challenge_tab_contents", locals: {challenges: @challenges} %>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
 
+
       <div class="active-challenges sixcol last">
-        <div class="feed-challenges">
-          <% @challenges.each do |challenge| %>
-            <div class="feed-challenge" id="feed-challenge-<%=challenge.id%>">
-              <div class="row any-width">
-                <div class="twocol">
-                  <%= link_to(image_tag(challenge.display_media), project_challenge_path(@project, challenge))  %>
-                </div>
-                <div class="tencol last">
-                  <span class="challenge-feed-name">
-                    <%= challenge.name %> will:
-                  </span>
-                  <span class="challenge-feed-title">
-                    <%= challenge.title %>
-                  </span>
-                  <div class="challenge-feed-target">
-                    When the project raises <%= humanized_money_with_symbol challenge.target_funding %>! <span class="amount-remaining">(Only <%= humanized_money_with_symbol challenge.amount_currency %> to go!)</span>
-                  </div>
-                  <div>
-                  <%= link_to("View Challenge", project_challenge_path(@project, challenge), class: "challenge-link")  %>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
+              <% if @challenges.any? %>
+        <%= render partial: "challenge_nav_tabs", locals: {challenges: @challenges} %>
+              <% end %>
 
         <div class="new-challenge-link">
-          Add your contribution to the effort: <%= link_to "Post a challenge!", new_project_challenge_path(:project_id => @project.id) %>
+          Contribute to the effort: <%= link_to "Post a challenge!", new_project_challenge_path(:project_id => @project.id) %>
         </div>
       </div>
     </div>
+    </div> <!-- end tabbable tabs-right -->
   </div> <!-- end challenges -->
 </div> <!--end container -->
 
