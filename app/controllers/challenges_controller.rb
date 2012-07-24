@@ -4,7 +4,6 @@ class ChallengesController < ApplicationController
 
   def new
     @challenge = Challenge.new(params[:challenge])
-    @project = Project.find(params[:project_id])
   end
 
   def create
@@ -13,8 +12,7 @@ class ChallengesController < ApplicationController
       redirect_to project_path(@project)
       flash[:notice] = "Your challenge has been created"
     else
-      redirect_to new_project_challenge_path(@project)
-      flash[:error] = "Your challenge cannot be created"
+      render "new"
     end
   end
 
