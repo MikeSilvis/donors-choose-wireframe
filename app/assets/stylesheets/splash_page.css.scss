@@ -69,15 +69,22 @@ input.form-submit{
 }
 
 .info-details{
+  a {
+    color: white;
+    border-bottom: 1px dashed white;
+    &:hover {
+      color: lighten($teal, 40%);
+    }
+  }
   .number {
-    font-size: 24px;
-    color: $orange;
+    font-size: 32px;
+    border-bottom: 1px solid white;
   }
   border: 2px solid #eee;
   border: 6px solid rgba(0, 0, 0, 0.1);
   /*height:200px;*/
   background:$teal;
-  font-size: 20px;
+  font-size: 28px;
   padding:10px;
   border-radius: 25px;
   color: white;
@@ -95,9 +102,15 @@ input.form-submit{
 .splash-icon-wrap {
 }
 .row.how-to-row{
-  margin-bottom: 16px;
+  font-family: "Rokkitt", serif;
+  margin-bottom: 32px;
 }
 .splash-icon {
   color: $orange;
   font-size: 42px;
+}
+
+span.bold {
+  font-weight: bold;
+  border-bottom: 1px dashed white;
 }
