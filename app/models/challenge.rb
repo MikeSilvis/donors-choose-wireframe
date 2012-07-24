@@ -8,7 +8,7 @@ class Challenge < ActiveRecord::Base
   has_many :challenge_evidences
 
   validates_presence_of     :name, :title, :display_media
-  validates_numericality_of :amount, :greater_than => 0
+  validates_numericality_of :amount, :greater_than_or_equal_to => 0
   validate                  :amount_versus_donors_choose_fund, :on => :create
 
   after_create :calculate_target_funding
