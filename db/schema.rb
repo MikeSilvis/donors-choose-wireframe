@@ -13,6 +13,12 @@
 
 ActiveRecord::Schema.define(:version => 20120723230052) do
 
+  create_table "challenge_creation_events", :force => true do |t|
+    t.integer  "challenge_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "challenge_evidences", :force => true do |t|
     t.integer  "challenge_id"
     t.string   "image"

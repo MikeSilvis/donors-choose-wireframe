@@ -44,5 +44,3 @@ group :development, :test do
 end
 
 gem 'jquery-rails'
-
-
