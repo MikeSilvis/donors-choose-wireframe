@@ -21,4 +21,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @challenges = Challenge.where("project_id = ?", params[:id]).order("amount ASC").limit(6)
   end
+
+  def index
+  end
 end
