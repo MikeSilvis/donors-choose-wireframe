@@ -23,6 +23,6 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all.sort_by{ |project| project.title }
+    @projects = Project.order("title").page(params[:page]).per(8)
   end
 end

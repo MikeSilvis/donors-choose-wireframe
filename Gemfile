@@ -15,6 +15,7 @@ gem 'resque', "~> 1.20.0", :require => 'resque/server'
 gem 'resque-scheduler', :require => 'resque_scheduler'
 gem 'text_to_media', github: "verdi327/text_to_media"
 gem 'money-rails'
+gem 'kaminari'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -44,5 +45,3 @@ group :development, :test do
 end
 
 gem 'jquery-rails'
-
-
