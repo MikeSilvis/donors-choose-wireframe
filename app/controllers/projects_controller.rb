@@ -23,6 +23,6 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.order("title").page(params[:page]).per(8)
+    @projects = Project.where(:funding_status => "needs funding").order("title").page(params[:page]).per(8)
   end
 end
