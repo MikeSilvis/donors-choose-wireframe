@@ -21,7 +21,7 @@ class Challenge < ActiveRecord::Base
   def amount_currency
     Money.new(amount * 100)
   end
-  
+
   private
 
   def amount_versus_donors_choose_fund
