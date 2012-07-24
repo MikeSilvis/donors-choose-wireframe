@@ -23,7 +23,8 @@ $("#new_message").live("ajax:complete", function(event,xhr,status){
 $(document).ready(function() {
   $(".challenge-nav-tab-contents").click(function () {
     var clicked = $(this);
-    var link = clicked.find("a");
+    var link = clicked.find("a").first();
+    console.log(link);
     link.tab('show');
   });
 });

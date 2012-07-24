@@ -23,7 +23,9 @@
         <div class="featured-challenge">
           <div class="row any-width">
             <div class="tab-content">
-              <%= render partial: "challenge_tab_contents", locals: {challenges: @challenges} %>
+              <% if @challenges.any? %>
+                <%= render partial: "challenge_tab_contents", locals: {challenges: @challenges} %>
+              <% end %>
             </div>
           </div>
         </div>
@@ -31,7 +33,9 @@
 
 
       <div class="active-challenges sixcol last">
+              <% if @challenges.any? %>
         <%= render partial: "challenge_nav_tabs", locals: {challenges: @challenges} %>
+              <% end %>
 
         <div class="new-challenge-link">
           Contribute to the effort: <%= link_to "Post a challenge!", new_project_challenge_path(:project_id => @project.id) %>
