@@ -17,7 +17,7 @@ a {
   &:visited {
     color: $text;
     &:hover {
-      color: $hover;
+      color: $hover2;
       border-bottom: 1px dashed $cream;
     }
   }
@@ -58,6 +58,7 @@ a {
 
 #navbar {
   background: $navbar;
+  @include linear-gradient($navbar, #444);
   color: white;
   a {
     color: white;

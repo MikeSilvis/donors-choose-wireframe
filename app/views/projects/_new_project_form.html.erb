@@ -1,12 +1,27 @@
 <div class="well">
   <div class="fourcol">
-    <%= image_tag("http://3.bp.blogspot.com/-tY30zdA0YNs/TgpRjEUFkXI/AAAAAAAAAU0/U5UqPrzWKWk/s1600/HappyKids2.jpg") %>
+    <%= image_tag("http://www.teachingvillage.org/wp-content/uploads/2010/02/C4C775B1FABB436AAAA367FE275A4F59.jpg") %>
   </div>
   <div class='eightcol last'>
     <div class="title-text"><h1>Be A Hero Today</h1></div>
-    <%= form_for @project, class: "project-form" do |f| %>
-      <%= f.text_field :proposal_url, placeholder: "Enter a Donors Choose Url" %>
-      <%= f.submit class: 'form-submit' %>
-    <% end %>
+    <div class="subtitle-text">Welcome to Donor's Challenge, where you and your friends can create fun and
+      exciting challenges while raising money for teachers and students nationwide.  </div>
   </div>
+
+  <hr/>
+  <div id="how-to-use">
+    <div class="row">
+      <%= render partial: "how_to_use" %>
+    </div>
+    <div class="arrow">
+      <%= image_tag("arrow33_blue2.png") %>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <%= form_for @project, class: "project-form" do |f| %>
+    <%= f.text_field :proposal_url, placeholder: "Enter a Donors Choose URL (e.g. http://www.donorschoose.org/project/comfy-literacy-center/814936/)", class:'text_field' %>
+    <%= f.submit class: 'form-submit', value: "Adopt Project" %>
+  <% end %>
 </div>
