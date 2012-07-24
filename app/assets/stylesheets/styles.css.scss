@@ -58,7 +58,7 @@ a {
 
 #navbar {
   background: $navbar;
-  @include linear-gradient($navbar, #444);
+  @include linear-gradient(lighten($navbar, 12%), $navbar);
   color: white;
   a {
     color: white;
@@ -120,4 +120,32 @@ a {
   float: right;
   font-size: 50%;
   margin-right: 20px;
+}
+
+#challenge-form-obscurer {
+  background-color: black;
+  opacity: 0.35;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#create-challenge-box {
+  position: relative;
+}
+
+#sign-in-box {
+  @include button(pill, lighten($teal, 15%));
+  @include box-shadow(0 0 3px 1px $whale);
+  position: absolute;
+  left: 57px;
+  top: 92px;
+  width: 70%;
+  padding: 10px;
+  a {
+    color: white;
+    font-size: 300%;
+  }
 }

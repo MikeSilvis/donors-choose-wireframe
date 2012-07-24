@@ -15,4 +15,16 @@ class ApplicationController < ActionController::Base
   def sign_out_user
     session[:user_id] = nil
   end
+
+  def authenticate_user
+    unless current_user
+      flash[:notice] = "You must sign in to perform this action"
+      redirect_back_or_to_root
+    end
+  end
+
+  def redirect_back_or_to_root
+    request.env["HTTP_REFERER"] ||= request.env['omniauth.origin'] || root_url
+    redirect_to :back
+  end
 end

@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'support/redirection_support'
 
 describe "Creating a new challenge" do
   let(:project) { FactoryGirl.create(:project) }
@@ -20,6 +21,7 @@ describe "Creating a new challenge" do
 
   context "When I am on the new challenge page" do
     before :each do
+      sign_in(FactoryGirl.create(:user))
       visit new_project_challenge_path(project)
       find(:xpath, "//input[@id='challenge_project_id']").set project.id
     end

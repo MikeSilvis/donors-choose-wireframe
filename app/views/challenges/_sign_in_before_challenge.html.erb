@@ -1,0 +1,22 @@
+<h1>Create a new challenge</h1>
+<div id="create-challenge-box">
+  <div class="well">
+    <%= form_for [@project, @challenge] do |f| %>
+      <h3><%= f.label :name, "Name" %></h3>
+      <%= f.text_field :name, disabled: true %>
+      <h3><%= f.label :title, "Challenge" %></h3>
+      <%= f.text_field :title, disabled: true %>
+      <h3><%= f.label :amount, "Amount" %></h3>
+      <%= f.text_field :amount, disabled: true %>
+      <h3><%= f.label :display_media, "Photo or Video" %></h3>
+      <%= f.text_field :display_media, disabled: true %>
+      <%= f.hidden_field :project_id, :value => @project.id  %>
+      </br>
+      <%= f.submit disabled: true, class: "form-submit small" %>
+    <% end %>
+  </div>
+  <div id="challenge-form-obscurer"></div>
+  <div id="sign-in-box">
+    <%= link_to "Sign in with Twitter to create a new challenge", "/auth/twitter" %>
+  </div>
+</div>
