@@ -1,0 +1,9 @@
+<div class="challenge-details twelvecol tab-pane active" id="tab<%=@challenges.first.id%>">
+  <%= render partial: "challenge_tab", locals: {challenge: @challenges.first} %>
+</div>
+
+<% @challenges[1..-1].each do |challenge| %>
+  <div class="challenge-details twelvecol tab-pane" id="tab<%=challenge.id%>">
+    <%= render partial: "challenge_tab", locals: {challenge: challenge} %>
+  </div>
+<% end %>

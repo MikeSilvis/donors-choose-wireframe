@@ -1,4 +1,5 @@
 @import "colors";
+
 .feed-entry {
   background: $orange;
 }
@@ -16,7 +17,11 @@ img.profile-pic {
 
 /*CHALLENGE FEED*/
 
-.feed-challenge {
+li.feed-challenge {
+  background: $page-container;
+  /*&:hover {*/
+    /*background: darken($page-container, 10%);*/
+  /*}*/
   margin-bottom: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid $rule-grey;
@@ -28,18 +33,22 @@ img.profile-pic {
     }
   }
   .amount-remaining {
+    border-bottom: 1px dashed $orange;
     font-weight: bold;
   }
 }
 
 .new-challenge-link{
-  font-size: 18px;
   a {
     color: $orange;
+    @include button(simple, $challenge-button);
+    &:hover {
+      color: white;
+    }
+    font-size: 14px;
   }
+  font-size: 18px;
 }
-
-
 
 /*FEATURED CHALLENGE*/
 
@@ -133,8 +142,9 @@ img.profile-pic {
     }
   }
 
-  /*Progress Bar*/
 
+}
+  /*Progress Bar*/
   $bar-height: 30px;
   #progress-box {
     margin-top: 20px;
@@ -144,7 +154,7 @@ img.profile-pic {
   .meter {
     height: 20px;  /* Can be anything */
     position: relative;
-    background: #555;
+    background: $progress-bar-bg;
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
     border-radius: 25px;
@@ -291,7 +301,6 @@ img.profile-pic {
         background-image: -ms-linear-gradient(top, #f1a165, #f36d0a);
         background-image: -o-linear-gradient(top, #f1a165, #f36d0a);
   }
-}
 
 /*Feed*/
 #divider{
