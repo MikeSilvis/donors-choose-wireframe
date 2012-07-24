@@ -17,9 +17,6 @@
   border-radius: $well-radius;
 }
 
-
-
-
 .tagline {
   font-size: 24px;
   color: $orange;
@@ -83,15 +80,20 @@ input.form-submit{
 }
 
 
+.sample-projects {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+
 /*HOW TOS*/
 
-#how-to-use{
+.splash-icon-wrap {
 }
-
-.arrow{
-  margin-top: -153px;
-  margin-left: 125px;
-  width: 17%;
-  height: 17%;
+.row.how-to-row{
+  margin-bottom: 16px;
 }
-
+.splash-icon {
+  color: $orange;
+  font-size: 42px;
+}
