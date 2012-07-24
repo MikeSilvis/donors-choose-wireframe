@@ -26,9 +26,9 @@ describe "Creating a new challenge" do
       find(:xpath, "//input[@id='challenge_project_id']").set project.id
     end
 
-    it "should allow me to fill out the info for name, challenge, and amount" do
+    it "should allow me to fill out the info for name, challenge title, and amount" do
       page.should have_field('Name')
-      page.should have_field('Challenge')
+      page.should have_field('Challenge Title')
       page.should have_field('Amount')
     end
 
@@ -46,7 +46,7 @@ describe "Creating a new challenge" do
       fill_in("Amount", :with => 5)
       click_button("Create Challenge")
       page.should have_content("Create a new challenge")
-      current_path.should == new_project_challenge_path(project)
+      current_path.should == "/projects/1/challenges"
     end
 
     it "should error if amount is more than the completion amount" do
@@ -55,7 +55,7 @@ describe "Creating a new challenge" do
       fill_in("Amount", :with => 10000)
       find(:xpath, "//input[@id='challenge_project_id']").set project.id
       click_button("Create Challenge")
-      current_path.should == new_project_challenge_path(project)
+      current_path.should == "/projects/1/challenges"
       page.should have_content("Create a new challenge")
     end
   end

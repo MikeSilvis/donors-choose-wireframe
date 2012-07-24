@@ -388,3 +388,32 @@ p.overlay-text{
   padding:10px;
 }
 
+.arrow{
+  margin-top: -153px;
+  margin-left: 125px;
+  width: 17%;
+  height: 17%;
+}
+
+.new_project{
+  margin-top: -59px;
+}
+
+h3{
+  .inline-error{
+    color: #FF6666;
+    font-style: italic;
+  }
+
+  .field_with_errors{
+    display: inline;
+  }
+}
+
+
+.field_with_errors {
+  input{
+    border: 1px solid red;
+    background: #fff0f0
+  }
+}
