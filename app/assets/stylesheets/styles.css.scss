@@ -58,7 +58,7 @@ a {
 
 #navbar {
   background: $navbar;
-  @include linear-gradient($navbar, #444);
+  @include linear-gradient(lighten($navbar, 12%), $navbar);
   color: white;
   a {
     color: white;

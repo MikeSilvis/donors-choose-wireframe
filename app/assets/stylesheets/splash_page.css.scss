@@ -1,0 +1,96 @@
+@import "colors";
+
+/*splash page*/
+
+
+.well {
+  $well-radius: 8px;
+  min-height: 222px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: $cream;
+  border: 2px solid #eee;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-radius: $well-radius;
+  -webkit-border-radius: $well-radius;
+  -moz-border-radius: $well-radius;
+  border-radius: $well-radius;
+}
+
+
+
+
+.tagline {
+  font-size: 24px;
+  color: $orange;
+  .site-name {
+    color: $teal;
+  }
+}
+
+.tagline.tagline-copy {
+  margin-top: -16px;
+}
+
+
+/*PROJECT FORM*/
+
+.project-creation {
+  margin-top: 32px;
+}
+
+.project-cta {
+  color: $teal;
+}
+.text_field{
+  border-radius: 25px;
+  padding-left: 15px;
+}
+
+input#project_proposal_url{
+  height:28px;
+  width: 100%;
+}
+
+input.form-submit{
+  @include button(pill, $orange);
+  font-size: 24px;
+  font-family: "Rokkitt", serif;
+}
+
+
+.subtitle-text{
+  color: #838b83;
+}
+
+
+.info-title{
+  font-size:25px;
+  margin-left: 10px;
+  color: #838b83;
+
+}
+
+.info-details{
+  border: 2px solid #eee;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  /*height:200px;*/
+  background:$teal;
+  font-size: 20px;
+  padding:10px;
+  border-radius: 25px;
+  color: white;
+}
+
+
+/*HOW TOS*/
+
+#how-to-use{
+}
+
+.arrow{
+  margin-top: -153px;
+  margin-left: 125px;
+  width: 17%;
+  height: 17%;
+}
