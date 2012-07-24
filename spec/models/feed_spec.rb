@@ -30,8 +30,8 @@ describe "Feed" do
       let(:project) { FactoryGirl.create(:project_with_the_works) }
       let(:feed) { Feed.for(project) }
 
-      it "returns an array with the length equal to total messages and events" do
-        feed.items.count.should == 5
+      it "returns an array with the length equal to total messages" do
+        feed.items.count.should == 2
       end
 
       it "returns an array of messages and events sorted by descending created date" do

@@ -27,14 +27,13 @@
   </div>
   <div class="sixcol last">
     <h1>Evidence So Far</h1>
-    <% unless @challenge_evidences.blank? %>
+    <% if @challenge_evidences.any? %>
       <% @challenge_evidences.each do |evidence| %>
         <% if evidence.image_url %>
           <%= image_tag(evidence.image_url) %>
         <% elsif evidence.external_url %>
-          <%= image_tag(evidence.external_url) %>
+          <%= evidence.embed.html_safe %>
         <% else %>
-          <p>Photo not found</p>
         <% end %>
       <% end %>
     <% end %>
