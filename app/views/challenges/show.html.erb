@@ -25,8 +25,9 @@
 
   <%= render partial: 'challenge_evidences/form' if @challenge.user == current_user %>
   </div>
+
   <div class="sixcol last">
-    <h1>Evidence So Far</h1>
+    <h1>Evidence for this challenge:</h1>
     <% if @challenge_evidences.any? %>
       <% @challenge_evidences.each do |evidence| %>
         <% if evidence.image_url %>
