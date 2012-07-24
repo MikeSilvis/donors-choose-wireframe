@@ -1,27 +1,56 @@
 <div class="well">
-  <div class="fourcol">
-    <%= image_tag("http://www.teachingvillage.org/wp-content/uploads/2010/02/C4C775B1FABB436AAAA367FE275A4F59.jpg") %>
-  </div>
-  <div class='eightcol last'>
-    <div class="title-text"><h1>Be A Hero Today</h1></div>
-    <div class="subtitle-text">Welcome to Donor's Challenge, where you and your friends can create fun and
-      exciting challenges while raising money for teachers and students nationwide.  </div>
+  <div class="row">
+    <div class="twelvecol tagline tagline-name">
+      <h1><span class="site-name">Donors Challenge:</span>
+    </div>
   </div>
 
-  <hr/>
+  <div class="row">
+    <div class="twelvecol tagline tagline-copy">
+      <h1>Raising money at the expense of your dignity.
+    </div>
+  </div>
+
+
+  <div class="project-creation">
+  <div class="row">
+    <div class="twelvecol">
+      <h2 class="project-cta">Find a Donors Choose Project you'd like to support and enter the URL below:</h2>
+    </div>
+  </div>
+  <div class="row">
+      <%= form_for @project do |f| %>
+        <div class="ninecol">
+          <%= f.text_field :proposal_url, placeholder: "Enter a Donors Choose URL (e.g. http://www.donorschoose.org/project/comfy-literacy-center/814936/)", class:'text_field' %>
+        </div>
+        <div class="threecol last">
+          <%= f.submit class: 'form-submit', value: "Adopt Project" %>
+        </div>
+      <% end %>
+  </div>
+  <div class="row project-form-header">
+    <div class="twelvecol">
+      <h2 class="project-cta">Or help support a project that has already been adopted:</h2>
+    </div>
+  </div>
+  <div class="row sample-projects">
+    <div class="threecol">
+      Project 1
+    </div>
+    <div class="threecol">
+      Project 1
+    </div>
+    <div class="threecol">
+      Project 1
+    </div>
+    <div class="threecol last">
+      more
+    </div>
+  </div>
+
+
   <div id="how-to-use">
-    <div class="row">
-      <%= render partial: "how_to_use" %>
-    </div>
-    <div class="arrow">
-      <%= image_tag("arrow33_blue2.png") %>
-    </div>
+    <%= render partial: "how_to_use" %>
   </div>
-  <br>
-  <br>
 
-  <%= form_for @project, class: "project-form" do |f| %>
-    <%= f.text_field :proposal_url, placeholder: "Enter a Donors Choose URL (e.g. http://www.donorschoose.org/project/comfy-literacy-center/814936/)", class:'text_field' %>
-    <%= f.submit class: 'form-submit', value: "Adopt Project" %>
-  <% end %>
 </div>
