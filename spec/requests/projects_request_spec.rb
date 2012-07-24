@@ -48,43 +48,34 @@ describe "Creating a project" do
   context "Viewing a project" do
     let(:project) { FactoryGirl.create(:project) }
 
-    before(:each) { visit project_path(project) }
-
-    it "shows the basic details for the project" do
-      page.should have_content(project.school_name)
+    it "displays the title as a link" do
+      pending
+      visit project_path(project)
+      page.should have_content(project.title)
     end
 
-    it "displays a truncated project title as a link to the original proposal" do
-      title = "a"*100
-      project.title = title
-      project.save
+    it "shows the challenge posters avatar" do
+      pending
       visit project_path(project)
-      page.should have_link(project.title.truncate(54))
-    end
-
-    it "otherwise shows the whole title" do
-      project.title = "Short Title"
-      project.save
-      visit project_path(project)
-      page.should have_link(project.title)
+      page.should have_image(project.owner_avatar)
     end
   end
 
-  context "Viewing the challenges attached to a project" do
-    let(:project) { FactoryGirl.create(:project) }
-    let!(:challenge1) { FactoryGirl.create(:challenge, project: project) }
-    let!(:challenge2) { FactoryGirl.create(:challenge, project: project) }
+  # context "Viewing the challenges attached to a project" do
+  #   let(:project) { FactoryGirl.create(:project) }
+  #   let!(:challenge1) { FactoryGirl.create(:challenge, project: project) }
+  #   let!(:challenge2) { FactoryGirl.create(:challenge, project: project) }
 
-    before(:each) { visit project_path(project) }
+  #   before(:each) { visit project_path(project) }
 
-    it "shows a list of challenges with relevant details" do
-      project.challenges.each do |c|
-        within("#feed-challenge-#{c.id}") do
-          page.should have_content(c.name)
-          page.should have_content(c.title)
-          page.should have_content(c.amount)
-        end
-      end
-    end
-  end
+  #   it "shows a list of challenges with relevant details" do
+  #     project.challenges.each do |c|
+  #       within("#feed-challenge-#{c.id}") do
+  #         page.should have_content(c.name)
+  #         page.should have_content(c.title)
+  #         page.should have_content(c.amount)
+  #       end
+  #     end
+  #   end
+  # end
 end
