@@ -70,6 +70,22 @@ describe "Creating a project" do
     end
   end
 
+  context "Viewing all projects" do
+    let(:project1) { FactoryGirl.create(:project) }
+    let(:project2) { FactoryGirl.create(:project, :title => "Project 2") }
+
+    before(:each) do
+      @projects = []
+      @projects << project1 << project2
+      visit projects_path
+    end
+
+    it "should have all of the projects on the page" do
+      page.should have_content("Help Inspire Young Authors and Illustrators...With Books!")
+      page.should have_content(project2.title)
+    end
+  end
+
   context "Viewing the challenges attached to a project" do
     let(:project) { FactoryGirl.create(:project) }
     let!(:challenge1) { FactoryGirl.create(:challenge, project: project) }
