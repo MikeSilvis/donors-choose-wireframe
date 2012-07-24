@@ -375,76 +375,6 @@ li.feed-challenge.active {
 
 
 
-/*splash page*/
-
-.title-text{
-  font-size:45px;
-  color: #838b83;
-}
-
-.subtitle-text{
-  color: #838b83;
-}
-
-.text_field{
-  border-radius: 25px;
-  padding-left: 15px;
-}
-
-input#project_proposal_url{
-  height:35px;
-  width:82%;
-}
-
-input.form-submit{
-  @include button(simple, $orange);
-  margin-top: 5px;
-  font-size: 22px;
-  margin-left:5px;
-  font-family: "Rokkitt", serif;
-  border-radius: 25px;
-}
-
-.well {
-  min-height: 222px;
-  padding: 19px;
-  margin-bottom: 20px;
-  background-color: $cream;
-  border: 1px solid #eee;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-
-.project-form{
-   height:200px;
-}
-
-.info-title{
-  font-size:25px;
-  margin-left: 10px;
-  color: #838b83;
-
-}
-
-.info-details{
-  height:200px;
-  background:$teal;
-  font-size: 20px;
-  padding:10px;
-  border-radius: 25px;
-  color: white;
-}
-
-
-#how-to-use{
-  margin-top:23%;
-}
-
 /*Creating a new challenge*/
 
 .well.project-wrapper{
@@ -494,14 +424,3 @@ p.overlay-text{
   padding:10px;
 }
 
-
-.arrow{
-  margin-top: -153px;
-  margin-left: 125px;
-  width: 17%;
-  height: 17%;
-}
-
-.new_project{
-  margin-top: -59px;
-}
