@@ -121,6 +121,11 @@ li.feed-challenge.active {
 }
 
 /*PROJECT INDEX PAGE*/
+#index-title{
+  margin-left: 65px;
+  color: #838b83;
+}
+
 .all-projects{
   margin-left: 50px;
 }
@@ -144,11 +149,11 @@ li.feed-challenge.active {
 
 .pagination{
   padding-left: 7px;
-  color: $teal;
 }
 
 .first, .last, .next, .prev, .page{
   padding: 10px;
+  color: $teal;
 }
 
 /*PROJECT INFO BAR*/
