@@ -16,8 +16,9 @@ class ProjectImporter
       adjustment_to_goal = previous_cost - new_cost
       project.challenges.each do |challenge|
         new_goal = challenge.amount - adjustment_to_goal
-        if new_goal < 0
+        if new_goal < 0 || new_goal=0
           new_goal = 0
+          challenge.update_attributes(:status => "closed")
         end
         challenge.update_attributes(:amount => new_goal)
       end

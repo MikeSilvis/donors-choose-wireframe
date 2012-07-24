@@ -1,6 +1,6 @@
 class Challenge < ActiveRecord::Base
   attr_accessible :name, :title, :amount,
-                  :project_id, :display_media
+                  :project_id, :display_media, :status
 
   monetize :target_funding_cents, allow_nil: true
 
