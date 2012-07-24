@@ -13,7 +13,7 @@ describe "Creating a project" do
 
     it "creates a project from a donors choose url" do
       fill_in "project_proposal_url", with: "http://www.donorschoose.org/project/a-library-for-all-to-enjoy/793053/"
-      click_link_or_button "Create Project"
+      click_link_or_button "Adopt Project"
       project = Project.find_by_donors_choose_id("793053")
       current_path.should == new_project_challenge_path(project)
       page.should have_content("Thanks for adopting this project! To kick this party off right, create a new challenge!")
@@ -26,7 +26,7 @@ describe "Creating a project" do
 
     it "shows a message that the project has been created successfully" do
       fill_in "project_proposal_url", with: "http://www.donorschoose.org/project/a-library-for-all-to-enjoy/793053/"
-      click_link_or_button "Create Project"
+      click_link_or_button "Adopt Project"
       current_path.should == new_project_challenge_path(Project.last)
       page.should have_content "Thanks for adopting this project! To kick this party off right, create a new challenge!"
     end
@@ -39,7 +39,7 @@ describe "Creating a project" do
 
     it "shows a message that the project already exists" do
       fill_in "project_proposal_url", with: project.proposal_url
-      click_link_or_button "Create Project"
+      click_link_or_button "Adopt Project"
       current_path.should == project_path(project)
       page.should have_content "This project already exists. You can contribute to it here!"
     end
