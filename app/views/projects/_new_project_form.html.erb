@@ -4,9 +4,24 @@
   </div>
   <div class='eightcol last'>
     <div class="title-text"><h1>Be A Hero Today</h1></div>
-    <%= form_for @project, class: "project-form" do |f| %>
-      <%= f.text_field :proposal_url, placeholder: "Enter a Donors Choose Url" %>
-      <%= f.submit class: 'form-submit' %>
-    <% end %>
+    <div class="subtitle-text">Welcome to Donor's Challenge, where you and your friends can create fun and
+      exciting challenges while helping raise money for teachers and students nationwide.  </div>
   </div>
+
+  <hr/>
+  <div id="how-to-use">
+    <div class="row">
+      <%= render partial: "how_to_use" %>
+    </div>
+    <div class="arrow">
+      <%= image_tag("arrow33_blue2.png") %>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <%= form_for @project, class: "project-form" do |f| %>
+    <%= f.text_field :proposal_url, placeholder: "Enter a Donors Choose Url", class:'text_field' %>
+    <%= f.submit class: 'form-submit', value: "Adopt Project" %>
+  <% end %>
 </div>
