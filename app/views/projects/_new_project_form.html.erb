@@ -34,20 +34,23 @@
     </div>
   </div>
   <div class="row sample-projects">
-    <div class="threecol">
-      Project 1
+    <% @projects[0..3].each do |project| %>
+      <div class="threecol" id="project_info">
+        <div id="project-title-2">
+          <%= project.title %>
+        </div>
+    <div class="image">
+      <%= link_to image_tag(project.image_url), project_path(project) %>
     </div>
-    <div class="threecol">
-      Project 1
-    </div>
-    <div class="threecol">
-      Project 1
-    </div>
-    <div class="threecol last">
-      more
-    </div>
+      </div>
+    <% end %>
   </div>
 
+  <div>
+    <%= link_to "Click here for a full list of adopted projects", projects_path %> 
+  </div>
+  <br>
+  <hr>
 
   <div id="how-to-use">
     <%= render partial: "how_to_use" %>

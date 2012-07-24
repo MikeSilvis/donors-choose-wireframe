@@ -26,4 +26,8 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @challenges = Challenge.where("project_id = ?", params[:id]).order("amount ASC").limit(6)
   end
+
+  def index
+    @projects = Project.where(:funding_status => "needs funding").order("title").page(params[:page]).per(8)
+  end
 end
