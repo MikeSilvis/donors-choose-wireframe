@@ -7,7 +7,7 @@
     </a>
   </div>
   <div class="tencol last">
-    <span class="challenge-username"><%= challenge.name %></span> will: <%= challenge.title %> <span class="amount-remaining">(Only <%= humanized_money_with_symbol challenge.amount_currency %> to go!)</span>
+    <span class="challenge-nav-text"><span class="challenge-username"><%= challenge.name %></span> will: <%= challenge.title %> <span class="amount-remaining">(Only <%= humanized_money_with_symbol challenge.amount_currency %> to go!)</span></span>
     <div>
       <%= link_to("View Challenge", project_challenge_path(@project, challenge), class: "challenge-link")  %>
     </div>
