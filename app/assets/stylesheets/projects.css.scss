@@ -324,6 +324,11 @@ img.profile-pic {
   font-size:45px;
 }
 
+.text_field{
+  border-radius: 25px;
+  padding-left: 15px;
+}
+
 input#project_proposal_url{
   height:35px;
   width:80%;
@@ -334,6 +339,8 @@ input.form-submit{
   margin-top: 5px;
   font-size: 22px;
   margin-left:5px;
+  font-family: "Rokkitt", serif;
+  border-radius: 25px;
 }
 
 .well {
