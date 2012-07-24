@@ -1,6 +1,8 @@
 class ChallengeEvidence < ActiveRecord::Base
   attr_accessible :image, :challenge_id, :external_url
   belongs_to :challenge
+  belongs_to :user
+
   mount_uploader :image, ImageUploader
 
   def embed

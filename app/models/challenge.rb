@@ -5,6 +5,8 @@ class Challenge < ActiveRecord::Base
   monetize :target_funding_cents, allow_nil: true
 
   belongs_to :project
+  belongs_to :user
+
   has_many :challenge_evidences
 
   validates_presence_of     :name, :title, :display_media

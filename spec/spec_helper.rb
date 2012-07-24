@@ -22,6 +22,8 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
 
   config.infer_base_class_for_anonymous_controllers = false
+
+  config.include UserSupport
 end
 
 module Capybara
@@ -44,3 +46,12 @@ class UploadStubber
     evidence
   end
 end
+
+
+OmniAuth.config.test_mode = true
+
+OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new( {
+  provider: "twitter",
+  :uid => '123545',
+  :extra => { :raw_info => { :screen_name => "Nisarg" } }
+})

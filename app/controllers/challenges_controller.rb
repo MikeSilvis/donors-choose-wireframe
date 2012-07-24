@@ -1,5 +1,6 @@
 class ChallengesController < ApplicationController
   before_filter :find_project
+  before_filter :authenticate_user, only: [:create]
 
   def new
     @challenge = Challenge.new(params[:challenge])
@@ -7,7 +8,7 @@ class ChallengesController < ApplicationController
   end
 
   def create
-    @challenge = Challenge.new(params[:challenge])
+    @challenge = current_user.challenges.new(params[:challenge])
     if @challenge.save
       redirect_to project_path(@project)
       flash[:notice] = "Your challenge has been created"

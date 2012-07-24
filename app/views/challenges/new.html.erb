@@ -4,7 +4,11 @@
       <%= render partial: 'project_overview' %>
     </div>
     <div class="sixcol last">
-      <%= render partial: 'new_challenge' %>
+      <% if current_user %>
+        <%= render partial: 'new_challenge' %>
+      <% else %>
+        <%= render partial: 'sign_in_before_challenge' %>
+      <% end %>
     </div>
   </div>
 
