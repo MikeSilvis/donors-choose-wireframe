@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :challenges
+  has_many :challenge_evidences
+  has_many :messages
 
   def self.find_or_create_from_auth(auth)
     user = find_by_provider_and_uid(auth.provider, auth.uid) || User.send("create_from_#{auth.provider}", auth)

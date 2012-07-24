@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(:version => 20120723230052) do
     t.datetime "updated_at",   :null => false
     t.string   "external_url"
     t.string   "display_html"
+    t.integer  "user_id"
+  end
+
+  create_table "challenge_met_events", :force => true do |t|
+    t.integer  "challenge_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "challenges", :force => true do |t|
@@ -32,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20120723230052) do
     t.string   "display_media"
     t.boolean  "met",                  :default => false
     t.integer  "target_funding_cents"
+    t.integer  "user_id"
   end
 
   create_table "events", :force => true do |t|
@@ -49,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20120723230052) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.string   "display_html"
+    t.integer  "user_id"
   end
 
   create_table "projects", :force => true do |t|
