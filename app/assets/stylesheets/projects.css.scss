@@ -1,4 +1,5 @@
 @import "colors";
+
 .feed-entry {
   background: $orange;
 }
@@ -16,7 +17,7 @@ img.profile-pic {
 
 /*CHALLENGE FEED*/
 
-.feed-challenge {
+li.feed-challenge {
   background: $page-container;
   &:hover {
     background: darken($page-container, 10%);
