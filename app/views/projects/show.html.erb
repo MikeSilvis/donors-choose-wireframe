@@ -5,7 +5,7 @@
   <div class="row spacer"></div>
 
     <div class="row challenges-headers">
-      <h1 class="sixcol"><%= @project.title %> </h1>
+      <h1 class="sixcol">Project: <%= @project.title %> </h1>
       <div id="progress-box" class="sixcol last">
         <div class="meter orange">
           <span style="width: 30%"></span>
@@ -33,9 +33,9 @@
 
 
       <div class="active-challenges sixcol last">
-              <% if @challenges.any? %>
-        <%= render partial: "challenge_nav_tabs", locals: {challenges: @challenges} %>
-              <% end %>
+        <% if @challenges.any? %>
+          <%= render partial: "challenge_nav_tabs", locals: {challenges: @challenges} %>
+        <% end %>
 
         <div class="new-challenge-link">
           Contribute to the effort: <%= link_to "Post a challenge!", new_project_challenge_path(:project_id => @project.id) %>
