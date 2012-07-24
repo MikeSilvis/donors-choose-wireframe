@@ -23,5 +23,6 @@ class ProjectsController < ApplicationController
   end
 
   def index
+    @projects = Project.all.sort_by{ |project| project.title }
   end
 end
