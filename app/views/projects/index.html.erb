@@ -1,0 +1,25 @@
+<div class="container">
+	
+  <div class="row spacer"></div>
+
+	<div class="well">
+	  <div class="twelvecol">
+	  	<h1 id="index-title">Current Adopted Projects</h1>
+	  	<ul class="all-projects">
+				<% @projects.each do |project| %>
+					<li class="project-info">
+						<div id="project-title">
+					  	<%= project.title %>
+					  </div>
+					  <div class="image">
+							<%= link_to image_tag(project.image_url), project_path(project) %>
+						</div>
+					</li>
+				<% end %>
+				<div class="pagination">
+					<%= paginate @projects %>
+				</div>
+			</ul>
+
+	  </div>
+
