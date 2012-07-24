@@ -406,3 +406,34 @@ h3{
     background: #fff0f0
   }
 }
+
+/*PROJECT INDEX PAGE*/
+#index-title{
+  margin-left: 65px;
+  color: #838b83;
+}
+
+.all-projects{
+  margin-left: 50px;
+}
+
+.project-info{
+  width: 20%;
+  display: inline-block;
+  padding: 15px;
+}
+
+#project-title{
+  position: absolute;
+  font-size: 12px;
+  color: white;
+  background: $teal;
+  width: 190px;
+  height: 35px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.pagination{
+  padding-left: 7px;
+}
