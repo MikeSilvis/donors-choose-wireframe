@@ -27,36 +27,33 @@ describe "Creating a new challenge" do
     end
 
     it "should allow me to fill out the info for name, challenge title, and amount" do
-      page.should have_field('Name')
-      page.should have_field('Challenge Title')
-      page.should have_field('Amount')
+      page.should have_field('challenge_title')
+      page.should have_field('challenge_amount')
     end
 
     it "should allow me to create the new challenge" do
-      fill_in("Name", :with => "Darrell Rivera")
-      fill_in("Challenge", :with => "I will shave my head")
-      fill_in("Amount", :with => 5)
-      fill_in("Photo or Video", :with => "http://www.flushdoggy.com/wordpress/wp-content/uploads/2012/05/male-dog.jpg")
-      click_button("Create Challenge")
+      fill_in("challenge_title", :with => "I will shave my head")
+      fill_in("challenge_amount", :with => 5)
+      fill_in("challenge_display_media", :with => "http://www.flushdoggy.com/wordpress/wp-content/uploads/2012/05/male-dog.jpg")
+      click_button("Sign It!")
       page.should have_content("Your challenge has been created")
     end
 
     it "should redirect me to form if I leave an item blank" do
-      fill_in("Challenge", :with => "I will shave my head")
-      fill_in("Amount", :with => 5)
-      click_button("Create Challenge")
-      page.should have_content("Create a new challenge")
+      fill_in("challenge_title", :with => "I will shave my head")
+      fill_in("challenge_amount", :with => 5)
+      click_button("Sign It!")
+      page.should have_content("Photo or Video is required")
       current_path.should == "/projects/1/challenges"
     end
 
     it "should error if amount is more than the completion amount" do
-      fill_in("Name", :with => "Darrell Rivera")
-      fill_in("Challenge", :with => "I will shave my head")
-      fill_in("Amount", :with => 10000)
+      fill_in("challenge_title", :with => "I will shave my head")
+      fill_in("challenge_amount", :with => 10000)
       find(:xpath, "//input[@id='challenge_project_id']").set project.id
-      click_button("Create Challenge")
+      click_button("Sign It!")
       current_path.should == "/projects/1/challenges"
-      page.should have_content("Create a new challenge")
+      page.should have_content("Amount must be less than the cost to complete")
     end
   end
 
