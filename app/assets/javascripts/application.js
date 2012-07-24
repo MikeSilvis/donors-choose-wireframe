@@ -18,3 +18,12 @@ $("#new_message").live("ajax:complete", function(event,xhr,status){
   $('#message_name').val('');
   $('#message_body').val('');
 });
+
+
+$(document).ready(function() {
+  $(".challenge-nav-tab-contents").click(function () {
+    var clicked = $(this);
+    var link = clicked.find("a");
+    link.tab('show');
+  });
+});
