@@ -1,0 +1,13 @@
+<div class="row any-width">
+  <div class="twocol">
+    <a class="nav-tab-link" href="#tab<%=challenge.id%>" data-toggle="tab">
+      <%= image_tag(challenge.display_media) %>
+    </a>
+  </div>
+  <div class="tencol last">
+    <span class="challenge-username"><%= challenge.name %></span> will: <%= challenge.title %> <span class="amount-remaining">(Only <%= humanized_money_with_symbol challenge.amount_currency %> to go!)</span>
+    <div>
+      <%= link_to("View Challenge", project_challenge_path(@project, challenge), class: "challenge-link")  %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="row any-width">
+  <div class="twelvecol featured-challenge-image">
+    <%= link_to(image_tag(challenge.display_media), project_challenge_path(@project, challenge))  %>
+  </div>
+</div>
+
+<div class="row any-width">
+  <div class="challenger twocol">
+    <div class="challenger-image">
+      <img src="https://si0.twimg.com/profile_images/1373765588/Verdi_reasonably_small.jpg">
+    </div>
+    <span class="user-name"><%= link_to challenge.name, "#" %></span>
+  </div>
+
+  <div class="challenge-description sixcol">
+    <div>
+      <%= challenge.name %> will <span class="challenge-action"><%= challenge.title %></span>
+      <span class="challenge-condition">when this project raises: <%= humanized_money_with_symbol challenge.target_funding %></span>
+    </div>
+    <div>
+      (Only <%= humanized_money_with_symbol challenge.amount_currency %> to go!)
+    </div>
+  </div>
+
+  <div class="fourcol last">
+    <div class="challenge-money">
+      <div class="challenge-progress">
+        <span class="dollars-left">$84</span>
+        <p class="to-go">To Go</p>
+      </div>
+      <div class="challenge-donate">
+        <%= link_to "Give", challenge.project.proposal_url, target: "_blank", class: "give-link" %>
+      </div>
+    </div>
+    <div>
+      <%= link_to("View Challenge", project_challenge_path(@project, challenge), class: "challenge-link")  %>
+    </div>
+  </div>
+</div>

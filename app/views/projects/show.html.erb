@@ -23,16 +23,7 @@
         <div class="featured-challenge">
           <div class="row any-width">
             <div class="tab-content">
-
-              <div class="challenge-details twelvecol tab-pane active" id="tab<%=@challenges.first.id%>">
-                <%= @challenges.first.id %>
-              </div>
-
-              <% @challenges[1..-1].each do |challenge| %>
-                <div class="challenge-details twelvecol tab-pane" id="tab<%=challenge.id%>">
-                  <%= challenge.id %>
-                </div>
-              <% end %>
+              <%= render partial: "challenge_tab_contents", locals: {challenges: @challenges} %>
             </div>
           </div>
         </div>
@@ -40,21 +31,7 @@
 
 
       <div class="active-challenges sixcol last">
-        <ul class="feed-challenges nav nav-tabs">
-            <li class="feed-challenge active" id="feed-challenge-<%=@challenges.first.id%>">
-              <a href="#tab<%=@challenges.first.id%>" data-toggle="tab">
-                <%= @challenges.first.id %>
-              </a>
-            </li>
-
-          <% @challenges[1..-1].each do |challenge| %>
-            <li class="feed-challenge" id="feed-challenge-<%=challenge.id%>">
-              <a href="#tab<%=challenge.id%>" data-toggle="tab">
-                <%= challenge.id %>
-              </a>
-            </li>
-          <% end %>
-        </ul>
+        <%= render partial: "challenge_nav_tabs", locals: {challenges: @challenges} %>
 
         <div class="new-challenge-link">
           Contribute to the effort: <%= link_to "Post a challenge!", new_project_challenge_path(:project_id => @project.id) %>
