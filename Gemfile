@@ -25,7 +25,7 @@ group :assets do
 end
 
 group :production do
-  # ruby "1.9.3"
+  ruby "1.9.3"
   gem 'pg'
 end
 
@@ -46,14 +46,3 @@ end
 gem 'jquery-rails'
 
 
-  gem 'rspec-rails', '~> 2.0'
-  gem 'capybara'
-  gem 'launchy'
-  gem 'guard-rspec'
-  gem 'factory_girl_rails'
-  gem 'faker'
-  gem 'simplecov'
-  gem 'launchy'
-  gem 'vcr'
-  gem 'fakeweb'
-  gem 'sqlite3'
