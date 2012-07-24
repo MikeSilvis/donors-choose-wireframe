@@ -21,7 +21,7 @@
   <br>
 
   <%= form_for @project, class: "project-form" do |f| %>
-    <%= f.text_field :proposal_url, placeholder: "Enter a Donors Choose Url", class:'text_field' %>
+    <%= f.text_field :proposal_url, placeholder: "Enter a Donors Choose URL (e.g. http://www.donorschoose.org/project/comfy-literacy-center/814936/)", class:'text_field' %>
     <%= f.submit class: 'form-submit', value: "Adopt Project" %>
   <% end %>
 </div>
