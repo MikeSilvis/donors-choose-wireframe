@@ -44,11 +44,13 @@
     </div>
       </div>
     <% end %>
-    <div class="threecol last">
-      <%= link_to "More", projects_path %> 
-    </div>
   </div>
 
+  <div>
+    <%= link_to "Click here for a full list of adopted projects", projects_path %> 
+  </div>
+  <br>
+  <hr>
 
   <div id="how-to-use">
     <%= render partial: "how_to_use" %>
