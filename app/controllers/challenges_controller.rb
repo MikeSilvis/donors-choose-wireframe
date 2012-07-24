@@ -8,7 +8,6 @@ class ChallengesController < ApplicationController
 
   def create
     @challenge = Challenge.new(params[:challenge])
-    @challenge.amount_left = @challenge.amount
     if @challenge.save
       redirect_to project_path(@project)
       flash[:notice] = "Your challenge has been created"

@@ -18,14 +18,14 @@
       <span class="challenge-condition">when this project raises: <%= humanized_money_with_symbol challenge.target_funding %></span>
     </div>
     <div>
-      (Only <%= humanized_money_with_symbol challenge.amount_left_currency %> to go!)
+      (Only <%= humanized_money_with_symbol challenge.amount_currency %> to go!)
     </div>
   </div>
 
   <div class="fourcol last">
     <div class="challenge-money">
       <div class="challenge-progress">
-        <span class="dollars-left"><%= humanized_money_with_symbol challenge.amount_left %></span>
+        <span class="dollars-left"><%= humanized_money_with_symbol challenge.amount %></span>
         <p class="to-go">To Go</p>
       </div>
       <div class="challenge-donate">

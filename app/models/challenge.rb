@@ -1,5 +1,5 @@
 class Challenge < ActiveRecord::Base
-  attr_accessible :name, :title, :amount, :amount_left,
+  attr_accessible :name, :title, :amount,
                   :project_id, :display_media
 
   monetize :target_funding_cents, allow_nil: true
@@ -21,11 +21,7 @@ class Challenge < ActiveRecord::Base
   def amount_currency
     Money.new(amount * 100)
   end
-
-  def amount_left_currency
-    Money.new(amount_left * 100)
-  end
-
+  
   private
 
   def amount_versus_donors_choose_fund
