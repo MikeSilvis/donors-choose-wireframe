@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120723230052) do
+ActiveRecord::Schema.define(:version => 20120724154141) do
 
   create_table "challenge_evidences", :force => true do |t|
     t.integer  "challenge_id"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20120723230052) do
     t.string   "display_media"
     t.boolean  "met",                  :default => false
     t.integer  "target_funding_cents"
+    t.integer  "amount_left"
   end
 
   create_table "events", :force => true do |t|

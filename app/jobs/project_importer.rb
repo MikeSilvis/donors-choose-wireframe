@@ -15,12 +15,12 @@ class ProjectImporter
     unless previous_cost == new_cost
       adjustment_to_amount = previous_cost - new_cost
       project.challenges.each do |challenge|
-        new_goal = challenge.amount - adjustment_to_amount
+        new_goal = challenge.amount_left - adjustment_to_amount
         if new_goal <= 0
           challenge.mark_as_met
           new_goal = 0
         end
-        challenge.update_attributes(:amount => new_goal)
+        challenge.update_attributes(:amount_left => new_goal)
       end
     end
   end
