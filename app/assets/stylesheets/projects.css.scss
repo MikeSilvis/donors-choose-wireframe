@@ -19,11 +19,11 @@ img.profile-pic {
 
 li.feed-challenge {
   background: $page-container;
-  /*&:hover {*/
-    /*background: darken($page-container, 10%);*/
-  /*}*/
+  &:hover {
+    background: lighten($teal, 55%);
+  }
   margin-bottom: 16px;
-  padding-bottom: 16px;
+  padding: 8px;
   border-bottom: 1px solid $rule-grey;
   .challenge-link {
     color: $teal;
@@ -36,6 +36,18 @@ li.feed-challenge {
     border-bottom: 1px dashed $orange;
     font-weight: bold;
   }
+
+  .challenge-username {
+    color: $orange;
+  }
+
+  .challenge-nav-text {
+    font-size: 18px;
+  }
+}
+
+li.feed-challenge.active {
+  background: lighten($teal, 50%);
 }
 
 .new-challenge-link{

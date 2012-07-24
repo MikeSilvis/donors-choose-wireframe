@@ -21,10 +21,10 @@ $("#new_message").live("ajax:complete", function(event,xhr,status){
 
 
 $(document).ready(function() {
-  $(".challenge-nav-tab-contents").click(function () {
+  $("li.feed-challenge").click(function () {
     var clicked = $(this);
     var link = clicked.find("a").first();
-    console.log(link);
     link.tab('show');
+    $(clicked).addClass("active");
   });
 });
