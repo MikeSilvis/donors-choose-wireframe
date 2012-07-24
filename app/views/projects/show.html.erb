@@ -1,11 +1,8 @@
 <div class="container">
-  <div class="row project">
-    <%= render partial: "project_info_bar" %>
-  </div>
   <div class="row spacer"></div>
 
     <div class="row challenges-headers">
-      <h1 class="sixcol">Project: <%= @project.title %> </h1>
+      <h1 class="sixcol">Project: <%= link_to @project.title, @project.proposal_url, target: "_blank" %> </h1>
       <div id="progress-box" class="sixcol last">
         <% if @project.percent_funded == "0" %>
           <div class="meter">
@@ -23,8 +20,6 @@
     <div class="row">
 
     <div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
-
-
       <div class="sixcol">
         <div class="featured-challenge">
           <div class="row any-width">
@@ -36,7 +31,6 @@
           </div>
         </div>
       </div>
-
 
       <div class="active-challenges sixcol last">
         <% if @challenges.any? %>
