@@ -21,9 +21,9 @@
 
 <div class="row">
   <div class="sixcol">
-  <%= image_tag(@challenge.display_media) %>g
+  <%= image_tag(@challenge.display_media) %>
 
-  <%= render partial: 'challenge_evidences/form' %>
+  <%= render partial: 'challenge_evidences/form' if @challenge.user == current_user %>
   </div>
   <div class="sixcol last">
     <h1>Evidence So Far</h1>

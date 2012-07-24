@@ -1,10 +1,8 @@
 <div class="container">
  <%= render partial: 'error_message', locals: { challenge: @challenge } %>
   <div class="row">
-    <div class="sixcol">
-      <%= render partial: 'project_overview' %>
-    </div>
-    <div class="sixcol last">
+    <div class="twocol"></div>
+    <div class="sevencol last">
       <% if current_user %>
         <%= render partial: 'new_challenge' %>
       <% else %>

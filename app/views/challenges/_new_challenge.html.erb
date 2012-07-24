@@ -1,16 +1,14 @@
-<h1>Create a new challenge</h1>
-<div class="well">
-  <%= form_for [@project, @challenge] do |f| %>
-    <% [:name, :title, :amount, :display_media].each do |field| %>
-      <h3>
-        <%= f.label field %>
-        <span class="inline-error"><%= @challenge.errors[field].join(", ") %></span>
-      </h3>
-      <%= f.text_field field %>
-    <% end %>
-
-    <%= f.hidden_field :project_id, :value => @project.id  %>
-    </br>
-    <%= f.submit class: "form-submit small" %>
-  <% end %>
-</div>
+<%= form_for [@project, @challenge] do |f| %>
+  <div id="pledge-form">
+    I, <%= current_user.name %>, do swear and affirm that
+    I will
+    <%= f.text_field :title %><br>
+    should the aforementioned project raise
+    <%= f.text_field :amount %><br>
+    more dollars. The following media link demonstrates my
+    commitment to the cause:
+    <%= f.text_field :display_media %>.
+  </div>
+  <%= f.hidden_field :project_id, :value => @project.id  %>
+  <%= f.submit "Sign It!", class: "form-submit small" %>
+<% end %>

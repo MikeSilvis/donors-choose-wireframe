@@ -2,8 +2,6 @@
 <div id="create-challenge-box">
   <div class="well">
     <%= form_for [@project, @challenge] do |f| %>
-      <h3><%= f.label :name, "Name" %></h3>
-      <%= f.text_field :name, disabled: true %>
       <h3><%= f.label :title, "Challenge" %></h3>
       <%= f.text_field :title, disabled: true %>
       <h3><%= f.label :amount, "Amount" %></h3>
