@@ -125,7 +125,6 @@ li.feed-challenge.active {
   margin-left: 50px;
 }
 
-
 .project-info{
   width: 20%;
   display: inline-block;
@@ -145,6 +144,11 @@ li.feed-challenge.active {
 
 .pagination{
   padding-left: 7px;
+  color: $teal;
+}
+
+.first, .last, .next, .prev, .page{
+  padding: 10px;
 }
 
 /*PROJECT INFO BAR*/
