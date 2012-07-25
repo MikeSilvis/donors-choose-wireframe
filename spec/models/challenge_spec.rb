@@ -5,7 +5,7 @@ describe Challenge do
   context "#mark_as_met" do
     let(:challenge) { FactoryGirl.build(:challenge) }
     before do
-      challenge.stub(:amount_versus_donors_choose_fund)
+      challenge.stub(:amount_versus_donors_choose_funds)
       challenge.stub(:calculate_target_funding)
     end
 

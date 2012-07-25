@@ -82,9 +82,8 @@ li.feed-challenge.active {
   .challenge-link {
     font-size: 16px;
   }
-  .challenge-money {
+  .challenge-donate {
     width: 92.5%;
-    color: white;
     padding: 8px;
     $c-m-radius: 8px;
     background-color: $accent-background;
@@ -94,30 +93,56 @@ li.feed-challenge.active {
     -moz-border-radius-bottomleft:      $c-m-radius;
     border-bottom-right-radius:         $c-m-radius;
     border-bottom-left-radius:          $c-m-radius;
-    div {
-      display: inline-block;
-    }
     .give-link {
       @include button(simple, $give-button);
       font-size: 18px;
-      padding: 8px 18px;
-    }
-    .challenge-donate {
-      margin-top: 10px;
-      vertical-align: top;
-    }
-    .challenge-progress {
-      padding: 4px;
-      font-size: 16px;
-      .dollars-left {
-        font-size: 24px;
-        font-weight: bold;
-      }
-      .to-go {
-        font-size: 14px;
-      }
+      padding: 8px 35px;
+      margin-left: 15px;
     }
   }
+}
+
+.give-link-big{
+  &:visited {
+    &:hover {
+      color: white;
+    }
+    color: white;
+  }
+  &:hover {
+    color: white;
+  }
+  @include button(pill, $give-button);
+  color: white;
+  font-size:18px;
+  padding: 9px 50px;
+  height: 20px;
+  margin-top:-5px;
+}
+
+.title-bar-font{
+  font-size:25px;
+  margin-top:10px;
+  .adjusted{
+    margin-right:50px;
+  }
+}
+
+.give-bar{
+  margin-top:14px;
+  font-size:20px;
+}
+
+.small{
+  font-size:14px;
+  margin-left:1px;
+  color: $teal;
+  margin-right: 20px
+}
+
+.at-price{
+  padding:5px;
+  background:$salmon;
 }
 
 /*PROJECT INFO BAR*/
@@ -159,7 +184,7 @@ li.feed-challenge.active {
   /*Progress Bar*/
   $bar-height: 30px;
   #progress-box {
-    margin-top: 20px;
+    margin-top: 8px;
     margin-bottom: 20px;
   }
 
@@ -314,6 +339,13 @@ li.feed-challenge.active {
         background-image: -o-linear-gradient(top, #f1a165, #f36d0a);
   }
 
+.bar-font{
+  color:white;
+  font-size:14px;
+  float:right;
+  margin-right:5px;
+}
+
 /*Feed*/
 #divider{
   margin-top:50px;
@@ -367,32 +399,16 @@ h1.no-margin{
   margin-bottom:-9px;
 }
 
+.bottom {
+  position: relative;
+  height: 300px;
+}
+
 .display-wrapper{
-  position:relative;
-  margin-top:15px;
-  max-height:200px !important;
-  margin-bottom:30px;
-}
-
-.overlay{
   position:absolute;
-  bottom:0px;
-  width:100%;
-  background-color:black;
-  font-size:15px;
-  color:white;
-  opacity:0.6;
-}
-
-p.overlay-text{
-  padding:10px;
-}
-
-.arrow{
-  margin-top: -153px;
-  margin-left: 125px;
-  width: 17%;
-  height: 17%;
+  bottom: 0px;
+  margin-top:15px;
+  margin-bottom:30px;
 }
 
 h3{

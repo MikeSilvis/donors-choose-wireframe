@@ -35,8 +35,14 @@
           </div>
         </div>
         <div class="row any-width">
-          <div class="ninecol last">
-            <h2>View the Project:</h3><h3 class="project-link"><%= link_to(@challenge.project.title, project_path(@challenge.project)) %></h3>
+          <div class="twelvecol">
+          </br>
+          <div>
+            <h2>View the Project:</h2>
+          </div>
+          <div>
+            <h3 class="challenge-page-project-link"><%= link_to(@challenge.project.title, project_path(@challenge.project)) %></h3>
+          </div>
           </div>
         </div>
       </div>
@@ -58,4 +64,7 @@
       <%= render partial: 'challenge_evidences/form' if @challenge.user == current_user %>
     </div>
   </div>
+  <div class="row spacer"></div>
+  <div class="row spacer"></div>
+  <div class="row spacer"></div>
 </div>

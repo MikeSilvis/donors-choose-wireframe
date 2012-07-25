@@ -43,6 +43,14 @@ class Project < ActiveRecord::Base
     amount_raised
   end
 
+  def currency_to_complete
+    Money.new(cents_to_complete)
+  end
+
+  def currency_total_price
+    Money.new(total_price.to_f*100)
+  end
+
   private
 
   def donors_choose_attributes

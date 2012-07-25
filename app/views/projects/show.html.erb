@@ -1,26 +1,53 @@
 <div class="container">
   <div class="row spacer"></div>
 
-    <div class="row challenges-headers">
-      <h1 class="sixcol">Project: <%= link_to @project.title, @project.proposal_url, target: "_blank" %> </h1>
-      <div id="progress-box" class="sixcol last">
+    <div class="row">
+      <div class="twelvecol">
+        <h1><span class="highlight">Challenges for:</span> <%= link_to @project.title, @project.proposal_url, target: "_blank"%> </h1>
+      </div>
+    </div>
+
+    <div class="row spacer"></div>
+    <div class="row">
+      <div id="progress-box" class="sixcol">
         <% if @project.percent_funded == "0" %>
           <div class="meter">
             No donations have been made yet
           </div>
         <% else %>
           <div class="meter orange">
-            <span style="width: <%= @project.percent_funded.to_i %>%"></span>
+            <span style="width: <%= @project.percent_funded.to_i %>%"><span class="bar-font"><%= humanized_money_with_symbol @project.raised_to_date %></span></span>
           </div>
         <% end %>
+      </div>
+      <div class="give-bar">
+        <div class="twocol">
+            <%= humanized_money_with_symbol @project.raised_to_date %> <span class="small">raised</span>
+        </div>
+        <div class="twocol">
+          <%= humanized_money_with_symbol @project.cost_to_complete %> <span class="small">to go</span>
+        </div>
+        <div class="twocol last">
+          <%= link_to "Give", @project.proposal_url, target: "_blank", class: "give-link-big" %>
+        </div>
       </div>
     </div>
 
   <div class="challenges">
     <div class="row">
 
-    <div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
-      <div class="sixcol">
+    <div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
+      <div class="active-challenges sixcol">
+        <% if @challenges.any? %>
+          <%= render partial: "challenge_nav_tabs", locals: {challenges: @challenges} %>
+        <% end %>
+
+        <div class="new-challenge-link">
+          <%= link_to "Make Your Own Challenge!", new_project_challenge_path(:project_id => @project.id) %>
+        </div>
+      </div>
+
+      <div class="sixcol last">
         <div class="featured-challenge">
           <div class="row any-width">
             <div class="tab-content">
@@ -31,17 +58,11 @@
           </div>
         </div>
       </div>
-
-      <div class="active-challenges sixcol last">
-        <% if @challenges.any? %>
-          <%= render partial: "challenge_nav_tabs", locals: {challenges: @challenges} %>
-        <% end %>
-
-        <div class="new-challenge-link">
-          Contribute to the effort: <%= link_to "Post a challenge!", new_project_challenge_path(:project_id => @project.id) %>
-        </div>
-      </div>
-    </div>
     </div> <!-- end tabbable tabs-right -->
   </div> <!-- end challenges -->
+  <div class="row spacer"></div>
+  <div class="row spacer"></div>
+  <div class="row spacer"></div>
+  <div class="row spacer"></div>
+  <div class="row spacer"></div>
 </div> <!--end container -->

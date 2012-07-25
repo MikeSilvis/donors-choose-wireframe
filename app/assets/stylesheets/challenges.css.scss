@@ -1,6 +1,33 @@
 @import "colors";
 
-h3.project-link {
+/*NEW CHALLENGE*/
+
+h2.project-heading {
+  a {
+    color: $orange;
+    &:hover {
+      color: $teal;
+    }
+    &:visited {
+      color: $orange;
+      &:hover {
+        color: $teal;
+      }
+    }
+  }
+  border-bottom: 1px dashed $orange;
+}
+
+/*Example Challenges*/
+
+.example-challenges {
+
+}
+
+
+/*CHALLENGE HEADER*/
+
+h3.challenge-page-project-link {
   a {
     font-size: 22px;
     border-bottom: 1px dashed $orange;
@@ -25,6 +52,13 @@ h3.project-link {
   padding-bottom: 16px;
   border-bottom: 1px solid $lightgrey;
 }
+
+.evidence-btn{
+  @include button(simple, $orange);
+  margin-top:10px;
+  font-size:14px;
+}
+
 
 /*Challenge Banner*/
 
