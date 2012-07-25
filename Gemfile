@@ -16,6 +16,7 @@ gem 'resque-scheduler', :require => 'resque_scheduler'
 gem 'text_to_media', github: "verdi327/text_to_media"
 gem 'money-rails'
 gem 'kaminari'
+gem 'htmlentities'
 
 # Gems used only for assets and not required
 # in production environments by default.

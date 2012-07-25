@@ -1,18 +1,17 @@
-<h1>Create a new challenge</h1>
 <div id="create-challenge-box">
-  <div class="well">
     <%= form_for [@project, @challenge] do |f| %>
-      <h3><%= f.label :title, "Challenge" %></h3>
-      <%= f.text_field :title, disabled: true %>
-      <h3><%= f.label :amount, "Amount" %></h3>
-      <%= f.text_field :amount, disabled: true %>
-      <h3><%= f.label :display_media, "Photo or Video" %></h3>
-      <%= f.text_field :display_media, disabled: true %>
-      <%= f.hidden_field :project_id, :value => @project.id  %>
-      </br>
-      <%= f.submit disabled: true, class: "form-submit small" %>
+      <div id="pledge-form">
+        I,
+        John Doe, do swear and affirm that
+        I will
+        <%= f.text_field :title, disabled: true, placeholder: "perform a stunning/humiliating stunt" %><br>
+        should the aforementioned project raise
+        <%= f.text_field :amount, disabled: true, placeholder: "a monetary sum up to $#{@project.cost_to_complete.to_i}" %><br>
+        more dollars. The following media link demonstrates my
+        commitment to the cause:
+        <%= f.text_field :display_media, disabled: true, class: "url-input", placeholder: "http://www.youtube.com/mynewhaircut" %>
+      </div>
     <% end %>
-  </div>
   <div id="challenge-form-obscurer"></div>
   <div id="sign-in-box">
     <%= link_to "Sign in with Twitter to create a new challenge", "/auth/twitter" %>

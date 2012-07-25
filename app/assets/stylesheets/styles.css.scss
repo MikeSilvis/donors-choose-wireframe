@@ -140,9 +140,9 @@ a {
   @include button(pill, lighten($teal, 15%));
   @include box-shadow(0 0 3px 1px $whale);
   position: absolute;
-  left: 57px;
-  top: 92px;
-  width: 70%;
+  left: 220px;
+  top: 150px;
+  width: 400px;
   padding: 10px;
   a {
     color: white;
