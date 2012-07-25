@@ -41,7 +41,6 @@
         <% if @challenges.any? %>
           <%= render partial: "challenge_nav_tabs", locals: {challenges: @challenges} %>
         <% end %>
-
         <div class="new-challenge-link">
           <%= link_to "Make Your Own Challenge!", new_project_challenge_path(:project_id => @project.id) %>
         </div>
