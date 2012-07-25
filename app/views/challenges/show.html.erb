@@ -45,12 +45,14 @@
     <div class="sixcol last">
       <% if @challenge_evidences.any? %>
         <% @challenge_evidences.each do |evidence| %>
-          <% if evidence.image_url %>
-            <%= image_tag(evidence.image_url) %>
-          <% elsif evidence.external_url %>
-            <%= evidence.embed.html_safe %>
-          <% else %>
-          <% end %>
+          <div class="challenge-evidence">
+            <% if evidence.image_url %>
+              <%= image_tag(evidence.image_url) %>
+            <% elsif evidence.external_url %>
+              <%= evidence.embed.html_safe %>
+            <% else %>
+            <% end %>
+          </div>
         <% end %>
       <% end %>
       <%= render partial: 'challenge_evidences/form' if @challenge.user == current_user %>

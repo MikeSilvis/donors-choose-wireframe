@@ -1,16 +1,16 @@
 @import "colors";
 
-html {
-  height: 100%;
-}
 body {
   background-color: $background;
   font-family: 'Lato', sans-serif;
-  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Rokkitt", serif;
+}
+
+iframe {
+  width: 100%;
 }
 
 a {
@@ -33,7 +33,6 @@ a {
 
 #page-container {
   max-width: 1140px;
-  height: 100%;
   margin: auto;
   background-color: $page-container;
 }
