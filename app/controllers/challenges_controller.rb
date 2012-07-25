@@ -13,6 +13,7 @@ class ChallengesController < ApplicationController
       redirect_to project_path(@project)
       flash[:notice] = "Your challenge has been created"
     else
+      @sample_challenges = Challenge.order("created_at DESC").limit(3)
       render "new"
     end
   end
