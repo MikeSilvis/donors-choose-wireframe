@@ -3,7 +3,8 @@ class ChallengeEvidencesController < ApplicationController
   before_filter :authorize_user
 
   def create
-    @challenge_evidence = current_user.challenge_evidences.new(params[:challenge_evidence])
+    @challenge_evidence = current_user.challenge_evidences.new(
+      params[:challenge_evidence])
     if @challenge_evidence.save
       flash[:notice] = "Your evidence has been logged"
       redirect_to project_challenge_path(project, challenge)

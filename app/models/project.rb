@@ -7,7 +7,8 @@ class Project < ActiveRecord::Base
   monetize :amount_raised_cents, allow_nil: true
 
   def self.valid_url(url)
-    return true unless DonorsChooseApi::Project.find_by_url(url) == "Invalid Donors Choose Url"
+    return true unless DonorsChooseApi::Project.find_by_url(url) ==
+      "Invalid Donors Choose Url"
   end
 
   def self.from_donors_choose_url(url)
@@ -45,7 +46,8 @@ class Project < ActiveRecord::Base
   end
 
   def calculate_amount_raised_cents
-    self.amount_raised_cents = ((total_price.to_f - cost_to_complete.to_f) * 100).to_i
+    self.amount_raised_cents = ((total_price.to_f - cost_to_complete.to_f) *
+      100).to_i
     save
   end
 end
