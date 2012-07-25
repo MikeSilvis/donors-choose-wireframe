@@ -43,7 +43,6 @@ describe "Creating a new challenge" do
       fill_in("challenge_title", :with => "I will shave my head")
       fill_in("challenge_amount", :with => 5)
       click_button("Sign It!")
-      page.should have_content("Photo or Video is required")
       current_path.should == "/projects/1/challenges"
     end
 
@@ -53,7 +52,7 @@ describe "Creating a new challenge" do
       find(:xpath, "//input[@id='challenge_project_id']").set project.id
       click_button("Sign It!")
       current_path.should == "/projects/1/challenges"
-      page.should have_content("Amount must be less than the cost to complete")
+      page.should have_selector(".inline-error")
     end
   end
 

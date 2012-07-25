@@ -1,18 +1,22 @@
 <%= form_for [@project, @challenge] do |f| %>
-  <% if @challenge.errors.any? %>
-    <% @challenge.errors.full_messages.each do |msg| %>
-      <div class="inline-error"><%= msg %><span>
-    <% end %>
-  <% end %>
   <div id="pledge-form">
     I, <%= current_user.name %>, do swear and affirm that
     I will
-    <%= f.text_field :title, placeholder: "perform a stunning/humiliating stunt" %><br>
+    <%= f.text_field :title, placeholder: "perform a stunning/humiliating stunt" %>
+    <% if @challenge.errors.messages[:title] %>
+      <h3><span class="inline-error"><%= @challenge.errors.messages[:title].first %><span></h3>
+    <% end %>
     should the aforementioned project raise
-    <%= f.text_field :amount, placeholder: "a monetary sum up to $#{@project.cost_to_complete.to_i}" %><br>
+    <%= f.text_field :amount, placeholder: "a monetary sum up to $#{@project.cost_to_complete.to_i}" %>
+    <% if @challenge.errors.messages[:amount] %>
+      <h3><span class="inline-error"><%= @challenge.errors.messages[:amount].first %><span></h3>
+    <% end %>
     more dollars. The following media link demonstrates my
     commitment to the cause:
     <%= f.text_field :display_media, class: "url-input", placeholder: "http://www.youtube.com/mynewhaircut" %>
+    <% if @challenge.errors.messages[:display_media] %>
+      <h3><span class="inline-error"><%= @challenge.errors.messages[:display_media].first %><span></h3>
+    <% end %>
   </div>
   <%= f.hidden_field :project_id, :value => @project.id  %>
   <%= f.submit "Sign It!", id: "new-challenge-submit", class: "form-submit small" %>

@@ -9,9 +9,10 @@ class Challenge < ActiveRecord::Base
 
   has_many :challenge_evidences
 
-  validates_presence_of     :title, :display_media
-  validates_numericality_of :amount, :greater_than_or_equal_to => 0
-  validate                  :amount_versus_donors_choose_fund, :on => :create
+  validates :title, :presence => { message: I18n.t(:challenge_title_missing) }
+  validates :display_media, :presence => { message: I18n.t(:challenge_media_missing) }
+  validates :amount, :numericality => { :greater_than_or_equal_to => 0, :message => I18n.t(:challenge_amount_not_a_number) }
+  validate  :amount_versus_donors_choose_funds => { on: :create }
 
   after_create :calculate_target_funding
 
@@ -35,9 +36,9 @@ class Challenge < ActiveRecord::Base
 
   private
 
-  def amount_versus_donors_choose_fund
+  def amount_versus_donors_choose_funds
     if self.amount && self.project.cost_to_complete.to_i < self.amount
-      errors.add(:amount, "Amount must be less than the cost to complete")
+      errors.add(:amount, I18n.t(:challenge_amount_too_much))
     end
   end
 
