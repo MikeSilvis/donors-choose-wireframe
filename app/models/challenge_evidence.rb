@@ -15,24 +15,15 @@ class ChallengeEvidence < ActiveRecord::Base
   end
 
   def display_html_from_embedly
-    result = embedly_response
-    if result
-      send("update_for_#{result.type}", result)
-    else
-      "<img src='/assets/images/no_pic.jpeg'"
+    case embedly_response.type
+      when 'photo' then "<img src='#{embedly_response.url}'>"
+      when 'video' then embedly_response.html
+      else "<img src='/assets/images/no_pic.jpeg'"
     end
-  end
-
-  def update_for_video(result)
-    result.html
-  end
-
-  def update_for_photo(result)
-    "<img src='#{result.url}'>"
   end
 
   def embedly_response
     api = Embedly::API.new(key: EMBEDLY_KEY)
-    api.oembed(url: self.external_url).first
+    @embedly ||= api.oembed(url: self.external_url).first
   end
 end
