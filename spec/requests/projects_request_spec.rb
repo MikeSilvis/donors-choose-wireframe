@@ -59,11 +59,11 @@ describe "Creating a project" do
       page.should have_link("Help Inspire Young Authors and Illustrators...With Books!")
     end
 
-    it "shows the challenge posters avatar" do
-      pending
-      visit project_path(project)
-      page.should have_image(project.owner_avatar)
-    end
+    # it "shows the challenge posters avatar" do
+    #   pending
+    #   visit project_path(project)
+    #   page.should have_image(project.owner_avatar)
+    # end
   end
 
   context "Viewing all projects" do
