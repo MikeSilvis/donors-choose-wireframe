@@ -8,12 +8,6 @@ class Project < ActiveRecord::Base
 
   after_create :sanitize_data
 
-  # self.column_names.each do |attr|
-  #   define_method(attr) do
-  #     HTMLEntities.new.decode(attributes[attr]) unless attr = "amount_raised_cents"
-  #   end
-  # end
-
   def self.valid_url(url)
     return true unless DonorsChooseApi::Project.find_by_url(url) ==
       "Invalid Donors Choose Url"

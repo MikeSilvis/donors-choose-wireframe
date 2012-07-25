@@ -24,16 +24,16 @@ class Challenge < ActiveRecord::Base
     save
   end
 
-  def amount_currency
-    Money.new(amount * 100)
-  end
-
   def name
     user.name
   end
 
   def owner_avatar
     user.profile_image_url
+  end
+
+  def amount_currency
+    Money.new(amount * 100)
   end
 
   def amount=(number)
@@ -48,7 +48,6 @@ class Challenge < ActiveRecord::Base
       errors.add(:amount, I18n.t(:challenge_amount_too_much))
     end
   end
-
 
   def calculate_target_funding
     self.target_funding_cents = (project.raised_to_date.cents +
