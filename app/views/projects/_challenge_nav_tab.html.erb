@@ -2,12 +2,15 @@
   <a class="nav-tab-link" href="#tab<%=challenge.id%>" data-toggle="tab"></a>
 <div class="row any-width">
   <div class="twocol">
+    <div class="at-price">At <%= humanized_money_with_symbol challenge.amount %></div>
+  </div>
+  <div class="twocol">
     <a class="nav-tab-link" href="#tab<%=challenge.id%>" data-toggle="tab">
       <%= image_tag(challenge.display_media) %>
     </a>
   </div>
-  <div class="tencol last">
-    <span class="challenge-nav-text"><span class="challenge-username"><%= challenge.name %></span> will: <%= challenge.title %> <span class="amount-remaining">(Only <%= humanized_money_with_symbol challenge.amount_currency %> to go!)</span></span>
+  <div class="sixcol last">
+    <span class="challenge-nav-text"><span class="challenge-username"><%= challenge.name %></span> will: <%= challenge.title %></span>
     <div>
       <%= link_to("View Challenge", project_challenge_path(@project, challenge), class: "challenge-link")  %>
     </div>

@@ -10,9 +10,9 @@
     <%= f.text_field :title, placeholder: "perform a stunning/humiliating stunt" %><br>
     should the aforementioned project raise
     <%= f.text_field :amount, placeholder: "a monetary sum up to $#{@project.cost_to_complete.to_i}" %><br>
-    more dollars. The following media link demonstrates my
+    more dollars. The following photo link demonstrates my
     commitment to the cause:
-    <%= f.text_field :display_media, class: "url-input", placeholder: "http://www.youtube.com/mynewhaircut" %>
+    <%= f.text_field :display_media, class: "url-input", placeholder: "http://www.instagram.com/mynewhaircut.png" %>
   </div>
   <%= f.hidden_field :project_id, :value => @project.id  %>
   <%= f.submit "Sign It!", id: "new-challenge-submit", class: "form-submit small" %>
