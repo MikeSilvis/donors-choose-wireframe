@@ -1,5 +1,5 @@
 project_importer:
-  every: ["5s"]
+  every: ["2m"]
   class: ProjectImporter
   queue: update_project_queue
   description: "This job will update the attributes of a project"
