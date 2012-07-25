@@ -36,6 +36,10 @@ class Challenge < ActiveRecord::Base
     user.profile_image_url
   end
 
+  def amount=(number)
+    amount = number.to_s.gsub('$', '')
+    write_attribute(:amount, amount)
+  end
 
   private
 

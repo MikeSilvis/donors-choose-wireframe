@@ -138,4 +138,280 @@ http_interactions:
         \"2012-10-07\",\n    \"fundingStatus\": \"needs funding\"\n  }]\n}\r\n"
     http_version: '1.1'
   recorded_at: Tue, 24 Jul 2012 21:15:46 GMT
+- request:
+    method: get
+    uri: http://api.donorschoose.org/common/json_feed.html?id&APIKEY=DONORSCHOOSE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accepts:
+      - application/json
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx
+      content-type:
+      - text/plain;charset=UTF-8
+      content-language:
+      - en-US
+      vary:
+      - Accept-Encoding
+      cache-control:
+      - private, max-age=598
+      expires:
+      - Wed, 25 Jul 2012 03:02:40 GMT
+      date:
+      - Wed, 25 Jul 2012 02:52:42 GMT
+      content-length:
+      - '20057'
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "\r\n \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t\r\n\r\n\t
+        \ \t\r\n\r\n\r\n\r\n\r\n\r\n{\n  \"searchTerms\": \"Most Urgent\",\n  \"searchURL\":
+        \"http://www.donorschoose.org/donors/search.html?id=&amp;APIKEY=DONORSCHOOSE&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=searchlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \ \"totalProposals\": \"13424\",\n  \"index\": \"0\",\n  \"max\": \"10\",\n
+        \ \"proposals\": [\n    {\n      \"id\": \"770557\",\n      \"proposalURL\":
+        \"http://www.donorschoose.org/project/digital-document-learning/770557/?utm_source=api&amp;utm_medium=feed&amp;utm_content=bodylink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"fundURL\": \"https://secure.donorschoose.org/donors/givingCart.html?proposalid=770557&amp;donationAmount=&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=fundlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"imageURL\": \"http://cdn.donorschoose.net/images/user/uploads/small/u1164173_sm.jpg?timestamp=1322583928062\",\n
+        \     \"title\": \"Digital Document Learning\",\n      \"shortDescription\":
+        \"Can you imagine the excitement from the students when they get to create
+        projects or presentations and will be able to project them on a large screen
+        for the entire class to view.  Using the...\",\n      \"fulfillmentTrailer\":
+        \"My students need a way to document and to share what they are looking at.
+        This document camera will allow every student to see a book at the same time.\",\n
+        \     \"percentFunded\": \"82\",\n      \"costToComplete\": \"98.11\",\n      \"matchingFund\":
+        {\n        \"matchingKey\": \"\",\n        \"name\": \"\",\n        \"logoURL\":
+        \"\",\n        \"faqURL\": \"\",\n        \"amount\": \"0.00\"\n      },\n
+        \     \"totalPrice\": \"544.87\",\n      \"freeShipping\": \"false\",\n      \"teacherName\":
+        \"Mrs. Robins\",\n      \"gradeLevel\": {\n        \"id\": \"2\",\n        \"name\":
+        \"Grades 3-5\"\n      },\n      \"povertyLevel\": \"High Poverty\",\n      \"schoolName\":
+        \"Temple Hill Academy\",\n      \"city\": \"New Windsor\",\n      \"zip\":
+        \"12553-6198\",\n      \"state\": \"NY\",\n      \"latitude\": \"41.482580000000000\",\n
+        \     \"longitude\": \"-74.059588000000000\",\n      \"zone\": {\n        \"id\":
+        \"104\",\n        \"name\": \"New York (State)\"\n      },\n      \"subject\":
+        {\n        \"id\": \"3\",\n        \"name\": \"Literature &amp; Writing\",\n
+        \       \"groupId\": \"6\"\n      },\n      \"resource\": {\n        \"id\":
+        \"2\",\n        \"name\": \"Technology\"\n      },\n      \"expirationDate\":
+        \"2012-08-08\",\n      \"fundingStatus\": \"needs funding\"\n    },\n    {\n
+        \     \"id\": \"776624\",\n      \"proposalURL\": \"http://www.donorschoose.org/project/enticing-reading-corner/776624/?utm_source=api&amp;utm_medium=feed&amp;utm_content=bodylink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"fundURL\": \"https://secure.donorschoose.org/donors/givingCart.html?proposalid=776624&amp;donationAmount=&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=fundlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"imageURL\": \"http://cdn.donorschoose.net/images/user/uploads/small/u157548_sm.jpg?timestamp=1332343725905\",\n
+        \     \"title\": \"Enticing Reading Corner\",\n      \"shortDescription\":
+        \"I encourage my students to read for pleasure, and I read aloud to my students.
+        \ Many of my students come to me with little experience listening to adults
+        reading to them.  Also, many aren&#039;t...\",\n      \"fulfillmentTrailer\":
+        \"My students need a carpet for a cozy, comfortable place to sit and read.\",\n
+        \     \"percentFunded\": \"94\",\n      \"costToComplete\": \"17.45\",\n      \"matchingFund\":
+        {\n        \"matchingKey\": \"\",\n        \"name\": \"\",\n        \"logoURL\":
+        \"\",\n        \"faqURL\": \"\",\n        \"amount\": \"0.00\"\n      },\n
+        \     \"totalPrice\": \"273.45\",\n      \"freeShipping\": \"false\",\n      \"teacherName\":
+        \"Mrs. Joseph\",\n      \"gradeLevel\": {\n        \"id\": \"1\",\n        \"name\":
+        \"Grades PreK-2\"\n      },\n      \"povertyLevel\": \"High Poverty\",\n      \"schoolName\":
+        \"Cornell School\",\n      \"city\": \"Coraopolis\",\n      \"zip\": \"15108-2977\",\n
+        \     \"state\": \"PA\",\n      \"latitude\": \"40.509170000000000\",\n      \"longitude\":
+        \"-80.168028000000000\",\n      \"zone\": {\n        \"id\": \"113\",\n        \"name\":
+        \"Pennsylvania\"\n      },\n      \"subject\": {\n        \"id\": \"10\",\n
+        \       \"name\": \"Literacy\",\n        \"groupId\": \"6\"\n      },\n      \"resource\":
+        {\n        \"id\": \"6\",\n        \"name\": \"Other\"\n      },\n      \"expirationDate\":
+        \"2012-08-19\",\n      \"fundingStatus\": \"needs funding\"\n    },\n    {\n
+        \     \"id\": \"781909\",\n      \"proposalURL\": \"http://www.donorschoose.org/project/no-more-bully-garten/781909/?utm_source=api&amp;utm_medium=feed&amp;utm_content=bodylink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"fundURL\": \"https://secure.donorschoose.org/donors/givingCart.html?proposalid=781909&amp;donationAmount=&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=fundlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"imageURL\": \"http://cdn.donorschoose.net/images/user/uploads/small/u1322660_sm.jpg?timestamp=1327638667525\",\n
+        \     \"title\": \"No More Bully-garten\",\n      \"shortDescription\": \"What
+        is a bully? How do bullies act? How can I stand up to a bully? These are the
+        questions that I would like to bring to my 24 kindergarten students. Our school
+        is located in California and is...\",\n      \"fulfillmentTrailer\": \"My
+        students need books to help combat bullying, a laminator and pouches to preserve
+        their work, and magnets to display their work and instructional posters.\",\n
+        \     \"percentFunded\": \"84\",\n      \"costToComplete\": \"58.28\",\n      \"matchingFund\":
+        {\n        \"matchingKey\": \"\",\n        \"name\": \"\",\n        \"logoURL\":
+        \"\",\n        \"faqURL\": \"\",\n        \"amount\": \"0.00\"\n      },\n
+        \     \"totalPrice\": \"356.52\",\n      \"freeShipping\": \"false\",\n      \"teacherName\":
+        \"Ms. Hernandez\",\n      \"gradeLevel\": {\n        \"id\": \"1\",\n        \"name\":
+        \"Grades PreK-2\"\n      },\n      \"povertyLevel\": \"High Poverty\",\n      \"schoolName\":
+        \"118th Street Elementary School\",\n      \"city\": \"Los Angeles\",\n      \"zip\":
+        \"90061-2499\",\n      \"state\": \"CA\",\n      \"latitude\": \"33.926025000000000\",\n
+        \     \"longitude\": \"-118.272141000000000\",\n      \"zone\": {\n        \"id\":
+        \"411\",\n        \"name\": \"California (South)\"\n      },\n      \"subject\":
+        {\n        \"id\": \"10\",\n        \"name\": \"Literacy\",\n        \"groupId\":
+        \"6\"\n      },\n      \"resource\": {\n        \"id\": \"1\",\n        \"name\":
+        \"Books\"\n      },\n      \"expirationDate\": \"2012-09-11\",\n      \"fundingStatus\":
+        \"needs funding\"\n    },\n    {\n      \"id\": \"792882\",\n      \"proposalURL\":
+        \"http://www.donorschoose.org/project/cinderella-musical/792882/?utm_source=api&amp;utm_medium=feed&amp;utm_content=bodylink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"fundURL\": \"https://secure.donorschoose.org/donors/givingCart.html?proposalid=792882&amp;donationAmount=&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=fundlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"imageURL\": \"http://cdn.donorschoose.net/images/user/uploads/small/u171072_sm.jpg?timestamp=1335895221976\",\n
+        \     \"title\": \"Cinderella Musical\",\n      \"shortDescription\": \"I
+        remember my 1st musical and what fun it was to sing and perform! I teach at
+        a Title 1 school in Middle Georgia. Next year my 5th grade students will have
+        an opportunity to select from several...\",\n      \"fulfillmentTrailer\":
+        \"My students need the musical Once Upon a Time - The Classic Story of Cinderella,
+        the director&#039;s score, reproducible student parts and CD.\",\n      \"percentFunded\":
+        \"54\",\n      \"costToComplete\": \"96.54\",\n      \"matchingFund\": {\n
+        \       \"matchingKey\": \"\",\n        \"name\": \"\",\n        \"logoURL\":
+        \"\",\n        \"faqURL\": \"\",\n        \"amount\": \"0.00\"\n      },\n
+        \     \"totalPrice\": \"208.25\",\n      \"freeShipping\": \"false\",\n      \"teacherName\":
+        \"Ms. Maddox\",\n      \"gradeLevel\": {\n        \"id\": \"2\",\n        \"name\":
+        \"Grades 3-5\"\n      },\n      \"povertyLevel\": \"High Poverty\",\n      \"schoolName\":
+        \"Kay Road Elementary School\",\n      \"city\": \"Byron\",\n      \"zip\":
+        \"31008\",\n      \"state\": \"GA\",\n      \"latitude\": \"32.618745000000000\",\n
+        \     \"longitude\": \"-83.769413000000000\",\n      \"zone\": {\n        \"id\":
+        \"313\",\n        \"name\": \"Georgia\"\n      },\n      \"subject\": {\n
+        \       \"id\": \"12\",\n        \"name\": \"Music\",\n        \"groupId\":
+        \"1\"\n      },\n      \"resource\": {\n        \"id\": \"3\",\n        \"name\":
+        \"Supplies\"\n      },\n      \"expirationDate\": \"2012-09-26\",\n      \"fundingStatus\":
+        \"needs funding\"\n    },\n    {\n      \"id\": \"822541\",\n      \"proposalURL\":
+        \"http://www.donorschoose.org/project/listening-makes-us-better-readers/822541/?utm_source=api&amp;utm_medium=feed&amp;utm_content=bodylink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"fundURL\": \"https://secure.donorschoose.org/donors/givingCart.html?proposalid=822541&amp;donationAmount=&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=fundlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"imageURL\": \"http://cdn.donorschoose.net/images/user/uploads/small/u1075087_sm.jpg?timestamp=1339536993791\",\n
+        \     \"title\": \"Listening Makes Us Better Readers!\",\n      \"shortDescription\":
+        \"Did you know that English is the most difficult language to listen in, comprehend
+        and read? Imagine how much HARDER it is for young students with disabilities
+        or students learning the language for...\",\n      \"fulfillmentTrailer\":
+        \"My students need a listening center with new headphones as well as a variety
+        of fiction and non fiction books on tape. They also need listening activities
+        for centers.\",\n      \"percentFunded\": \"84\",\n      \"costToComplete\":
+        \"63.01\",\n      \"matchingFund\": {\n        \"matchingKey\": \"\",\n        \"name\":
+        \"\",\n        \"logoURL\": \"\",\n        \"faqURL\": \"\",\n        \"amount\":
+        \"0.00\"\n      },\n      \"totalPrice\": \"404.22\",\n      \"freeShipping\":
+        \"true\",\n      \"teacherName\": \"Ms. Dowling\",\n      \"gradeLevel\":
+        {\n        \"id\": \"2\",\n        \"name\": \"Grades 3-5\"\n      },\n      \"povertyLevel\":
+        \"High Poverty\",\n      \"schoolName\": \"Ps 310 Marble Hill\",\n      \"city\":
+        \"Bronx\",\n      \"zip\": \"10463-7346\",\n      \"state\": \"NY\",\n      \"latitude\":
+        \"40.872721000000000\",\n      \"longitude\": \"-73.905197000000000\",\n      \"zone\":
+        {\n        \"id\": \"103\",\n        \"name\": \"New York (City)\"\n      },\n
+        \     \"subject\": {\n        \"id\": \"10\",\n        \"name\": \"Literacy\",\n
+        \       \"groupId\": \"6\"\n      },\n      \"resource\": {\n        \"id\":
+        \"2\",\n        \"name\": \"Technology\"\n      },\n      \"expirationDate\":
+        \"2012-12-18\",\n      \"fundingStatus\": \"needs funding\"\n    },\n    {\n
+        \     \"id\": \"783340\",\n      \"proposalURL\": \"http://www.donorschoose.org/project/teacher-my-string-broke/783340/?utm_source=api&amp;utm_medium=feed&amp;utm_content=bodylink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"fundURL\": \"https://secure.donorschoose.org/donors/givingCart.html?proposalid=783340&amp;donationAmount=&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=fundlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"imageURL\": \"http://cdn.donorschoose.net/images/user/uploads/small/u1402543_sm.jpg?timestamp=1333407427417\",\n
+        \     \"title\": \"Teacher, My String Broke!\",\n      \"shortDescription\":
+        \"&#034;Music can change the world because it can change people.&#034; Indeed,
+        I witness this firsthand with my own students. With limited funds, we do not
+        have the funds to purchase desperately needed violin...\",\n      \"fulfillmentTrailer\":
+        \"My students need violin strings, bass/cello bows, violin/viola rosin, and
+        bass rosin to ensure that the music continues on.\",\n      \"percentFunded\":
+        \"71\",\n      \"costToComplete\": \"156.07\",\n      \"matchingFund\": {\n
+        \       \"matchingKey\": \"\",\n        \"name\": \"\",\n        \"logoURL\":
+        \"\",\n        \"faqURL\": \"\",\n        \"amount\": \"0.00\"\n      },\n
+        \     \"totalPrice\": \"544.66\",\n      \"freeShipping\": \"true\",\n      \"teacherName\":
+        \"Mr. Grant\",\n      \"gradeLevel\": {\n        \"id\": \"3\",\n        \"name\":
+        \"Grades 6-8\"\n      },\n      \"povertyLevel\": \"High Poverty\",\n      \"schoolName\":
+        \"Charles D Jones Jr High School\",\n      \"city\": \"Baldwin Park\",\n      \"zip\":
+        \"91706-5243\",\n      \"state\": \"CA\",\n      \"latitude\": \"34.075756000000000\",\n
+        \     \"longitude\": \"-117.965991000000000\",\n      \"zone\": {\n        \"id\":
+        \"411\",\n        \"name\": \"California (South)\"\n      },\n      \"subject\":
+        {\n        \"id\": \"12\",\n        \"name\": \"Music\",\n        \"groupId\":
+        \"1\"\n      },\n      \"resource\": {\n        \"id\": \"3\",\n        \"name\":
+        \"Supplies\"\n      },\n      \"expirationDate\": \"2012-09-01\",\n      \"fundingStatus\":
+        \"needs funding\"\n    },\n    {\n      \"id\": \"817449\",\n      \"proposalURL\":
+        \"http://www.donorschoose.org/project/fostering-independence-in-kindergarten/817449/?utm_source=api&amp;utm_medium=feed&amp;utm_content=bodylink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"fundURL\": \"https://secure.donorschoose.org/donors/givingCart.html?proposalid=817449&amp;donationAmount=&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=fundlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"imageURL\": \"http://cdn.donorschoose.net/images/user/uploads/small/u643423_sm.jpg?timestamp=1339722800652\",\n
+        \     \"title\": \"Fostering Independence in Kindergarten!\",\n      \"shortDescription\":
+        \"My kindergarten students often lack the skills necessary to organize and
+        take care of their work areas and supplies. I believe it is important for
+        them to learn these skills and I would like to...\",\n      \"fulfillmentTrailer\":
+        \"My students need help with organizing their materials and projects. This
+        storage cubby box will allow them to independently gather completed work to
+        take home and share.\",\n      \"percentFunded\": \"71\",\n      \"costToComplete\":
+        \"103.41\",\n      \"matchingFund\": {\n        \"matchingKey\": \"\",\n        \"name\":
+        \"\",\n        \"logoURL\": \"\",\n        \"faqURL\": \"\",\n        \"amount\":
+        \"0.00\"\n      },\n      \"totalPrice\": \"355.18\",\n      \"freeShipping\":
+        \"false\",\n      \"teacherName\": \"Ms. Vaughn\",\n      \"gradeLevel\":
+        {\n        \"id\": \"1\",\n        \"name\": \"Grades PreK-2\"\n      },\n
+        \     \"povertyLevel\": \"High Poverty\",\n      \"schoolName\": \"Bowie Elementary
+        School\",\n      \"city\": \"Rosenberg\",\n      \"zip\": \"77471-4906\",\n
+        \     \"state\": \"TX\",\n      \"latitude\": \"29.543883000000000\",\n      \"longitude\":
+        \"-95.819537000000000\",\n      \"zone\": {\n        \"id\": \"321\",\n        \"name\":
+        \"Texas\"\n      },\n      \"subject\": {\n        \"id\": \"18\",\n        \"name\":
+        \"Early Development\",\n        \"groupId\": \"5\"\n      },\n      \"resource\":
+        {\n        \"id\": \"6\",\n        \"name\": \"Other\"\n      },\n      \"expirationDate\":
+        \"2012-12-04\",\n      \"fundingStatus\": \"needs funding\"\n    },\n    {\n
+        \     \"id\": \"823473\",\n      \"proposalURL\": \"http://www.donorschoose.org/project/books-for-bostons-brightest/823473/?utm_source=api&amp;utm_medium=feed&amp;utm_content=bodylink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"fundURL\": \"https://secure.donorschoose.org/donors/givingCart.html?proposalid=823473&amp;donationAmount=&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=fundlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"imageURL\": \"http://cdn.donorschoose.net/images/user/uploads/small/u1095709_sm.jpg?timestamp=1328680345580\",\n
+        \     \"title\": \"Books for Boston&#039;s Brightest\",\n      \"shortDescription\":
+        \"Do you remember what it was like the first time you read a book that you
+        couldn&#039;t put down? Now due to a lack of funding, our school is closing
+        our library before many of my students discover the...\",\n      \"fulfillmentTrailer\":
+        \"My students need books in the classroom to replace our closed school library!\",\n
+        \     \"percentFunded\": \"79\",\n      \"costToComplete\": \"111.02\",\n
+        \     \"matchingFund\": {\n        \"matchingKey\": \"\",\n        \"name\":
+        \"\",\n        \"logoURL\": \"\",\n        \"faqURL\": \"\",\n        \"amount\":
+        \"0.00\"\n      },\n      \"totalPrice\": \"518.67\",\n      \"freeShipping\":
+        \"true\",\n      \"teacherName\": \"Ms. Hindrichs\",\n      \"gradeLevel\":
+        {\n        \"id\": \"3\",\n        \"name\": \"Grades 6-8\"\n      },\n      \"povertyLevel\":
+        \"High Poverty\",\n      \"schoolName\": \"Lilla G. Frederick Pilot Middle
+        School\",\n      \"city\": \"Dorchester\",\n      \"zip\": \"02121\",\n      \"state\":
+        \"MA\",\n      \"latitude\": \"42.308822000000000\",\n      \"longitude\":
+        \"-71.074743000000000\",\n      \"zone\": {\n        \"id\": \"121\",\n        \"name\":
+        \"Massachusetts\"\n      },\n      \"subject\": {\n        \"id\": \"8\",\n
+        \       \"name\": \"Mathematics\",\n        \"groupId\": \"4\"\n      },\n
+        \     \"resource\": {\n        \"id\": \"1\",\n        \"name\": \"Books\"\n
+        \     },\n      \"expirationDate\": \"2012-12-20\",\n      \"fundingStatus\":
+        \"needs funding\"\n    },\n    {\n      \"id\": \"816084\",\n      \"proposalURL\":
+        \"http://www.donorschoose.org/project/kids-like-us-help-us-study-50-cents-ne/816084/?utm_source=api&amp;utm_medium=feed&amp;utm_content=bodylink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"fundURL\": \"https://secure.donorschoose.org/donors/givingCart.html?proposalid=816084&amp;donationAmount=&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=fundlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"imageURL\": \"http://cdn.donorschoose.net/images/user/uploads/small/u1146787_sm.jpg?timestamp=1325032287214\",\n
+        \     \"title\": \"Kids Like Us: Help Us Study 50 Cent&#039;s New Anti-Bullying
+        Book\",\n      \"shortDescription\": \"&#034;Maurice rose from the bench,
+        and now his expression was definitely frightened. He put down his books and
+        took a few steps toward me, and that&#039;s when I gave it to him. I reached
+        into my pocket and...\",\n      \"fulfillmentTrailer\": \"My students need
+        a class set of 50 Cent&#039;s new semi-autobiographical novel Playground,
+        about a troubled teen bully who looks, talks, and thinks like people they
+        know.\",\n      \"percentFunded\": \"72\",\n      \"costToComplete\": \"110.84\",\n
+        \     \"matchingFund\": {\n        \"matchingKey\": \"\",\n        \"name\":
+        \"\",\n        \"logoURL\": \"\",\n        \"faqURL\": \"\",\n        \"amount\":
+        \"0.00\"\n      },\n      \"totalPrice\": \"390.84\",\n      \"freeShipping\":
+        \"true\",\n      \"teacherName\": \"Ms. Raymond\",\n      \"gradeLevel\":
+        {\n        \"id\": \"3\",\n        \"name\": \"Grades 6-8\"\n      },\n      \"povertyLevel\":
+        \"High Poverty\",\n      \"schoolName\": \"Shortridge Magnet High School\",\n
+        \     \"city\": \"Indianapolis\",\n      \"zip\": \"46208-4436\",\n      \"state\":
+        \"IN\",\n      \"latitude\": \"39.817587000000000\",\n      \"longitude\":
+        \"-86.156620000000000\",\n      \"zone\": {\n        \"id\": \"203\",\n        \"name\":
+        \"Indiana\"\n      },\n      \"subject\": {\n        \"id\": \"10\",\n        \"name\":
+        \"Literacy\",\n        \"groupId\": \"6\"\n      },\n      \"resource\": {\n
+        \       \"id\": \"1\",\n        \"name\": \"Books\"\n      },\n      \"expirationDate\":
+        \"2012-11-28\",\n      \"fundingStatus\": \"needs funding\"\n    },\n    {\n
+        \     \"id\": \"737946\",\n      \"proposalURL\": \"http://www.donorschoose.org/project/inquiry-labs-for-ap-environmental-scienc/737946/?utm_source=api&amp;utm_medium=feed&amp;utm_content=bodylink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"fundURL\": \"https://secure.donorschoose.org/donors/givingCart.html?proposalid=737946&amp;donationAmount=&amp;utm_source=api&amp;utm_medium=feed&amp;utm_content=fundlink&amp;utm_campaign=DONORSCHOOSE\",\n
+        \     \"imageURL\": \"http://cdn.donorschoose.net/images/user/uploads/small/u558955_sm.jpg?timestamp=1281978428421\",\n
+        \     \"title\": \"Inquiry Labs for AP Environmental Science\",\n      \"shortDescription\":
+        \"If you had the chance to take APES (AP Environmental Science) in high school,
+        then you know how important the labs were to your deep understanding of our
+        Earth.  To date, my students have been...\",\n      \"fulfillmentTrailer\":
+        \"My students need lab equipment to learn important material for the AP environmental
+        science test through inquiry based experimentation.\",\n      \"percentFunded\":
+        \"76\",\n      \"costToComplete\": \"110.18\",\n      \"matchingFund\": {\n
+        \       \"matchingKey\": \"\",\n        \"name\": \"\",\n        \"logoURL\":
+        \"\",\n        \"faqURL\": \"\",\n        \"amount\": \"0.00\"\n      },\n
+        \     \"totalPrice\": \"466.94\",\n      \"freeShipping\": \"false\",\n      \"teacherName\":
+        \"Mr. Plowman\",\n      \"gradeLevel\": {\n        \"id\": \"4\",\n        \"name\":
+        \"Grades 9-12\"\n      },\n      \"povertyLevel\": \"High Poverty\",\n      \"schoolName\":
+        \"Marc &amp; Eva Stern Math &amp; Sci Cs\",\n      \"city\": \"Los Angeles\",\n
+        \     \"zip\": \"90032-4226\",\n      \"state\": \"CA\",\n      \"latitude\":
+        \"34.062422000000000\",\n      \"longitude\": \"-118.171691000000000\",\n
+        \     \"zone\": {\n        \"id\": \"411\",\n        \"name\": \"California
+        (South)\"\n      },\n      \"subject\": {\n        \"id\": \"7\",\n        \"name\":
+        \"Environmental Science\",\n        \"groupId\": \"4\"\n      },\n      \"resource\":
+        {\n        \"id\": \"3\",\n        \"name\": \"Supplies\"\n      },\n      \"expirationDate\":
+        \"2012-07-27\",\n      \"fundingStatus\": \"needs funding\"\n    }\n  ]\n}\r\n"
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jul 2012 02:52:42 GMT
 recorded_with: VCR 2.2.4
