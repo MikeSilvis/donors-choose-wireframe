@@ -28,6 +28,11 @@ class Challenge < ActiveRecord::Base
     user.name
   end
 
+  def owner_avatar
+    user.profile_image_url
+  end
+
+
   private
 
   def amount_versus_donors_choose_fund

@@ -14,7 +14,7 @@ describe "Creating a new challenge" do
     context "and when I click on the new challenge link" do
       it "should take me to a form to create a new challenge" do
         click_link("Post a challenge!")
-        page.should have_content("Create a new challenge")
+        page.should have_content("do swear and affirm")
       end
     end
   end

@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
   end
 
   def self.create_from_twitter(auth)
-    ap auth
     user = User.new
     user.provider = auth.provider
     user.uid = auth.uid
