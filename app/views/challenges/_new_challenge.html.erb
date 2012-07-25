@@ -11,9 +11,9 @@
     <% if @challenge.errors.messages[:amount] %>
       <h3><span class="inline-error"><%= @challenge.errors.messages[:amount].first %><span></h3>
     <% end %>
-    The following media link demonstrates my
+    The following photo link demonstrates my
     commitment to the cause:
-    <%= f.text_field :display_media, class: "url-input", placeholder: "http://www.youtube.com/mynewhaircut" %>
+    <%= f.text_field :display_media, class: "url-input", placeholder: "http://www.instagram.com/mynewhaircut.png" %>
     <% if @challenge.errors.messages[:display_media] %>
       <h3><span class="inline-error"><%= @challenge.errors.messages[:display_media].first %><span></h3>
     <% end %>

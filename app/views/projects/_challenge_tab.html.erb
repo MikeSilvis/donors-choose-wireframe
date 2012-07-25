@@ -14,23 +14,13 @@
 
   <div class="challenge-description sixcol">
     <div>
-      <%= challenge.name %> will <span class="challenge-action"><%= challenge.title %></span>
-      <span class="challenge-condition">when this project raises: <%= humanized_money_with_symbol challenge.target_funding %></span>
-    </div>
-    <div>
-      (Only <%= humanized_money_with_symbol challenge.amount_currency %> to go!)
+      Will <span class="challenge-action"><%= challenge.title %></span>
     </div>
   </div>
 
   <div class="fourcol last">
-    <div class="challenge-money">
-      <div class="challenge-progress">
-        <span class="dollars-left"><%= humanized_money_with_symbol challenge.amount %></span>
-        <p class="to-go">To Go</p>
-      </div>
-      <div class="challenge-donate">
-        <%= link_to "Give", challenge.project.proposal_url, target: "_blank", class: "give-link" %>
-      </div>
+    <div class="challenge-donate">
+      <%= link_to "Give", challenge.project.proposal_url, target: "_blank", class: "give-link" %>
     </div>
     <div>
       <%= link_to("View Challenge", project_challenge_path(@project, challenge), class: "challenge-link")  %>
