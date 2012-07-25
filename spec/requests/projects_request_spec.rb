@@ -55,9 +55,8 @@ describe "Creating a project" do
     let(:project) { FactoryGirl.create(:project) }
 
     it "displays the title as a link" do
-      pending
       visit project_path(project)
-      page.should have_content(project.title)
+      page.should have_link("Help Inspire Young Authors and Illustrators...With Books!")
     end
 
     it "shows the challenge posters avatar" do

@@ -10,8 +10,11 @@ class Challenge < ActiveRecord::Base
   has_many :challenge_evidences
 
   validates :title, :presence => { message: I18n.t(:challenge_title_missing) }
-  validates :display_media, :presence => { message: I18n.t(:challenge_media_missing) }
-  validates :amount, :numericality => { :greater_than_or_equal_to => 0, :message => I18n.t(:challenge_amount_not_a_number) }
+  validates :display_media, :presence => {
+                              message: I18n.t(:challenge_media_missing) }
+  validates :amount, :numericality => {
+                            :greater_than_or_equal_to => 0,
+                            :message => I18n.t(:challenge_amount_not_a_number) }
   validate  :amount_versus_donors_choose_funds => { on: :create }
 
   after_create :calculate_target_funding
@@ -44,7 +47,8 @@ class Challenge < ActiveRecord::Base
 
 
   def calculate_target_funding
-    self.target_funding_cents = (project.raised_to_date.cents + amount_currency.cents)
+    self.target_funding_cents = (project.raised_to_date.cents +
+      amount_currency.cents)
     save
   end
 end
