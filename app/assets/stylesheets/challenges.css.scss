@@ -1,0 +1,46 @@
+@import "colors";
+
+.single-challenge-details {
+  margin-top: 12px;
+}
+
+.challenge-banner {
+}
+
+
+.single-challenge-overview {
+
+}
+
+
+.challenge-banner {
+  h1 {
+    font-size: 24px;
+  }
+  $well-radius: 8px;
+  padding: 4px;
+  margin-bottom: 20px;
+  background-color: $cream;
+  border: 2px solid #eee;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-radius: $well-radius;
+  -webkit-border-radius: $well-radius;
+  -moz-border-radius: $well-radius;
+  border-radius: $well-radius;
+}
+
+$challenge-banner-met: $green;
+$challenge-banner-unmet: $orange;
+$challenge-banner-pending: lighten($red, 12%);
+.challenge-banner.met {
+  color: white;
+  background-color: $challenge-banner-met;
+}
+.challenge-banner.unmet {
+  color: white;
+  background-color: lighten($challenge-banner-unmet, 15%);
+}
+.challenge-banner.pending {
+  color: white;
+  background-color: $challenge-banner-pending;
+}
