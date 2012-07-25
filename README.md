@@ -1,6 +1,39 @@
 Donors Team 6
 =============
 
+# Setup
+
+1. `git clone git://github.com/worace/donors-choose-wireframe.git`
+
+2. `bundle`
+
+3. `bundle exec rake db:migrate`
+
+4. `bundle exec rake db:test:prepare`
+
+### Export Keys:
+
+In Bash Profile:
+
+5. `export TWITTER_CONSUMER_KEY="6PA2o1Y9veNxOsSOzUzQ"`
+   `export TWITTER_CONSUMER_SECRET="M5VqJufusXeR0D1dz3WYLxQDcJsQVGrLo4X4GxNCw"`
+   `export AWS_ACCESS_KEY='AKIAIQ6A4WA26WTJAN2Q'`
+   `export AWS_SECRET_ACCESS_KEY='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'`
+
+6. `source ~/.bash_profile`
+
+7. Run Redis: `redis-server /usr/local/etc/redis.conf`
+
+8. run the worker: `VERBOSE=TRUE QUEUE=* bundle exec rake environment resque:work`
+
+9. run the scheduler: `VERBOSE=TRUE QUEUE=* bundle exec rake resque:scheduler`
+
+7. run the tests: `bundle exec rspec`
+
+8. run the server: `bundle exec rails s`
+
+
+
 ### Who's it for
 
   Potential Characters:
