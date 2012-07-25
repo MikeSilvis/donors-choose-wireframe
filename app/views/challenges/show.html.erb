@@ -36,7 +36,7 @@
         </div>
         <div class="row any-width">
           <div class="ninecol last">
-            <h3><span>For Project: </span><span><%= link_to(@challenge.project.title, project_path(@challenge.project)) %></span></h3>
+            <h2>View the Project:</h3><h3 class="project-link"><%= link_to(@challenge.project.title, project_path(@challenge.project)) %></h3>
           </div>
         </div>
       </div>
@@ -53,7 +53,6 @@
           <% end %>
         <% end %>
       <% end %>
-
       <%= render partial: 'challenge_evidences/form' if @challenge.user == current_user %>
     </div>
   </div>
