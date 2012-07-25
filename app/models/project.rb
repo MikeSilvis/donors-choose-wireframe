@@ -10,10 +10,6 @@ class Project < ActiveRecord::Base
     return true unless DonorsChooseApi::Project.find_by_url(url) == "Invalid Donors Choose Url"
   end
 
-  def owner_avatar
-    User.find(self.challenges.first.user_id).profile_image_url
-  end
-
   def self.from_donors_choose_url(url)
     dc_id = donors_choose_id_from_url(url)
     self.find_or_initialize_by_donors_choose_id(dc_id)
