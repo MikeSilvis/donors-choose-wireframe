@@ -9,13 +9,13 @@ class User < ActiveRecord::Base
   end
 
   def self.create_from_twitter(auth)
-    user = User.new
-    user.provider = auth.provider
-    user.uid = auth.uid
-    user.screen_name = auth.extra.raw_info.screen_name
-    user.name = auth.extra.raw_info.name
+    user                   = User.new
+    user.provider          = auth.provider
+    user.uid               = auth.uid
+    user.screen_name       = auth.extra.raw_info.screen_name
+    user.name              = auth.extra.raw_info.name
     user.profile_image_url = auth.extra.raw_info.profile_image_url
     user.save
-    return user
+    user
   end
 end
