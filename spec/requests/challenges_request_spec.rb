@@ -53,7 +53,6 @@ describe "Creating a new challenge" do
       click_button("Sign It!")
 
       current_path.should == "/projects/1/challenges"
-      save_and_open_page
       page.should have_selector(".inline-error")
     end
   end
