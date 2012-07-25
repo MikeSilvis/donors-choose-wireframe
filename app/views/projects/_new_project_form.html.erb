@@ -7,49 +7,51 @@
 
   <div class="row">
     <div class="twelvecol tagline tagline-copy">
-      <h1>Raising money at the expense of your dignity.
+      <h2>Raising money at the expense of your dignity.</h2>
     </div>
   </div>
-
 
   <div class="project-creation">
-  <div class="row">
-    <div class="twelvecol">
-      <h2 class="project-cta">Find a Donors Choose Project you'd like to support and enter the URL below:</h2>
+    <h1 class="title">Choose a Project</h1>
+    <div class="row">
+      <div class="twelvecol">
+        <h2 class="project-cta">Find a Donors Choose Project you'd like to support and enter the URL below:</h2>
+      </div>
     </div>
-  </div>
-  <div class="row">
-      <%= form_for @project do |f| %>
-        <div class="ninecol">
-          <%= f.text_field :proposal_url, placeholder: "Enter a Donors Choose URL (e.g. http://www.donorschoose.org/project/comfy-literacy-center/814936/)", class: 'text_field' %>
-        </div>
-        <div class="threecol last">
-          <%= f.submit class: 'form-submit', value: "Adopt Project" %>
+    <div class="row">
+        <%= form_for @project do |f| %>
+          <div class="ninecol">
+            <%= f.text_field :proposal_url, placeholder: "Enter a Donors Choose URL (e.g. http://www.donorschoose.org/project/comfy-literacy-center/814936/)", class: 'text_field' %>
+          </div>
+          <div class="threecol last">
+            <%= f.submit class: 'form-submit', value: "Adopt Project" %>
+          </div>
+        <% end %>
+    </div>
+
+  <h2 class="title-padding"> Or </h2>
+
+    <div class="row project-form-header">
+      <div class="twelvecol">
+        <h2 class="project-cta">Support a project that has already been adopted:</h2>
+      </div>
+    </div>
+    <div class="row sample-projects" id="sample-projects">
+      <% @projects[0..3].each do |project| %>
+        <div class="threecol" id="project_info">
+          <div id="project-title-2">
+            <%= project.title %>
+          </div>
+          <div class="image">
+            <%= link_to image_tag(project.image_url), project_path(project) %>
+          </div>
         </div>
       <% end %>
-  </div>
-  <div class="row project-form-header">
-    <div class="twelvecol">
-      <h2 class="project-cta">Or help support a project that has already been adopted:</h2>
-    </div>
-  </div>
-  <div class="row sample-projects">
-    <% @projects[0..3].each do |project| %>
-      <div class="threecol" id="project_info">
-        <div id="project-title-2">
-          <%= project.title %>
-        </div>
-    <div class="image">
-      <%= link_to image_tag(project.image_url), project_path(project) %>
-    </div>
+      <div class="project-link">
+        <%= link_to "Click here for a full list of adopted projects", projects_path %> 
       </div>
-    <% end %>
+    </div>
   </div>
-
-  <div>
-    <%= link_to "Click here for a full list of adopted projects", projects_path %> 
-  </div>
-  <br>
   <hr>
 
   <div id="how-to-use">
