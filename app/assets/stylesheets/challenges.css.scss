@@ -1,5 +1,11 @@
 @import "colors";
 
+h3.project-link {
+  a {
+    font-size: 22px;
+    border-bottom: 1px dashed $orange;
+  }
+}
 .single-challenge-details {
   margin-top: 12px;
 }
