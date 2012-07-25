@@ -2,8 +2,8 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  challenge_title_missing: "Your word means nothing without a task."
-  challenge_media_missing: "A picture is worth a thousand words."
+  challenge_title_missing: "What would the people want to see?"
+  challenge_media_missing: "A good preview image will have the donations flying in."
   challenge_amount_not_a_number: "Try dollars. Up to the project's remaining cost."
   challenge_amount_too_much: "That's more than the project's remaining cost. Go lower."
   activerecord:
