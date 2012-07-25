@@ -41,7 +41,7 @@
         </div>
       </div>
     </div>
-  </div>
+
     <div class="sixcol last">
       <% if @challenge_evidences.any? %>
         <% @challenge_evidences.each do |evidence| %>
@@ -55,5 +55,6 @@
       <% end %>
 
       <%= render partial: 'challenge_evidences/form' if @challenge.user == current_user %>
+    </div>
   </div>
 </div>
