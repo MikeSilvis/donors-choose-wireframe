@@ -14,7 +14,7 @@
 
     <div class="row">
       <div class="sixcol">
-        <h1><span>Challenge: </span><span><%= @challenge.title.titleize %></span></h1>
+        <h1><span>Challenge: </span><span><%= @challenge.user.name %> will <%= @challenge.title.titleize %></span></h1>
       </div>
       <div class="sixcol last">
         <h1>Evidence for this challenge:</h1>
@@ -36,7 +36,7 @@
         </div>
         <div class="row any-width">
           <div class="ninecol last">
-            <h3><span>For Project: </span><span><%= link_to(@challenge.project.title, project_path(@challenge.project)) %></span></h3>
+            <h2>View the Project:</h3><h3 class="project-link"><%= link_to(@challenge.project.title, project_path(@challenge.project)) %></h3>
           </div>
         </div>
       </div>
@@ -45,15 +45,16 @@
     <div class="sixcol last">
       <% if @challenge_evidences.any? %>
         <% @challenge_evidences.each do |evidence| %>
-          <% if evidence.image_url %>
-            <%= image_tag(evidence.image_url) %>
-          <% elsif evidence.external_url %>
-            <%= evidence.embed.html_safe %>
-          <% else %>
-          <% end %>
+          <div class="challenge-evidence">
+            <% if evidence.image_url %>
+              <%= image_tag(evidence.image_url) %>
+            <% elsif evidence.external_url %>
+              <%= evidence.embed.html_safe %>
+            <% else %>
+            <% end %>
+          </div>
         <% end %>
       <% end %>
-
       <%= render partial: 'challenge_evidences/form' if @challenge.user == current_user %>
     </div>
   </div>

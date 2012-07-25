@@ -6,8 +6,17 @@ class Project < ActiveRecord::Base
   has_many :events
   monetize :amount_raised_cents, allow_nil: true
 
+  after_create :sanitize_data
+
+  # self.column_names.each do |attr|
+  #   define_method(attr) do
+  #     HTMLEntities.new.decode(attributes[attr]) unless attr = "amount_raised_cents"
+  #   end
+  # end
+
   def self.valid_url(url)
-    return true unless DonorsChooseApi::Project.find_by_url(url) == "Invalid Donors Choose Url"
+    return true unless DonorsChooseApi::Project.find_by_url(url) ==
+      "Invalid Donors Choose Url"
   end
 
   def self.from_donors_choose_url(url)
@@ -34,6 +43,14 @@ class Project < ActiveRecord::Base
     amount_raised
   end
 
+  def currency_to_complete
+    Money.new(cents_to_complete)
+  end
+
+  def currency_total_price
+    Money.new(total_price.to_f*100)
+  end
+
   private
 
   def donors_choose_attributes
@@ -45,7 +62,14 @@ class Project < ActiveRecord::Base
   end
 
   def calculate_amount_raised_cents
-    self.amount_raised_cents = ((total_price.to_f - cost_to_complete.to_f) * 100).to_i
+    self.amount_raised_cents = ((total_price.to_f - cost_to_complete.to_f) *
+      100).to_i
     save
+  end
+
+  def sanitize_data
+    attributes.each do |attr|
+      attributes[attr] = HTMLEntities.new.decode(attr)
+    end
   end
 end

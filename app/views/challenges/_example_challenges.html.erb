@@ -1,24 +1,10 @@
-<div class="fourcol">
+<% @sample_challenges.each do |challenge| %>
+<div class="threecol">
   <div class="display-wrapper">
-    <%= image_tag("http://4.bp.blogspot.com/_Acuay0A54HE/S8p29iYRG5I/AAAAAAAAA4o/GfI0PmWrwlY/s1600/handlebar1.jpg") %>
+    <%= link_to(image_tag(challenge.display_media), project_challenge_path(challenge.project, challenge)) %>
     <div class="overlay">
-      <p class="overlay-text">Grow a handlebar mustache</p>
+      <p class="overlay-text"><%= challenge.user.name %> will <%= challenge.title %></p>
     </div>
   </div>
 </div>
-<div class="fourcol">
-  <div class="display-wrapper">
-    <%= image_tag("http://4.bp.blogspot.com/_Acuay0A54HE/S8p29iYRG5I/AAAAAAAAA4o/GfI0PmWrwlY/s1600/handlebar1.jpg") %>
-    <div class="overlay">
-      <p class="overlay-text">Grow a handlebar mustache</p>
-    </div>
-  </div>
-</div>
-<div class="fourcol last">
-  <div class="display-wrapper">
-    <%= image_tag("http://4.bp.blogspot.com/_Acuay0A54HE/S8p29iYRG5I/AAAAAAAAA4o/GfI0PmWrwlY/s1600/handlebar1.jpg") %>
-    <div class="overlay">
-      <p class="overlay-text">Grow a handlebar mustache</p>
-    </div>
-  </div>
-</div>
+<% end %>

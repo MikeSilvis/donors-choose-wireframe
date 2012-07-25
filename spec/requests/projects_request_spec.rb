@@ -11,12 +11,18 @@ describe "Creating a project" do
       page.should have_selector("#new_project")
     end
 
-    it "creates a project from a donors choose url" do
+    it "creates a project from a valid donors choose url" do
       fill_in "project_proposal_url", with: "http://www.donorschoose.org/project/a-library-for-all-to-enjoy/793053/"
       click_link_or_button "Adopt Project"
       project = Project.find_by_donors_choose_id("793053")
       current_path.should == new_project_challenge_path(project)
       page.should have_content("Thanks for adopting this project! To kick this party off right, create a new challenge!")
+    end
+
+    it "redirects me to home page if I put in an invalid url" do
+      fill_in "project_proposal_url", with: "http://www.google.com"
+      click_link_or_button "Adopt Project"
+      page.should have_content("Sorry, we are unable to match the URL with a Donors Choose project")
     end
   end
 
@@ -49,15 +55,28 @@ describe "Creating a project" do
     let(:project) { FactoryGirl.create(:project) }
 
     it "displays the title as a link" do
-      pending
       visit project_path(project)
-      page.should have_content(project.title)
+      page.should have_link("Help Inspire Young Authors and Illustrators...With Books!")
     end
 
-    it "shows the challenge posters avatar" do
-      pending
-      visit project_path(project)
-      page.should have_image(project.owner_avatar)
+    # it "shows the challenge posters avatar" do
+    #   pending
+    #   visit project_path(project)
+    #   page.should have_image(project.owner_avatar)
+    # end
+  end
+
+  context "Viewing all projects" do
+    let(:project) { FactoryGirl.create(:project) }
+
+    before(:each) do
+      @projects = []
+      @projects << project
+      visit projects_path
+    end
+
+    it "should show all projects" do
+      page.should have_content("Help Inspire Young Authors and Illustrators...With Books!")
     end
   end
 

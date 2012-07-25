@@ -24,7 +24,7 @@ class ChallengeEvidence < ActiveRecord::Base
     elsif result.type == 'video'
       result.html
     else
-      "<img src='http://www.insidegatlinburg.com/wp-content/RainbowTrout_MendLess_2.jpg'"
+      "<img src='/assets/images/no_pic.jpeg'"
     end
   end
 

@@ -43,6 +43,8 @@ group :development, :test do
   gem 'vcr'
   gem 'fakeweb'
   gem 'sqlite3'
+  gem 'reek', :git => "git://github.com/mvz/reek.git" 
+  gem 'cane'
 end
 
 gem 'jquery-rails'

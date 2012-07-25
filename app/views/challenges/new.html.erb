@@ -1,6 +1,25 @@
 <div class="container">
+  <div class="row spacer"></div>
+  <div class="row">
+    <div class="tencol">
+      <h2 class="project-heading">New Challenge for Project: <%= link_to @project.title, @project.proposal_url, target: "_blank" %> </h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="fourcol">
+      <h3>Total Funding Goal: <%= humanized_money_with_symbol @project.currency_total_price %></h3>
+    </div>
+    <div class="fourcol">
+      <h3>Raised So Far: <%= humanized_money_with_symbol @project.raised_to_date %></h3>
+    </div>
+    <div class="fourcol last">
+      <h3>Still Needed: <%= humanized_money_with_symbol @project.currency_to_complete %></h3>
+    </div>
+  </div>
+
+  <div class="row spacer"></div>
   <div class="well">
-   <%= render partial: 'error_message', locals: { challenge: @challenge } %>
     <div class="row">
       <div class="onecol"></div>
       <div class="tencol last">
@@ -18,11 +37,11 @@
   <div class="spacer"></div>
   <div class="row">
     <div class='twelvecol'>
-      <h1 class="no-margin">Need Inspiration?</h1>
-      <p>These ideas have done well before</p>
+      <h1 class="no-margin">Looking for inspiration?</h1>
+      <p>Here are some other challenges to get your brain turning.</p>
     </div>
   </div>
-  <div class="row">
+  <div class="row example-challenges">
     <%= render partial: "example_challenges" %>
   </div>
 </div>

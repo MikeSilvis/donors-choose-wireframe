@@ -1,5 +1,37 @@
 @import "colors";
 
+/*NEW CHALLENGE*/
+
+h2.project-heading {
+  a {
+    color: $orange;
+    &:hover {
+      color: $teal;
+    }
+    &:visited {
+      color: $orange;
+      &:hover {
+        color: $teal;
+      }
+    }
+  }
+  border-bottom: 1px dashed $orange;
+}
+
+/*Example Challenges*/
+
+.example-challenges {
+
+}
+
+/*CHALLENGE HEADER*/
+
+h3.project-link {
+  a {
+    font-size: 22px;
+    border-bottom: 1px dashed $orange;
+  }
+}
 .single-challenge-details {
   margin-top: 12px;
 }
@@ -12,6 +44,15 @@
 
 }
 
+/*Challenge Evidences*/
+
+.challenge-evidence {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid $lightgrey;
+}
+
+/*Challenge Banner*/
 
 .challenge-banner {
   h1 {

@@ -4,6 +4,7 @@ class ChallengesController < ApplicationController
 
   def new
     @challenge = Challenge.new(params[:challenge])
+    @sample_challenges = Challenge.order("created_at DESC").limit(3)
   end
 
   def create

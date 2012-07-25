@@ -1,9 +1,4 @@
 <%= form_for [@project, @challenge] do |f| %>
-  <% if @challenge.errors.any? %>
-    <% @challenge.errors.full_messages.each do |msg| %>
-      <div class="inline-error"><%= msg %><span>
-    <% end %>
-  <% end %>
   <div id="pledge-form">
     I, <%= current_user.name %>, do swear and affirm that
     I will
