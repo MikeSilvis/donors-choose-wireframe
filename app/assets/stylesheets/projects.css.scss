@@ -399,8 +399,14 @@ h1.no-margin{
   margin-bottom:-9px;
 }
 
+.bottom {
+  position: relative;
+  height: 300px;
+}
+
 .display-wrapper{
-  position:relative;
+  position:absolute;
+  bottom: 0px;
   margin-top:15px;
   margin-bottom:30px;
 }

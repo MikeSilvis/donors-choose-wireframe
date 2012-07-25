@@ -1,16 +1,23 @@
 <div>
-<div>
-<h2>Completed this challenge? Post evidence for the world to see:</h2>
-</div>
-<%= form_for [@project, @challenge, @challenge_evidence] do |f| %>
-  <%= f.hidden_field :challenge_id, :value => @challenge.id  %>
   <div>
-  <%= f.file_field :image %>
+  <h2>Completed this challenge?</h2>
+  <h3>Post evidence for the world to see:</h3>
+  <br />
   </div>
-  <div>
-  <%= f.label :external_url, "or Enter a URL to an image or video on the web" %>
+
+  <div class="challenge-banner">
+    <%= form_for [@project, @challenge, @challenge_evidence] do |f| %>
+      <%= f.hidden_field :challenge_id, :value => @challenge.id  %>
+      <div>
+      <%= f.file_field :image %>
+      </div>
+      <br />
+      <h3>Or:</h3>
+      <div>
+      <%= f.label :external_url, "Enter a URL to an image or video on the web" %>
+      </div>
+      <%= f.text_field :external_url %></br>
+      <%= f.submit "Submit", class: "evidence-btn" %>
+    <% end %>
   </div>
-  <%= f.text_field :external_url %></br>
-  <%= f.submit "Submit" %>
-<% end %>
 </div>

@@ -1,9 +1,11 @@
 <% @sample_challenges.each do |challenge| %>
 <div class="threecol">
-  <div class="display-wrapper">
-    <%= link_to(image_tag(challenge.display_media), project_challenge_path(challenge.project, challenge)) %>
-    <div class="overlay">
-      <p class="overlay-text"><%= challenge.user.name %> will <%= challenge.title %></p>
+  <div class="bottom">
+    <div class="display-wrapper">
+      <%= link_to(image_tag(challenge.display_media), project_challenge_path(challenge.project, challenge)) %>
+      <div class="overlay">
+        <p class="overlay-text"><%= challenge.user.name %> will <%= challenge.title %></p>
+      </div>
     </div>
   </div>
 </div>

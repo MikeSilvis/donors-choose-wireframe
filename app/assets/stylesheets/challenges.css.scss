@@ -24,9 +24,10 @@ h2.project-heading {
 
 }
 
+
 /*CHALLENGE HEADER*/
 
-h3.project-link {
+h3.challenge-page-project-link {
   a {
     font-size: 22px;
     border-bottom: 1px dashed $orange;
@@ -51,6 +52,13 @@ h3.project-link {
   padding-bottom: 16px;
   border-bottom: 1px solid $lightgrey;
 }
+
+.evidence-btn{
+  @include button(simple, $orange);
+  margin-top:10px;
+  font-size:14px;
+}
+
 
 /*Challenge Banner*/
 
