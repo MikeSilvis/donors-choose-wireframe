@@ -2,7 +2,7 @@
   <div class="row spacer"></div>
   <div class="row">
     <div class="tencol">
-      <h2 class="project-heading">New Challenge for Project: <%= link_to @project.title, @project.proposal_url, target: "_blank" %> </h1>
+      <h2 class="project-heading">New Challenge for Project: <%= link_to @project.title, project_path(@project) %> </h1>
     </div>
   </div>
 
@@ -34,6 +34,7 @@
 </div>
 
 <div class="container">
+  <div class="row spacer"></div>
   <div class="spacer"></div>
   <div class="row">
     <div class='twelvecol'>
