@@ -14,7 +14,7 @@
 
     <div class="row">
       <div class="sixcol">
-        <h1><span>Challenge: </span><span><%= @challenge.user.name %> will <%= @challenge.title.titleize %></span></h1>
+        <h1><span>Challenge: </span><span><%= @challenge.user.name %> will <%= @challenge.uppercase_title %></span></h1>
       </div>
       <div class="sixcol last">
         <h1>Evidence for this challenge:</h1>
@@ -55,7 +55,6 @@
             <%= image_tag(evidence.image_url) %>
           <% elsif evidence.external_url %>
             <%= evidence.embed.html_safe %>
-          <% else %>
           <% end %>
         </div>
       <% end %>

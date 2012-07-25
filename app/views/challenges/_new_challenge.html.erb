@@ -3,20 +3,14 @@
     I, <%= current_user.name %>, do swear and affirm that
     I will
     <%= f.text_field :title, placeholder: "perform a stunning/humiliating stunt" %>
-    <% if @challenge.errors.messages[:title] %>
-      <h3><span class="inline-error"><%= @challenge.errors.messages[:title].first %><span></h3>
-    <% end %>
+    <%= render partial: "inline_error", locals: {error: @challenge.errors.messages[:title] } %>
     when the aforementioned project raises
     <%= f.text_field :amount, placeholder: "(up to) #{@project.cost_to_complete.to_i} additional dollars" %>
-    <% if @challenge.errors.messages[:amount] %>
-      <h3><span class="inline-error"><%= @challenge.errors.messages[:amount].first %><span></h3>
-    <% end %>
+    <%= render partial: "inline_error", locals: {error: @challenge.errors.messages[:amount] } %>
     The following photo link demonstrates my
     commitment to the cause:
     <%= f.text_field :display_media, class: "url-input", placeholder: "http://www.flickr.com/haircut.png" %>
-    <% if @challenge.errors.messages[:display_media] %>
-      <h3><span class="inline-error"><%= @challenge.errors.messages[:display_media].first %><span></h3>
-    <% end %>
+    <%= render partial: "inline_error", locals: {error: @challenge.errors.messages[:display_media] } %>
   </div>
   <%= f.hidden_field :project_id, :value => @project.id  %>
   <%= f.submit "Sign It!", id: "new-challenge-submit", class: "form-submit small" %>

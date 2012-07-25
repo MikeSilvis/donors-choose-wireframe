@@ -28,6 +28,10 @@ class Challenge < ActiveRecord::Base
     user.name
   end
 
+  def uppercase_title
+    title.titleize
+  end
+
   def owner_avatar
     user.profile_image_url
   end
