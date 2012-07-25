@@ -15,7 +15,7 @@ class Challenge < ActiveRecord::Base
   validates :amount, :numericality => {
                             :greater_than_or_equal_to => 0,
                             :message => I18n.t(:challenge_amount_not_a_number) }
-  validate  :amount_versus_donors_choose_funds => { on: :create }
+  validate  :amount_versus_donors_choose_funds, :on => :create
 
   after_create :calculate_target_funding
 
