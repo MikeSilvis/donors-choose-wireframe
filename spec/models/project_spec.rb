@@ -52,6 +52,24 @@ describe Project do
     end
   end
 
+  context "#currency_to_complete" do
+    it "returns a money object with the cost_to_complete" do
+      p = Project.new
+      p.cost_to_complete = "45.26"
+      p.currency_to_complete.should be_a(Money)
+      p.currency_to_complete.cents.should == 4526
+    end
+  end
+
+  context "#currency_total_price" do
+    it "returns a money object with the total_price" do
+      p = Project.new
+      p.total_price = "65.26"
+      p.currency_total_price.should be_a(Money)
+      p.currency_total_price.cents.should == 6526
+    end
+  end
+
   context "#raised_to_date" do
     let(:project) { FactoryGirl.create(:project, cost_to_complete: "50.00", total_price: "150.00") }
     it "returns the amount raised so far" do
