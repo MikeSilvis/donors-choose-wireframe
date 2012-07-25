@@ -6,6 +6,7 @@ en:
   challenge_media_missing: "A good preview image will have the donations flying in."
   challenge_amount_not_a_number: "Try dollars. Up to the project's remaining cost."
   challenge_amount_too_much: "That's more than the project's remaining cost. Go lower."
+  challenge_display_media_url_invalid: "Your image must be a valid PNG, JPEG, JPG, or Gif"
   activerecord:
     errors:
       messages:

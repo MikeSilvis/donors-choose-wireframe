@@ -12,6 +12,8 @@ class Challenge < ActiveRecord::Base
   validates :title, :presence => { message: I18n.t(:challenge_title_missing) }
   validates :display_media, :presence => {
                               message: I18n.t(:challenge_media_missing) }
+  validates_format_of :display_media, with: URL_REGEX, on: :create,
+                      message: I18n.t(:challenge_display_media_url_invalid)
   validates :amount, :numericality => {
                             :greater_than_or_equal_to => 0,
                             :message => I18n.t(:challenge_amount_not_a_number) }

@@ -1,0 +1,1 @@
+URL_REGEX = /http[s]?:\/\/(?:[a-z\-\d]+\.)+\S+\.(?:jpg|gif|png|jpeg)(?:\?.*)?/
