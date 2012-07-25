@@ -78,24 +78,23 @@ input.form-submit{
 
 .info-details{
   a {
-    color: white;
-    border-bottom: 1px dashed white;
+    color: gray;
+    border-bottom: 1px dashed black;
     &:hover {
-      color: lighten($teal, 40%);
+      color: lighten(black, 10%);
     }
   }
   .number {
     font-size: 32px;
     border-bottom: 1px solid white;
   }
-  border: 2px solid #eee;
-  border: 6px solid rgba(0, 0, 0, 0.1);
+  /*border: 2px solid #eee;*/
+  /*border: 6px solid rgba(0, 0, 0, 0.1);*/
   /*height:200px;*/
-  background:$teal;
   font-size: 28px;
   padding:10px;
-  border-radius: 25px;
-  color: white;
+  /*border-radius: 25px;*/
+  color: gray;
 }
 
 
