@@ -3,7 +3,7 @@
 
     <div class="row">
       <div class="twelvecol">
-        <h1><span class="highlight">Challenges for:</span> <%= link_to @project.title, @project.proposal_url, target: "_blank"%> </h1>
+        <h1><span class="highlight">Challenges for:</span> <%= link_to @project.title.html_safe, @project.proposal_url, target: "_blank"%> </h1>
       </div>
     </div>
 

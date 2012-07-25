@@ -1,9 +1,0 @@
-<div class="challenge_evidence_posted_event">
-  <h4>New evidence from the challenger!</h4>
-
-  <div class="evidence-media">
-    <%= challenge_evidence_posted.content[:owner_class] %>
-    <%= challenge_evidence_posted.content[:owner_id] %>
-    <%= image_tag(challenge_evidence_posted.content[:owner_class].find(challenge_evidence_posted.content[:owner_id]).image_url) %>
-  </div>
-</div>
